@@ -1,16 +1,16 @@
 
 var text={
 	//Chapter 1: Introduction and Welcome
-	f0_0:"Let us start!",
+	f0_0:"Let's get started!",
 	f1_0:"Welcome to the world of object-based image analysis! We are happy that you are here! We will share some exciting ideas with you. You've already noticed that this course is designed in such a way that you can study the material on your own. All relevant documents, papers, and other external sources are provided. The content is conveyed through interactive sessions, meaning that chapters as well as exercises use multi-media content to  study the matter presented. The course has been growing over the last years and today you will benefit from a series of preceding discussions and revisions. As usual, we happily receive your feedback, whether related to content or organisational issues. Explore and enjoy!",
 	//1.1 Introduction
-	f2_0:"First, there are some organizational and informative matters. Please study the following slides on your own. There we will provide more information on the course objectives and structure.  When you reach the chapter on course objectives, we will guide you again. Please press the play button.",
+	f2_0:"First, there are some organizational and informative matters. Please study the following slides on your own. There we shall provide some information on the course objectives and structure. When you reach the chapter on course objectives, we will guide you again. You may also press the play button then.",
 		//1.1.1 Foreword
 		f1_1:"foreword - no text",
 	// 1.2 Read me
-	f3_0:"",
-		// 1.2.1 Read me
-		f3_1:"read me - no text",
+	f3_0:"read me - no text",
+		// 1.2.1 Acknow
+		f3_1:"acknows - no text",
 		
 		//1.2.2 Disclaimer
 		f3_2:"disclaim - no text",
@@ -22,11 +22,11 @@ var text={
 		f3_4:"structure - no text",
 		
 	// 1.3 Course Content
-	f4_0:"Lets have a look at the course content.",
+	f4_0:"Well, let's have a look at the course content then.",
 		// 1.3.1 Course Content
 		f4_1:"The course comprises eight chapters: The introduction in chapter 1 opens the stage towards the field of object-based image analysis. It  reflects on how we deal with objects in our daily and professional life. It then sets the broader frame for the reasoning why we actually need such a technology, including to address (and also cope with) global challenges. After we try to clarify what is, and actually does, OBIA, we will look at a critical driver behing this technology, notably the recent generation of high-resolution satellite data.  Chapter 2, image interpretation and perception, discusses some of the specificities of how human perception. While not digging too much into cognitive psychology, we need discuss a few main aspects to better understand our approach to OBIA. When moving into hierarchy theory in chapter 3, we briefly explore a fundamental ordering principle of reality, or lets say, our conceptualization of reality. We are interested in hierarchy principles because they are manifested in space and time, in different-sized objects, detectable on images. One more theoretical chapter, chapter 4, deals with knowledge representation. We know there is a difference between knowledge we acquire by reading a book or newspaper, and something what we call experience. Knowledge can be externalized and imparted to others, experience not as easy. In OBIA we need to make knowledge explicit and encapsulate it in rules. Chapter 5 addresses a methodological key element of OBIA, image segmentation. The creation of image objects has great advantage in practical context and is often seen as the main asset over manual interpretation. Building upon the generation of boundaries is object classification, dealt with in chapter 6. This often goes beyond a mere labelling of image objects according to one single spectral feature. In fact, image classification within OBIA is more a cylic, meaning recursive, process, other than in classical pixel-based analysis. As we will see in chapter 7, object-based accuracy assessment goes beyond the traditional site-specific accuracy measures. We will look at means to explore this, by discussing the concepts of object-fate analysis and object validity.",
 
-		f4_1_f:" Finally, in chapter 8, we go one step beyond image analysis in a stricter sense, by integrating and analyzing other kinds of continuous data sets. We start with the obvious, digital elevation models and related landform analysis, and then move further towards exploring socio-economic data in a multi-dimensional indicator spaces, creating spatial composite indicators.",
+		f4_1_f:"Finally, in chapter 8, we go one step beyond image analysis in a stricter sense, by integrating and analyzing other kinds of continuous data sets. We start with the obvious, digital elevation models and related landform analysis, and then move further towards exploring socio-economic data in a multi-dimensional indicator spaces, creating spatial composite indicators.",
 		//1.3.2 Assignments
 		
 	// 1.4 Objects in our life
@@ -76,7 +76,7 @@ var text={
 		// 1.6.2 OBIA information update part 2
 		f7_2:"This can be illustrated when we move from the intermediate stage of a modelled composite object to an object which is fully valid. As we will see later, object validity does not only look at the correct label but also at its fitness to existing workflows and spatial data infrastructures. ",
 		// 1.6.3 OBIA information update part 3
-		f7_3:"But it is not only about providing some nicely looking geo-objects. It is more general about supporting the urgent need for updated information in various application domains. As we move forward in better understanding the complex interrelationships of global problems and challenges, we also need the means to tackle these. Providing imagery with increasing spatial resolution and higher frequencies is one thing and know that images alone are only part of the game. To turn image data into useful information, we need either experienced human interpreters or sophisticated image analysis tools.  Soon we shall realize we need both, depending on the setting and the task to be fulfilled. Now the exiting thing is the following. OBIA is capable of integrating both, the algorithm-based automated analysis, and the experience-based visual interpretation. ",
+		f7_3:"But it is not only about providing some nicely looking geo-objects. It is more general about supporting the urgent need for updated information in various application domains. As we move forward in better understanding the complex interrelationships of global problems and challenges, we also need the means to tackle these. Providing imagery with increasing spatial resolution and higher frequencies is one thing and know that images alone are only part of the game. To turn image data into useful information, we need either experienced human interpreters or sophisticated image analysis tools.  Soon we shall realize we need both, depending on the setting and the task to be fulfilled. Now the exciting thing is the following. OBIA is capable of integrating both, the algorithm-based automated analysis, and the experience-based visual interpretation. ",
 		// Quotation
 		f7_4:"There is an ever increasing demand for regularly updated geo-spatial data combined with techniques for rapid extraction and targeted provision of relevant information. The latter trying to keep pace with the changing requirements of the society at a global dimension. Novel Earth observation techniques and concepts from GIScience led to the emerging field of OBIA. The main purpose of OBIA in the context of remote sensing applications is to provide adequate and automated methods for the analysis of very high resolution data. OBIA helps describe the imaged reality using spectral, textural, spatial and topological characteristics. It offers a methodological framework for machine-based interpretation of complex classes, defined by spectral, spatial and structural as well as hierarchical properties. It combines different techniques of processing, retrieval and analyzing multi-resolution data from various sensors. By bridging technical and sector-oriented domains from remote sensing and geoinformatics we may significantly enhance the efficiency of data provision for policy making and decision support.",
 		
