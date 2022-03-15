@@ -1,25 +1,25 @@
 
 var text={
-	//Capitel 1: Introduction& Welcome
+	//Chapter 1: Introduction and Welcome
 	f0_0:"Let us start!",
 	f1_0:"Welcome to the world of object-based image analysis! We are happy that you’re here! We will share some exciting ideas with you. You already noticed that this course is designed in such a way that you can study the material on your own. All relevant documents, papers, and other external sources are provided. The content is conveyed through interactive sessions, meaning that chapters as well as exercises use multi-media content to  study the matter presented.The course has been growing over the last years and today you will benefit from a series of preceding discussions and revisions. As usual, we happily receive your feedback, whether related to content or organisational issues. Explore and enjoy!",
 	//1.1 Introduction
-	f2_0:"First, there are some organizational and informative matters. Please study the following slides on your own. They will provide more information about course objectives, structure, and copyright.  When you reach the chapter on course objectives, we will guide you again. Please press the play button.",
-		//1.1.1 Forword
-		f1_1:"",
-	// 1.2 Front Matter
+	f2_0:"First, there are some organizational and informative matters. Please study the following slides on your own. They will provide more information on the course objectives and structure.  When you reach the chapter on course objectives, we will guide you again. Please press the play button.",
+		//1.1.1 Foreword
+		f1_1:"foreword - no text",
+	// 1.2 Read me
 	f3_0:"",
-		// 1.2.1 Front Matter
-		f3_1:"",
+		// 1.2.1 Read me
+		f3_1:"read me - no text",
 		
 		//1.2.2 Disclaimer
-		f3_2:"",
+		f3_2:"disclaim - no text",
 		
 		//1.2.3 Objectives:
-		f3_3:"",
+		f3_3:"objectives - no text",
 		
 		//1.2.4 Course Structure:
-		f3_4:"",
+		f3_4:"structure - no text",
 		
 	// 1.3 Course Content
 	f4_0:"Lets have a look at the course content.",
@@ -32,8 +32,8 @@ var text={
 	// 1.4 Objects in our life
 	f5_0:"Let us know consider how we perceive objects in our life.",
 		//1.4.1 Objects in our life
-		f5_1:"We as human beings continiuously deal with objects. We see objects and handle objects, we sense objects and feel objects, and yes, we indeed think objects. But what are objects? Are objects things? Well yes and no. They are not the same, with things being rather tangible objects of our daily lives. ",
-		f5_1_f:"The word object, where does it come from? The word is originating from Latin ob, yee, cere, meaning literally to throw against. More figuratively to offer, to reply. We know the expression to object to. So an object is something we can touch, handle, think and tell of.",
+		f5_1:"We as human beings continiuously deal with objects. We see objects and handle objects, we sense objects, and yes, indeed we also think objects. But what are objects? Are objects the same as things? Yes and no. Things may be considered as the tangible, physical objects of our daily lives.",
+		f5_1_f:"Where does the word object actually come from? The word is originating from Latin ob-yee-ce-re, meaning literally to throw against. More figuratively to offer, to reply. We know the expression to object to. So an object is something we can touch, handle, think and tell of.",
 		f5_1_f_1:"Thus it implies that it is something which is a conceptual whole, an entity. Of course, our world is much more and much richer than a simple collection of objects, but you may ask yourself how much your daily life is determined by objects. And so is in professional life: Categorising, analyzing, planning, designing, managing our environment requires objects, too.",
 		f5_1_f_2:"Professionals dealing with space, such as spatial planners, geographers, or landscape ecologist have their particular (and often very much specialized) sets of objects they are interested in.  Otherwise our environment cannot be handled, it would be way too complex",
 		f5_1_f_3:"In fact, using objects reduces complexity. At this very point, some of us may tend to move into a philosophical debate. What we see, is this the real world or just a conceptualisation of it? Well, for our purposes it is sufficient to accept the fact, that even if conceptualised, this constitutes our reality and the world we live and work in.",
@@ -48,7 +48,7 @@ var text={
 	// 1.5 Landscape and objects
 	f6_0:"So naturally, on images, air photos or a satellite images we are looking for objects, too.",
 		// 1.5.1 Landscape and objects part 1
-		f6_1:"In geographical image analysis, objects are representations of the real-world, in units that are significant in a certain application context. This image shows landscape objects as viewed from an aircraft window. What objects can you on this image? Some are quite obvious, notably.",
+		f6_1:"In geographical image analysis, objects are representations of the real-world, in units that are significant in a certain application context. This image shows landscape objects as viewed from an aircraft window. What objects can you on this image? Some are quite obvious, for example.",
 		//1.5.2 Landscape and objects part 2
 		f6_2:"Roads and settlements",
 		//1.5.3 Landscape and objects part3
