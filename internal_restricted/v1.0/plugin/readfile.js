@@ -2,9 +2,9 @@
 var text={
 	//Chapter 1: Introduction and Welcome
 	f0_0:"Let us start!",
-	f1_0:"Welcome to the world of object-based image analysis! We are happy that you’re here! We will share some exciting ideas with you. You already noticed that this course is designed in such a way that you can study the material on your own. All relevant documents, papers, and other external sources are provided. The content is conveyed through interactive sessions, meaning that chapters as well as exercises use multi-media content to  study the matter presented.The course has been growing over the last years and today you will benefit from a series of preceding discussions and revisions. As usual, we happily receive your feedback, whether related to content or organisational issues. Explore and enjoy!",
+	f1_0:"Welcome to the world of object-based image analysis! We are happy that you are here! We will share some exciting ideas with you. You've already noticed that this course is designed in such a way that you can study the material on your own. All relevant documents, papers, and other external sources are provided. The content is conveyed through interactive sessions, meaning that chapters as well as exercises use multi-media content to  study the matter presented. The course has been growing over the last years and today you will benefit from a series of preceding discussions and revisions. As usual, we happily receive your feedback, whether related to content or organisational issues. Explore and enjoy!",
 	//1.1 Introduction
-	f2_0:"First, there are some organizational and informative matters. Please study the following slides on your own. They will provide more information on the course objectives and structure.  When you reach the chapter on course objectives, we will guide you again. Please press the play button.",
+	f2_0:"First, there are some organizational and informative matters. Please study the following slides on your own. There we will provide more information on the course objectives and structure.  When you reach the chapter on course objectives, we will guide you again. Please press the play button.",
 		//1.1.1 Foreword
 		f1_1:"foreword - no text",
 	// 1.2 Read me
