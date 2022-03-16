@@ -1,18 +1,4 @@
 
-<!--
-	Document information:
-
-	Author: Andreas Schlagbauer; Vanessa Streifeneder
-	Email: andreas.schlagbauer@stud.sbg.ac.at, vanessa.streifeneder@stud.sbg.ac.at
-	Date: 29.07.2021/31.01.2022
-
-	The slides were transferred from Powerpoint format to reveal.js slides. Most of the content was 
-	transferred one to one. The slides from the GEOBIA Summer School were used as basis. 
-
-	I did not change the css files for the slides and implemented the styling within the html code. 
-	For future usage, it would be probably good to create a css file with the adapted styling, e.g. 
-	text-align:left for p etc. 
--->
 
 <!DOCTYPE html>
 <!-- saved from url=(0057)https://eo4geocourses.github.io/PLUS_OBIA-Introduction/#/ -->
@@ -22,19 +8,18 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 
-	<title>OBIA - Image Interpretation and Perception</title>
-	<meta property="dc:title" content="Object-based Image Analysis - Image Interpretation and Perception">
+	<title>OBIA - A Complete Introduction</title>
+	<meta property="dc:title" content="Object-based Image Analysis">
 	<meta property="dc:creator" content="Stefan Lang, University of Salzburg">
 	<meta property="dc:publisher" content="University of Salzburg">
-	<meta property="dc:subject" content="OBIA concept, image segmentation, Earth observation">
+	<meta property="dc:subject" content="OBIA concept, image segmentation, class modelling, Earth observation">
 	
 	<!-- Meta data needs to be acutalized -->
 
 	<meta property="dc:abstract"
 		content="These slides give an introduction to concepts and methods of object-based image analysis (OBIA). The slides have been prepared for and used in the virtual GEOBIA summer school in 2020.">
 
-	<meta property="dc:tableOfContents" content="(1) Visual perception; (2) Early vision and gestalt; (3) Role of experience; 
-		(4) Pixel-scape & object-scape; (5) Visual delineation vs. machine-based segmentations">
+	<meta property="dc:tableOfContents" content="(1) Introduction; (2) Image interpretation and perception; (3) Basic concepts of hierarchy theory; (4) Knowledge representation; (5) Image segmentation; (6) Object-based classification (incl. class modelling); (7) Accuracy assessment (incl. object validity; (8) OBIA for non-image data">
 	<meta property="dc:description"
 		content="Learning outcomes: Understand the principles of spatial image analysis; discuss specific advantages of OBIA over pixel-based approach; apply OBIA concepts and analyse complex image content; examine different segmentation and object-based classification methods">
 	<meta property="dc:contributor" content="Vanessa Streifeneder, Andreas Schlagbauer, Florian Albrecht, Michael Hagenlocher, Hannah Augustin">
@@ -45,7 +30,7 @@
 	<meta property="dc:SizeOrDuration" content="45min">
 	<meta property="dc:audience" content="students">
 	<meta property="dc:educationLevel" content="EQF 6">
-	<meta property="dc:source" content="GEOBIA Summer School Material">
+	<meta property="dc:source" content="OBIA Introduction">
 	<meta property="dc:rightsHolder" content="Stefan Lang, University of Salzburg">
 	<meta property="dc:license" content="https://creativecommons.org/licenses/by-sa/4.0/deed.en">
 
@@ -348,7 +333,7 @@
 		<section id= "Chapter 1.3" >
 		
 			<section >
-				<h1> [1.3] Course Content</h1>
+				<h1> [1.3] Course structure</h1>
 					<aside class="notes">
 						<script>
 							document.write(String(text.f1_0));
@@ -356,12 +341,12 @@
 					</aside>
 				</section>
 			<!--Course Content-->
-			<section id= "Chapter 1.3" >
-			<h2> Course Content</h2>
+			<section>
+			<h2>Table of contents</h2>
 			<div style="position:relative; text-align: left; font-size:80%; width: 80%;">
 			<ul style="text-align: left; ">
 				<li>
-					The course comprises the following <strong>main chapters</strong>:
+					This course comprises the following <strong>main chapters</strong>:
 				</li>
 				<ol style="font-size:90%">
 					<li>
@@ -388,7 +373,7 @@
 					</li>
 					<div class="fragment" id="f4_1_f" >
 					<li >
-						Outlook: OBIA for non-image data
+						Outlook: OBIA for <strong>non-image</strong> data
 					</li>
 				</div>
 				</ol>
@@ -400,7 +385,7 @@
 			
 			</section>
 			<!--Assignments-->
-			<section id= "Chapter 1.3">
+			<section>
 			<h2>Assignments</h2>
 			<ul style ="text-align: left;">
 				
@@ -431,7 +416,6 @@
 			</ul>
 			</section>
 
-				
 			
 		</section>
 		<!--Chapter 4: Objects on our life-->
@@ -446,13 +430,13 @@
 					</aside>
 				</section>
 			<!--Objects in our life-->
-			<section id= "Chapter 1.4" >
+			<section>
 				<h2>Objects in our life</h2>
 			
 				<div style="position:relative; text-align:left; width:70%; margin-right: 2%;">
 				<ul style="width:80%; font-size: 70%; " >
 					<li>
-						We all deal constantly with objects – in both private and professional lives
+						We deal with objects constantly in our lives
 					</li>
 					<div class="fragment" id ="f1_5_f">
 						<li>
@@ -501,7 +485,7 @@
 		
 			</section>
 			<!--Objects in our life- Forest structure-->
-			<section id= "Chapter 1.4"  >
+			<section>
 			<h2>Objects in our life</h2>
 			<div style="color:white;text-align: left; background-image:url('OBIA - Image Interpretation_folder/01_11_background.jpg')" > 
 			<ul style="width:50%; " >
@@ -543,7 +527,7 @@
 			</section>
 		
 			<!--Objects in our Life-Forest stands-->
-			<section id= "Chapter 1.4" >
+			<section>
 		<h2> Objects in our life</h2>
 		<ul style="text-align: left; font-size: 70%;">
 			<li>
@@ -611,8 +595,8 @@
 					</aside>
 				</section>
 			<!--Landscape and objects part 1-->
-			<section id= "Chapter 1.5"  >
-				<h2> Landscape and objects</h2>
+			<section >
+				<h2> Landscape objects</h2>
 				<figure>
 					<img src="OBIA - Image Interpretation_folder/01_13_landscape_objects.PNG" style="width:50%;bottom:0%;background: none; border: none; box-shadow: none; ">
 				</figure>
@@ -627,8 +611,8 @@
 					</aside>
 				</section>
 					<!-- Landscape and objects- part 2-->
-			<section id= "Chapter 1.5" >
-				<h2> Landscape and objects</h2>
+			<section >
+				<h2> Landscape objects</h2>
 				<figure>
 					<img src="OBIA - Image Interpretation_folder/01_13_landscape_objects_settlements.PNG" style="width:80%;background: none; border: none; box-shadow: none; ">
 				</figure>
@@ -642,8 +626,8 @@
 			</section>
 
 			<!-- Landscape and objects- part 3-->
-			<section id= "Chapter 1.5"  >
-				<h2> Landscape and objects</h2>
+			<section >
+				<h2> Landscape objects</h2>
 				<figure>
 					<img src="OBIA - Image Interpretation_folder/01_14_landscape_objects_wood.PNG" style="width:80%;background: none; border: none; box-shadow: none; ">
 				</figure>
@@ -657,8 +641,8 @@
 			</section>
 
 			<!-- Landscape and objects- part 4-->
-			<section id= "Chapter 1.5"  >
-				<h2> Landscape and objects</h2>
+			<section  >
+				<h2> Landscape objects</h2>
 				<figure>
 					<img src="OBIA - Image Interpretation_folder/01_15_landscape_objcts_field.PNG" style="width:80%;background: none; border: none; box-shadow: none; ">
 				</figure>
@@ -672,8 +656,8 @@
 			</section>
 
 		 <!-- Landscape and objects- part 5-->
-		 <section id= "Chapter 1.5" >
-			<h2> Landscape and objects</h2>
+		 <section >
+			<h2> Landscape  objects</h2>
 			<figure>
 				<img src="OBIA - Image Interpretation_folder/01_13_landscape_objects.PNG" style="width:50%;background: none; border: none; box-shadow: none; ">
 			</figure>
@@ -701,7 +685,7 @@
 		</aside>
 			</section>
 			<!-- Landscape and objects- part 6-->
-			<section id= "Chapter 1.5"  >
+			<section >
 				<h2> Landscape and objects</h2>
 				<figure>
 					<img src="OBIA - Image Interpretation_folder/01_13_landscape_objects_last.jpg" style="width:50%;background: none; border: none; box-shadow: none; ">
@@ -1258,8 +1242,8 @@
 				<p></p>
 				<p style="font-size: 70%;">
 					<b>[1]</b> Visual perception | <b>[2]</b> Early vision and gestalt | <b>[3]</b> Role of experience |
-					<b>[4]</b> Pixel-scape & object-scape |
-					<b>[5]</b> Visual delineation vs. machine-based segmentation
+					<b>[4]</b> Pixel-scape and object-scape |
+					<b>[5]</b> Visual delineation vs. segmentation
 				</p>
 				<p><small>University of Salzburg, Department of Geoinformatics, 2021/21<br></small></p>
 						
