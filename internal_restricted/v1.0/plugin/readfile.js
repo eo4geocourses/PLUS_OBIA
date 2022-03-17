@@ -5,28 +5,16 @@ var text={
 	f1_0:"Welcome to the world of object-based image analysis! We are happy that you are here! We will share some exciting ideas with you. You've already noticed that this course is designed in such a way that you can study the material on your own. All relevant documents, papers, and other external sources are provided. The content is conveyed through interactive sessions, meaning that chapters as well as exercises use multi-media content to  study the matter presented. The course has been growing over the last years and today you will benefit from a series of preceding discussions and revisions. As usual, we happily receive your feedback, whether related to content or organisational issues. Explore and enjoy!",
 	//1.1 Introduction
 	f2_0:"First, there are some organizational and informative matters. Please study the following slides on your own. There we shall provide some information on the course objectives and structure. When you reach the chapter on course objectives, we will guide you again. You may also press the play button then.",
-		//1.1.1 Foreword
-		f1_1:"foreword - no text",
-	// 1.2 Read me
-	f3_0:"read me - no text",
-		// 1.2.1 Acknow
-		f3_1:"acknows - no text",
-		
-		//1.2.2 Disclaimer
-		f3_2:"disclaim - no text",
-		
-		//1.2.3 Objectives:
-		f3_3:"objectives - no text",
-		
-		//1.2.4 Course Structure:
-		f3_4:"structure - no text",
+
 		
 	// 1.3 Course Content
-	f4_0:"Well, let's have a look at the course content then.",
+	f4_0:"Now, let's have a look at the course content.",
 		// 1.3.1 Course Content
-		f4_1:"The course comprises eight chapters: The introduction in chapter 1 opens the stage towards the field of object-based image analysis. It  reflects on how we deal with objects in our daily and professional life. It then sets the broader frame for the reasoning why we actually need such a technology, including to address (and also cope with) global challenges. After we try to clarify what is, and actually does, OBIA, we will look at a critical driver behing this technology, notably the recent generation of high-resolution satellite data.  Chapter 2, image interpretation and perception, discusses some of the specificities of how human perception. While not digging too much into cognitive psychology, we need discuss a few main aspects to better understand our approach to OBIA. When moving into hierarchy theory in chapter 3, we briefly explore a fundamental ordering principle of reality, or lets say, our conceptualization of reality. We are interested in hierarchy principles because they are manifested in space and time, in different-sized objects, detectable on images. One more theoretical chapter, chapter 4, deals with knowledge representation. We know there is a difference between knowledge we acquire by reading a book or newspaper, and something what we call experience. Knowledge can be externalized and imparted to others, experience not as easy. In OBIA we need to make knowledge explicit and encapsulate it in rules. Chapter 5 addresses a methodological key element of OBIA, image segmentation. The creation of image objects has great advantage in practical context and is often seen as the main asset over manual interpretation. Building upon the generation of boundaries is object classification, dealt with in chapter 6. This often goes beyond a mere labelling of image objects according to one single spectral feature. In fact, image classification within OBIA is more a cylic, meaning recursive, process, other than in classical pixel-based analysis. As we will see in chapter 7, object-based accuracy assessment goes beyond the traditional site-specific accuracy measures. We will look at means to explore this, by discussing the concepts of object-fate analysis and object validity.",
+		f4_1:"The course comprises eight chapters: The introduction in chapter 1 opens the stage towards the field of object-based image analysis. It  reflects on how we deal with objects in our daily and professional life. It then sets the broader frame for the reasoning why we actually need such a technology, including to address (and also cope with) global challenges. After we try to clarify what is, and actually does, OBIA, we will look at a critical driver behing this technology, notably the recent generation of high-resolution satellite data.",
+		
+		f4_1_f_1:"Chapter 2, image interpretation and perception, discusses some of the specificities of how human perception. While not digging too much into cognitive psychology, we need discuss a few main aspects to better understand our approach to OBIA. When moving into hierarchy theory in chapter 3, we briefly explore a fundamental ordering principle of reality, or lets say, our conceptualization of reality. We are interested in hierarchy principles because they are manifested in space and time, in different-sized objects, detectable on images. One more theoretical chapter, chapter 4, deals with knowledge representation. We know there is a difference between knowledge we acquire by reading a book or newspaper, and something what we call experience. Knowledge can be externalized and imparted to others, experience not as easy. In OBIA we need to make knowledge explicit and encapsulate it in rules. Chapter 5 addresses a methodological key element of OBIA, image segmentation. The creation of image objects has great advantage in practical context and is often seen as the main asset over manual interpretation. Building upon the generation of boundaries is object classification, dealt with in chapter 6. This often goes beyond a mere labelling of image objects according to one single spectral feature. In fact, image classification within OBIA is more a cylic, meaning recursive, process, other than in classical pixel-based analysis. As we will see in chapter 7, object-based accuracy assessment goes beyond the traditional site-specific accuracy measures. We will look at means to explore this, by discussing the concepts of object-fate analysis and object validity.",
 
-		f4_1_f:"Finally, in chapter 8, we go one step beyond image analysis in a stricter sense, by integrating and analyzing other kinds of continuous data sets. We start with the obvious, digital elevation models and related landform analysis, and then move further towards exploring socio-economic data in a multi-dimensional indicator spaces, creating spatial composite indicators.",
+		f4_1_f_2:"Finally, in chapter 8, we go one step beyond image analysis in a stricter sense, by integrating and analyzing other kinds of continuous data sets. We start with the obvious, digital elevation models and related landform analysis, and then move further towards exploring socio-economic data in a multi-dimensional indicator spaces, creating spatial composite indicators.",
 		//1.3.2 Assignments
 		
 	// 1.4 Objects in our life
@@ -120,7 +108,7 @@ var text={
 		// 1.9.4 very high resolution part 4
 		f10_4:" There is also an issue in providing too much detail, somewhat going beyond the scale domain of human activity. Some argue, depending on the point of view, that there is a continuum of scale; others promote the concept of domains-of-scale. According to the latter there are gaps in the scale continuum that corresponds to the level hierarchical organisation. We will come back to this later on, for the time being let us assume there is a certain limit in resolution required for geographical purposes and there is a larger gap before we reach to medical or even chemical scales. And within the human scale, is it always necessary to have the highest possible resolution? Can there be too much spatial detail? It depends on the application, and of course, also evokes ethical issues. Often the observer has an intuitive understanding of the proper relation between scale and resolution. If you are investigating bark beetle attacks in an otherwise homogenous forest stand, a resolution of 5 metres may be sufficient. Too much detail might be even hampering the analysis process. Sometimes, however, the scale of the scene displayed is not that obvious, and thus the ideal resolution is not easy to be determined. ",
 		// 1.9.5 very high resolution:Bush encroachment
-		f10_5:"What can you see on the following example? It is a small-scale dynamic occuing in a dehydrated wetland site, where single bushes encroach over the open area, due to drainage. ",
+		f10_5:"What can you see on the following example? It is a small-scale dynamic occuring in a dehydrated wetland site, where single bushes encroach over the open area, due to drainage. ",
 		// 1.9.6 very high resolution:camp
 		f10_6:"Sometimes, a slight increase in resolution makes a big difference. If the aim is to to extract dwellings from an image showing a refugee camp, the step from 0.6 to 0.5 meters may be critical, because only the latter would reveal small shadows that support the visual impression of dwelling structures. So we have to think of a commensurate scale of observation. This also illustrates the superiority of our human eye. If there is a shadow next to an object, our experience tells us, that this structure must be somehow elevated. Within OBIA this relationship between small, compact white objects and surrounding shadows can generally be modelled. But are our eyes always doing better? Not necessarily! Think of an analysis task where you would have to extract literally thousands of similar features such as tents or little huts in a huge settlement. Your eyes would tire after a certain time and with decreasing attention you may end up losing one or the other structure. ",
 		// 1.9.7 Quotation
@@ -129,7 +117,7 @@ var text={
 	
 
 	//Capitel 2: Image Interpretation and Perception
-	f11_0:"'Welcome to Lesson 2 - Image Interpretation and Perception. Here we will introduce the concept of OBIA and how humans percieve images. This is the content of lesson 2 – we have 5 subchapters: (1) Visual Perception; (2) Early Vision; (3) Role of Experience; (4) Pixel-scape and Object-scape; (5) Visual Delineation vs. machine-based segementation'",
+	f11_0:"'Welcome to Lesson 2 - Image interpretation and perception. Here we introduce the concept of OBIA and compare it with the way how humans perceive images. There are five subchapters: (1) visual perception; (2) Early Vision; (3) Role of Experience; (4) Pixel-scape and Object-scape; (5) Visual Delineation vs. machine-based segementation'",
 	
 	
 
