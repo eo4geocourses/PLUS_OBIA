@@ -2753,7 +2753,7 @@
 												<p style="text-align: left; font-size: 20px; margin-top: 10px; margin-bottom: 10px;">Hierarchical relations between scales can be utilized, but scales cannot be captured simultaneously</p>
 											</li>
 											<li>
-												<p style="text-align: left; font-size: 20px; margin-top: 10px; margin-bottom: 10px;">Scale adaptive vs. scale specific delineation (see below)</p>
+												<p style="text-align: left; font-size: 20px; margin-top: 10px; margin-bottom: 10px;">Scale adaptive vs. scale specific delineation</p>
 											</li>
 										</ul>
 									</li>
@@ -2771,11 +2771,11 @@
 										<p style="text-align: left; margin-top: 10px; margin-bottom: 10px;">Limitations</p>
 										<ul style="font-size: 80%;">
 											<li>
-												<p style="text-align: left; font-size: 20px; margin-top: 10px; margin-bottom: 10px;">Only objects which  have boundaries can be used later </p>
+												<p style="text-align: left; font-size: 20px; margin-top: 10px; margin-bottom: 10px;">Only objects that are delineated can be used later </p>
 												
 											</li>
 											<li>
-												<p style="text-align: left; font-size: 20px; margin-top: 10px; margin-bottom: 10px;">Orchard problem: if boundaries are only conceptual</p>
+												<p style="text-align: left; font-size: 20px; margin-top: 10px; margin-bottom: 10px;">Orchard problem: boundaries are conceptual only and not directly detectable</p>
 											</li>
 										</ul>
 									</li>
@@ -2793,20 +2793,1660 @@
 
 			</section>	
 
+		<!--Lesson 3: Basic concepts of hierarchy theory-->
+						
+			<section section id="Chapter 3.0" >
+							
+								
+				<h1>Object-based Image Analysis (OBIA)</h1>
+				<h2>Basic Concepts of Hierarchy Theory</h2>
+				<small>Stefan LANG & Dirk TIEDE</small>
+				<p></p>
+				<p></p>
+				<p style="font-size: 50%;">
+					<b>[1]</b> Multi-scale representation <b>[2]</b> Scale <b>[3]</b> Hierarchy theory
+					<b>[4]</b> Hiearchical patch dynamcis <b>[5]</b> Multi-scale imagery <b>[6]</b> Scale space analysis.
+				</p>
+				<p><small>University of Salzburg | Department of Geoinformatics | (c) 2010-2022<br></small></p>
+						
+						
+				<aside class="notes">
+					
+					<script>
+						document.write(String(text.f17_0));
+					</script>					
+					
+				</aside>
+			</section>
 
+			<!--Chapter 1: Mulit-scale representation-->
+			<section id="Chapter 3.1">
+				
+				<section >
+					<h1>[3.1] Multi-scale representation</h1>
+
+					<aside class="notes">
+						<script>
+
+							document.write(String(text.f18_0))
+						</script>
+					</aside>
+				</section>
+
+				<!--Multi-scale representation- part 1-->
+
+				<section>
+					<h2>Multi-scale representation</h2>
+					<ul style="text-align: left;font-size:70%">
+						<li>
+							Principal assumptions
+						</li>
+						<ul style="font-size:60%">
+							<div class="fragment" id="f18_1_f_1"> 
+							<li>
+								World in its complexity is <strong> hierarchically structured</strong> 
+							</li>
+							</div>
+							<div class="fragment" id="f18_1_f_2"> 
+							<li>
+								This complexity can be <strong> decomposed</strong> and structured in <strong>scaled representations</strong> 
+							</li>
+							</div>
+							<div class="fragment" id="f18_1_f_3"> 
+							<li>
+								Objects are <strong> interlinked</strong> on different scales (spatial concepts required)
+							</li>
+							</div>
+							<div class="fragment" id="f18_1_f_4"> 
+							<li>
+								Multi‐scale segmentation <strong>mimics</strong>  our way of perception
+							</li>
+							</div>
+						</ul>
+					
+						<figure >
+							<img src="OBIA - Image Interpretation_folder/03_4_visual_delineation.PNG" style="background: none; border: none; box-shadow: none; left:0%">
+							<img src="OBIA - Image Interpretation_folder/03_4_segmentation.PNG" style="position:absolute;background: none; border: none; box-shadow: none; left:40% ">
+							<img src="OBIA - Image Interpretation_folder/arrow.png" style="position:absolute;background: none; border: none; box-shadow: none; bottom:10%; width:15%; left:63% ">
+							<img src="OBIA - Image Interpretation_folder/03_4_multiscale_seg.PNG" style="position:absolute;background: none; border: none; box-shadow: none; left:80% ">
+						</figure>
+					</ul>		
+
+					<aside class="notes">
+						<script>
+
+							document.write(String(text.f18_1,text.f18_1_f_1,text.f18_1_f_2,text.f18_1_f_3,text.f18_1_f_4))
+						</script>
+					</aside>
+				</section>
+
+				<!--Multi-scale representation.- part 2-->
+
+				<section >
+					<h2>Multi-scale representation</h2>
+					<div style="text-align: left;width: 50%;font-size: 80%;">
+						<li>
+							Human eye
+						</li>
+						<ul>
+							<li>
+								Represents <strong>reality </strong> in various levels <strong>simultaneously</strong>
+							</li>
+							<li>
+								We may need to have <strong> ‘a closer look’, </strong> but the crucial information is conveyed <strong> instantly</strong> 
+							</li>
+						</ul>
+					</div>
+					<figure>
+						<img src="OBIA - Image Interpretation_folder/03_5_forest.PNG" style="position:absolute;background: none; border: none; box-shadow: none;right:-10%;top:20%; width:50%">
+					</figure>
+					<figcaption >
+						<p style="position: absolute;background:lightblue; text-align:left; width:50%; font-size:60%; right:30%">We perceive several scales simultaneously, from single trees over forest stands and fields to forests and agricultural land </p>
+					</figcaption>
+					<div style=" position: absolute; text-align: left;font-size:50%; bottom:-15% ;right: -5%">
+						From: Lang 2002, Photo: T.Blaschke
+					</div>
+					<aside class="notes">
+						<script>
+							document.write(String(text.f18_2))
+						</script>
+					</aside>
+				
+				</section>
+				<!--Multi-scale representation -part 3-->
+				<section >
+					<h2>Multi-scale representation</h2>
+				<ul style="text-align: left; width:70%; font-size: 80%;">
+					<li>Human eye</li>
+					<ul>
+						<li>
+							Represents <strong>reality</strong> in various levels <strong>simultaneously</strong> 
+						</li>
+					</ul>
+					<li> Image segmentation</li>
+					<ul>
+						<li> Representation in various levels <strong> sequentially </strong> </li>
+					</ul>
+				</ul>
+				<figure>
+					<img src="OBIA - Image Interpretation_folder/03_6_scale_adaptive.PNG" style="position:absolute;background: none; border: none;box-shadow: none; right:-5%; top:20%" >
+				</figure>
+				<div style=" position: absolute; width:40%;background-color: lightblue; font-size: 50%; right:23%; text-align: left;">
+					<p> <strong>Scale‐adaptive</strong> multi‐scale representation (boundaries congruent but notscale‐specific </p>
+				</div>
+				<aside class="notes">
+					<script>
+
+						document.write(String(text.f18_3))
+					</script>
+				</aside>
+				</section>
+
+				<!--Multi-scale representation -part 4-->
+				<section >
+					<h2> Multi-scale representation</h2>
+					<ul style="text-align: left; width:70%; font-size: 80%;">
+					<li>Human eye</li>
+					<ul>					
+						<li>
+							Represents <strong>reality</strong> in various levels <strong>simultaneously</strong> 
+						</li>
+					</ul>
+					<li> Image segmentation</li>
+					<ul>
+						<li> Representation in various levels <strong> sequentially </strong> </li>
+						<li>
+							Links between between levels via object hierarchy (<strong> scale‐adaptive </strong> or <strong>scale‐specific</strong> )
+						</li>
+						<li>
+							How to hit the <strong>appropriate</strong> scale domain?
+						</li>
+					</ul>
+				</ul>
+				<figure>
+					<img src="OBIA - Image Interpretation_folder/03_7_hierachy_scale.PNG" style="position:absolute;background: none; border: none;box-shadow: none; right:-10%; top:20% " >
+				</figure>
+				<figcaption style="position:absolute;text-align: left;font-size: 50%; bottom: -5%; right:-10%">
+					From Lang et al. 2004
+				</figcaption>
+				<div style="position:absolute;font-size:50%; text-align: left; width:30%; background-color: lightblue; right:12%">
+					<p><strong>Object hierachy</strong> from 'pixel level'to 'level 3'</p>
+				</div>
+				<aside class="notes">
+					<script>
+
+						document.write(String(text.f18_4))
+					</script>
+				</aside>
+				
+				</section>
+				
+
+			</section>
+
+			<!--Chapter 2: Scale-->
+			<section id="Chapter 3.2" >
+				
+				<section >
+					<h1>[3.2] Scale</h1>
+
+					<aside class="notes">
+						<script>
+
+							document.write(String(text.f19_0))
+						</script>
+					</aside>
+				</section>
+
+				<!--Scales part 1-->
+				<section >
+				<h2> Scales</h2>
+				<ul style="text-align: left; width: 60%; font-size: 80%;">
+					<div class="fragment" id="f19_1_f_1">
+					<li>Two inherent scale domains</li>
+					</div>
+					<ul>
+						<div class="fragment" id="f19_1_f_2">
+							<li> 
+								The <strong> entire face</strong> (including the recognition of a person)
+							</li>
+						</div>
+						<div class="fragment" id="f19_1_f_3">
+							<li>
+								The <strong> constituting parts</strong>  (eyes , forehead, nose, beard, collar)
+							</li>
+						
+							<li>
+								But not: <strong>single pixels</strong> (that’s why we twinkle our eyes)
+							</li>
+						</div>
+					</ul>
+				</ul>
+				<figure>
+					<img src="OBIA - Image Interpretation_folder/03_8_Lincoln.png" style="position:absolute;background: none; border: none;box-shadow: none; right:-13%; top:20%; width:30% " > 
+				</figure>
+				<aside class="notes">
+					<script>
+
+						document.write(String(text.f19_1,text.f19_1_f_1, text.f19_1_f_2, text.f19_1_f_3))
+					</script>
+				</aside>
+				</section>
+
+				<!--Scales part 2-->
+				<section>
+				<h2 >Scales</h2>
+				<ul style="text-align: left; ">
+					<li style="font-size: 60%;">
+						Scale
+					</li>
+					
+					<ul style="font-size: 60%;">
+						<li>
+							Def: <i> “the period of time or space over which signals are integrated [...] to give message ”</i> (Allen & Starr, 1982)
+						</li>
+						<u> Here:</u> Refers to the size of objects in reality or in a representation of it (e.g. a map or a satellite image)
+					</ul>
+					
+					<div class="fragment" id="f19_2_f">
+					<li style="font-size: 60%; width:50%">
+						Different objects have different scales
+					</li>
+					<ul style="font-size: 60%; width: 45%;">
+						<li>
+							Every object has its inherent scale
+						</li>
+						<li>
+							It only appears in a certain range scale
+						</li>
+					</ul>
+					<li style="font-size: 60%; width: 50%;">
+						Depending on the elevation of our viewpoint we see certain objects
+					</li>
+				</div>
+					</ul>
+					<figure>
+						<img src="OBIA - Image Interpretation_folder/03_09_different_scales.PNG"  style="position:absolute;background: none; border: none;box-shadow: none;  top:70%; width:50%; right:0% ">
+					</figure>
+					<div style="position: absolute; background-color: lightblue; width: 40%; font-size: 40%; text-align: left;right:0%; top:60%;">
+						<p>Different view - different scales - different objects ...</p>
+					</div>
+					<aside class="notes">
+						<script>
+
+							document.write(String(text.f19_2, text.f19_2_f))
+						</script>
+					</aside>
+
+				</section>
+
+				<!--Grain and extent-->
+				<section >
+					<h2> Grain and Extent</h2>
+				<ul style="text-align: left; width: 50%; font-size: 80%;">
+					<li style="font-size: 80%;width: 50%;">
+						Relevant range of the scale spectrum for landscape analysis
+					</li>
+					<div class="fragment" id="f19_3_f_1"> 
+					<li style="font-size: 80%;">
+						Grain
+					</li>
+					<ul style="font-size: 70%; width: 50%;">
+						<li>
+							minimum area at which an organism responds comparable to resolution (spatial, spectral, temporal) in an image
+						</li>
+					</ul>
+					</div>
+					<div class="fragment" id="f19_3_f_2">
+					<li style="font-size: 80%;">
+						Extent 
+					</li>
+					<ul style="font-size: 70%; width: 50%;">
+						<li>
+							coarsest scale of spatial heterogeneity extent of the whole scene (total area, bandwidths, covered temporal duration)
+						</li>
+					</ul>
+					</div>
+				</ul>
+				<div class="fragment" id="f19_3_f_3">
+				<figure>
+					<img  src="OBIA - Image Interpretation_folder/03_10_grain_extent.PNG" style="position:absolute;background: none; border: none;box-shadow: none; right:-5%; top:15%;width:40%  ">
+				</figure>
+				<div style="text-align: left; width:40%; font-size: 50%; position: absolute; right:-5%; background-color: lightblue; bottom: 5%;">
+					<p>Same landscape, same extent, different 'grain size'</p>
+				</div>
+			</div>
+			<aside class="notes">
+				<script>
+
+					document.write(String(text.f19_3, text.f19_3_f_1, text.f19_3_f_2,text.f19_3_f_3))
+				</script>
+			</aside>
+				</section>
+
+
+			</section>	
+
+			<!-- Chapter 3: Hierarchy theory -->
+			<section id="Chapter 3.3">
+				
+				<section >
+					<h1>[3.3] Hierarchy theory</h1>
+
+					<aside class="notes">
+						<script>
+
+							document.write(String(text.f20_0))
+						</script>
+					</aside>
+				</section>
+
+				<!--Holons-->	
+				<section >
+				<h2> Holons</h2>
+				<div class="fragment" id="f20_1_f">
+				<ul style="text-align: left; ">
+					<li style="font-size: 80%;">Holons</li>
+					<ul style="font-size: 60%; width:50%">
+						<li>
+							Greek <i>holos </i> [whole] and ‐on [part] (proposed by Koestler, 1967)
+						</li>
+						<li>
+							“any stable sub‐whole in a hierarchy” (Haigh, 1987)
+						</li>
+						<li>
+							defined by a set of governing principles =‘canon’
+						</li>
+						<li>
+							determines invariant properties and options of responses to environmental changes (flexible strategies)
+						</li>
+					</ul>
+				</div>
+					<figure>
+						<img  src="OBIA - Image Interpretation_folder/03_11_holons.PNG" style="position:absolute;background: none; border: none;box-shadow: none; right:0%; bottom:0%; width:35%"> 
+					</figure>
+					<div style="text-align: left; width: 40%; font-size: 40%; position: absolute; top:20%; right:0%; background-color: lightblue;">
+						<p> "[...] self-creating, open sytsem, governed by a set of laws which regulate its coherence, stability, structure and functioning" (HAIGH,1987)</p>
+					</div>
+
+					
+				</ul>
+				<aside class="notes">
+					
+					<script>
+						document.write(String(text.f20_1, text.f20_1_f));
+					</script>					
+					
+				</aside>
+
+				</section>
+
+
+			</section>
+
+			<!--Chapter 4: HPDP-->
+			<section id="Chapter 3.4">
+				
+				<section >
+					<h1>[3.4] Hierarchical Patch Dynamics</h1>
+
+					<aside class="notes">
+						<script>
+
+							document.write(String(text.f21_0))
+						</script>
+					</aside>
+				</section>
+
+				<!--Decomposability,holarchy part 1-->	
+				<section >
+				<h2>Decomposability & holarchy </h2>
+				<ul style="text-align: left; width:60%">
+					<li> Landscape as a system</li>
+					<ul style="font-size: 60%; width:60%">
+						<li>
+							Consisting of interacting subsystems
+						</li>
+						<li>
+							Hierarchical Patch Dynamics Paradigm (HPDP) , Wu 1999
+						</li>
+					</ul>
+					<div class="fragment" id="f21_1_f">
+					<li> Decomposition</li>
+					<ul style="font-size: 60%; width:50%">
+						<li> Separating a system into its components according to their scale and ordering them hierarchically </li>
+					</ul>
+				</div>
+
+				</ul>
+				<div style="text-align: left;font-size: 40%; position:absolute; background-color: lightblue; width: 20%; top:30%; right: 15%">
+					<p>
+						Decomposing
+					</p>
+				</div>
+				<div style="text-align: left;font-size: 40%; position:absolute; background-color: lightblue; width: 20%; top:30%; right:0%">
+					<p >
+						Hierarchical organization
+					</p>
+				</div>
+				<figure>
+					<img src="OBIA - Image Interpretation_folder/03_12_decomposition.PNG"  style="position:absolute;background: none; border: none;box-shadow: none; right:20%; top:40%; width:15%">
+					<img src="OBIA - Image Interpretation_folder/03_12_hierachical_org.PNG"  style="position:absolute;background: none; border: none;box-shadow: none; right:0%; top:40%; width:15%">
+				</figure>
+				<aside class="notes">
+					
+					<script>
+						document.write(String(text.f21_1, text.f21_1_f));
+					</script>					
+					
+				</aside>
+				
+				
+				</section>
+				<!-- Quotation-->
+				<section >
+				<h2> Quotation</h2>
+				<figure>
+					<img src="OBIA - Image Interpretation_folder/03_12_Qutation_1.PNG" style="background: none; border: none;box-shadow: none">
+				</figure>
+				<figcaption>
+					<p style="font-size:70%">Wu& Louks 1995  </p>
+					<div class="fragment" id="f21_2_f">
+					<p style="font-size:70%"> and Simon 1962,1973</p>	
+					</div>
+				</figcaption>
+				<aside class="notes">
+					
+					<script>
+						document.write(String(text.f21_2, text.f21_2_f));
+					</script>					
+					
+				</aside>
+				</section>
+				<!--Decomposability,holarchy part 2-->
+				<section >
+				<h2>Decomposability & holarchy</h2>
+				<ul style="text-align: left;width: 50%; position: absolute;left:0%; font-size:80%">
+					<li>
+						Scaling Ladder
+					</li>
+					<ul style="font-size: 70%; width: 70%;">
+						<li>
+							Every portion of land contains objects of many different scales resulting in a series of scales
+						</li>
+					</ul>
+					<li>
+						Boundaries within the scale spectrum
+					</li>
+					<ul style="font-size: 70%;">
+						<li>
+							Thresholds between ranges of scale are never crisp
+						</li>
+					</ul>
+				</ul>
+				<figure style="position: absolute; right:-2%; width: 40%; top:60%">
+					<img src="OBIA - Image Interpretation_folder/03_13_scaling_ladder.PNG"style="background: none; border: none;box-shadow: none;" >
+				</figure>
+				<aside class="notes">
+					
+					<script>
+						document.write(String(text.f21_3));
+					</script>					
+					
+				</aside>
+
+
+				</section>
+
+				<!--Decomposability,holarchy part 3-->
+				<section >
+				<h2>Decomposability & holarchy</h2>
+				<ul style="text-align: left; width:30%;position: relative;left:-30%">
+					<li style="font-size: 70%;" > Subsystems </li>
+					<ul style="font-size: 60%;">
+						<li>
+							Horizontal and vertical	coupling
+						</li>
+					</ul>
+					<li style="font-size: 70%;"> 
+						Self‐assertive tendencies
+					</li>
+					<ul style="font-size: 60%;">
+						<li>
+							rather independent from each other
+						</li>
+					</ul>
+					<li style="font-size: 70%;">
+						Integrative tendencies
+					</li>
+					<ul style="font-size: 60%;">
+						<li>
+							Part‐being of constituting elements
+						</li>
+					</ul>
+				</ul>
+				<figure>
+					<img  src ="OBIA - Image Interpretation_folder/03_14_Multi_scale.PNG" style="background: none; border: none;box-shadow: none; position: absolute; right:0%; top:15%; width:60%">
+				</figure>
+				<aside class="notes">
+					
+					<script>
+						document.write(String(text.f21_4));
+					</script>					
+					
+				</aside>
+				
+				</section>
+
+
+			</section>
+
+
+			<!--Chapter 5: Multi-scale imagery-->
+			<section id="Chapter 3.5" >
+				
+				<section style="top: 287px; display: block;" class="" aria-hidden="true" data-index-h="3" data-index-v="0">
+					<h1>[3.5] Multi-scale imagery</h1>
+
+					<aside class="notes">
+						<script>
+
+							document.write(String(text.f22_0))
+						</script>
+					</aside>
+				</section>
+
+				<!--Multi-scale imagery-->	
+				<section >
+				<h2>Multiple scales in images</h2>
+				<ul style="text-align: left;width: 50%; left:-15%">
+					<li style="font-size:60%; width:60%" >
+					Definition of fundamental objects in remote sensing images
+					</li>
+					<ul style="font-size: 50%;width:50%">
+						<li>
+							Integrated objects vs. aggregates objects
+						</li>
+					</ul>
+					<li style="font-size:60%; width:60%" >
+						Interaction of objects within and across scale domains
+					</li>
+					<ul style="font-size: 50%; width:50%">
+						<li>
+							What <strong> scales</strong> should be chosen for the different objects?
+						</li>
+						<li>
+							At <strong>what scale </strong> should hierarchies be established?
+						</li>
+						<div class="fragment" id="f22_1_f_1">
+						<li>
+						Is a <strong>pan‐hierarchical </strong> representation sufficient or do we need <strong>regionalized </strong> or <strong>class‐specific </strong> segmentation?
+						</li>
+						</div>
+					</ul>
+
+				</ul>
+				<div class="fragment" id="f22_1_f_2">
+				<figure>
+					<img src="OBIA - Image Interpretation_folder/03_15_MultiScale_imagery.PNG" style="background: none; border: none;box-shadow: none; position: absolute; right:0%; top:15%; width:30% " >
+					<img src="OBIA - Image Interpretation_folder/arrow.png" style="background: none; border: none;box-shadow: none; position: absolute; right:30%; top:20%; width:10%; transform:rotate(330deg) ">
+					<img src="OBIA - Image Interpretation_folder/arrow.png" style="background: none; border: none;box-shadow: none; position: absolute; right:30%; top:45%; width:10%; transform:rotate(340deg) ">
+					<img src="OBIA - Image Interpretation_folder/arrow.png" style="background: none; border: none;box-shadow: none; position: absolute; right:30%; top:65%; width:10% ">
+				</figure>
+				<figcaption>
+					<p style="text-align: left;font-size: 50%; position: absolute;right:0%; top:90%">From: Lang,2002</p>
+				</figcaption>
+			</div>
+			<aside class="notes">
+				<script>
+
+					document.write(String(text.f22_1, text.f22_1_f_1, text.f22_1_f_2))
+				</script>
+			</aside>
+				</section>
+
+			</section>
+
+			<!-- Chapter 6: Scale-space analysis-->
+			<section id="Chapter 3.6" >
+				
+				<section >
+					<h1>[3.6] Scale- space analysis</h1>
+
+					<aside class="notes">
+						<script>
+
+							document.write(String(text.f23_0))
+						</script>
+					</aside>
+				</section>
+
+				<!--Scale- space analysis part 1-->	
+				<section >
+				<h2> Scale-space analysis</h2>
+				<ul style="text-align: left; width: 55%;">
+					<li>
+						Linear Scale Space Analysis
+					</li>
+					<ul style="font-size: 70%;">
+						<li>
+							Repetitive smoothing of an image applying a Gauss filter
+						</li>
+						<li>
+							Image objects emerge and disappear in a dynamic process
+						</li>
+					</ul>
+					<li>
+						Multiscale representation
+					</li>
+					<ul style="font-size: 70%;">
+						<li>
+						Stacking of multiple filter layers
+						</li>
+					</ul>
+				</ul>
+				<figure>
+					<img src="OBIA - Image Interpretation_folder/03_16_scale_space_analysis.PNG" style="background: none; border: none;box-shadow: none; position: absolute; right:-5%; top:20%;">
+				</figure>
+				<aside class="notes">
+					<script>
+
+						document.write(String(text.f23_1))
+					</script>
+				</aside>
+				</section>
+
+				<!--Scale- space analysis part 2-->	
+
+				<section >
+				<h2> Scale- space analysis</h2>
+				<ul style="text-align: left;width: 60%;">
+					<li>
+						Blob detection
+					</li>
+					<ul style="font-size: 60%; width: 70%;">
+						<li>
+							Dynamc image objects
+						</li>
+						<li>
+							4 dimensions: x & y, reflection, scale
+						</li>
+						<li>
+							Visualisation as 2D‐blobs (a) vs. 3D Hyper blob	(b)
+						</li>
+					</ul>
+					<li>
+						Scale-Space Events
+					</li>
+					<ul style="font-size: 60%; width: 70%;">
+						<li>
+							<strong>C:</strong> Creation
+						</li>
+						<li>
+							<strong>A:</strong> Annihilation
+						</li>
+						<li>
+							<strong>S,M:</strong> Split and Merge
+						</li>
+					</ul>
+					<li>
+						Application
+					</li>
+					<ul style="font-size: 60%; width: 70%;">
+						<li>
+							E.g. tree crown detection
+						</li>
+					</ul>
+				</ul>
+				<figure>
+					<img src="OBIA - Image Interpretation_folder/03_17_blobDetection_a_b.PNG" style="background: none; border: none;box-shadow: none; position: absolute; right:-20%; top:15%;" >
+					<img src="OBIA - Image Interpretation_folder/03_17_Scale_Space_Events.png" style="background: none; border: none;box-shadow: none; position: absolute; right:8%; top:50%;">
+					<div class="fragment fade-out" id="f23_2_f_1">
+					<img src="OBIA - Image Interpretation_folder/03_17_Scale_Space_Events_1.png" style="background: none; border: none;box-shadow: none; position: absolute; right:8%; top:50%;" >
+					</div>
+					<div class="fragment fade-in-then-out" id="f23_2_f_2">
+					<img src="OBIA - Image Interpretation_folder/03_17_Scale_Space_Events_2.png" style="background: none; border: none;box-shadow: none; position: absolute; right:8%; top:50%;" >
+					</div>
+					<div class="fragment fade-in-then-out" id="f23_2_f_3">
+					<img src="OBIA - Image Interpretation_folder/03_17_Scale_Space_Events_3.png" style="background: none; border: none;box-shadow: none; position: absolute; right:8%; top:50%;" >
+					</div>
+					<div class="fragment fade-in" id="f23_2_f_4">
+					<img src="OBIA - Image Interpretation_folder/03_17_Scale_Space_Events_4.png" style="background: none; border: none;box-shadow: none; position: absolute; right:8%; top:50%;" >
+					</div>
+					<div class="fragment " id="f23_2_f_5">
+					<img src="OBIA - Image Interpretation_folder/03_17_application.PNG" style="background: none; border: none;box-shadow: none; position: absolute; right:60%; top:90%;" >
+					</div>	
+				</figure>
+				<figcaption>
+					<p style="font-size: 50%; text-align: left; position: absolute;right:0%; top: 100%"> From: Hay et al., 2003</p>
+				</figcaption>
+				<aside class="notes">
+					<script>
+
+						document.write(String(text.f23_2, text.f23_2_f_1, text.f23_2_f_2,text.f23_2_f_3,text.f23_2_f_4,text.f23_2_f_5))
+					</script>
+				</aside>
+				</section>	
+
+			</section>
 
 	
-				<!-- ----------------------------------------------------------------------------------------------------------------------------------------------- -->
+	<!-- Lesson 4 Knowledge Representation-->
 
-
-				<!-- AUTHORS: DEFINE SECTIONS WITHIN A SECTION TO GET VERTICAL SLIDES:-->
+	<section section id="Chapter 4.0">
+		
+			
+		<h1>Object-based Image Analysis (OBIA)</h1>
+		<h2>Knowledge Representation</h2>
+		<small>Stefan LANG & Dirk TIEDE</small>
+		<p></p>
+		<p></p>
+		<p style="font-size: 70%;">
+			<b>[1]</b> Knowledge Representation - why? | <b>[2]</b> Experience and Learning |
+			<b>[3]</b> Production Systems | <b>[4]</b> Fuzzy Sets| <b>[5]</b> Image Understanding| <b>[6]</b> Object Categories
+		</p>
+		<p><small>University of Salzburg | Department of Geoinformatics | (c) 2010-2022<br></small></p>
+			
+			
+		<aside class="notes">
+		
+		<script>
+			document.write(String(text.f24_0));
+		</script>					
+		
+		</aside>
+		</section>
+	
+		<!--Chapter 1: Knowledge Representation-->
+		<section id="Chapter 4.1">
+			
+			<section >
+				<h1>[4.1] Knowledge Representation - Why?</h1>
+	
+				<aside class="notes">
+					<script>
+	
+						document.write(String(text.f25_0))
+					</script>
+				</aside>
+			</section>
+	
+			<!--Preamble-->
+			<section >
+			<h2> Why? </h2>
+			<ul style="text-align: left; font-size: 80%;">
+				<li>An intuitive, yet <strong>experience‐</strong> and <strong>culture‐driven</strong> concept of our geographical reality.
+				</li>
+				<li>While single elements are perceived, likewise the entire image is <strong>understood</strong>.
+				</li>
+				<li>
+				Once understanding the <strong>whole scene</strong> we assign meaning, maybe even emotion, to it.
+				</li>
+				<li>
+				To achieve such level in <strong>image analysis</strong> (or at least an approximation), we need to make implicit knowledge <strong>explicit!</strong>
+				</li>
+			</ul>
+			<aside class="notes">
+		
+				<script>
+					document.write(String(text.f25_1));
+				</script>					
 				
-				<!--AUTHORS: Integration of Jupyter Notebooks from VITO-Platform - user authentification not solved yet -->
-				<!--section class="scrollable"> 
-					 <iframe src="https://notebooks.vgt.vito.be/user/emissoni/lab/tree/PLUS_Test.ipynb" width="1481" height="1280" frameborder="0" allowfullscreen="allowfullscreen"></iframe></script>
-				</section-->
-
-
+				</aside>
+			</section>
+	
+			<!--Knowledge representation?-->
+			<section >
+			<h2>Knowledge Representation </h2>
+			<ul style="text-align: left;width:50%; font-size: 70%;">
+				<li>
+					Knowledge plays a key role in the <strong>interpretation‐oriented</strong> parts of the remote sensing process chain  (Campbell 2001)
+				</li>
+				<div class="fragment" id="f25_2_f_1">
+				<li>
+					Colour form, and arrangement evolve certain parts of our experience and knowledge
+				</li>
+				</div>
+				<div class="fragment" id="f25_2_f_2">
+				<li>
+					Object hypotheses tested and verified against what we see
+				</li>
+				<li>
+					 Matching to stored information
+				</li>
+				</div>
+			</ul>
+			<figure>
+				<img src="OBIA - Image Interpretation_folder/02_3_zebra_sample2.png" style="background: none; border: none;box-shadow: none; position: absolute; width:20%; right:0%; top:15%;">
+				<img src="OBIA - Image Interpretation_folder/03_8_Lincoln.png" style="background: none; border: none;box-shadow: none; position: absolute; right:0%; bottom:0%;width:20%">
+				
+			</figure>
+			<aside class="notes">
+		
+				<script>
+					document.write(String(text.f25_2, text.f25_2_f_1, text.f25_2_f_2));
+				</script>					
+				
+				</aside>
+			
+			</section>
+	
+		</section>	
+	
+		<!-- Chapter 2: Experience and Learning-->
+	
+		<section id="Chapter 4.2">
+			
+			<section >
+				<h1>[4.2] Experience and Learning</h1>
+	
+				<aside class="notes">
+					<script>
+	
+						document.write(String(text.f26_0))
+					</script>
+				</aside>
+			</section>
+	
+			<!-- Experience and learning- part 1-->
+			<section >
+			<h2>Experience and Learning </h2>
+			<ul style="text-align: left; width: 70%;">
+				<li>
+					Training feeds knowledge through <strong>formalized learning </strong>	
+				</li>
+				<div class="fragment" id="f26_1_f_1">			
+				<li>
+					Artificial intelligence (AI)
+				</li>
+				</div>
+				<ul style="font-size:70%">
+					<div class="fragment" id="f26_1_f_2">
+					<li>
+						Procedural knowledge vs. structural knowledge
+					</li>
+					</div>
+					<div class="fragment" id="f26_1_f_3">
+					<li>
+						Knowledge organizing systems (KOS), formal concept analysis (FCA)
+					</li>
+					</div>
+					<div class="fragment" id="f26_1_f_4">
+					<li>
+						Semantic nets
+					</li>
+					</div>
+				</ul>
+				<div class="fragment" id="f26_1_f_5">
+				<li>
+					Artificial neural networks
+				</li>
+				</div>
+				<ul style="font-size:70%">
+					<div class="fragment" id="f26_1_f_6">
+					<li>
+						Neuron‐like machines
+					</li>
+					<li>
+						Adaptive vector coding with tuned weights weights and synapses
+					</li>
+					</div>
+					<div class="fragment" id="f26_1_f_7">
+					<li>
+						But otherwise black box system and limited transparency
+					</li>
+					</div>
+					
+				</ul>
+			</ul>
+			<figure>
+				<img src="OBIA - Image Interpretation_folder/04_06_Learning.PNG" style="background: none; border: none;box-shadow: none; position: absolute; width:40%; right: -10%; top:50%;">
+			</figure>
+			<aside class="notes">
+				<script>
+	
+					document.write(String(text.f26_1, text.f26_1_f_1, text.f26_1_f_2, text.f26_1_f_3, text.f26_1_f_4, text.f26_1_f_5, text.f26_1_f_6, text.f26_1_f_7))
+				</script>
+			</aside>
+			</section>
+	
+			<!-- Experience and learning- part 2-->
+			<section>
+			<h2>Experience and Learning </h2>
+			<ul style="text-align: left; width: 60%; font-size: 80%;">
+				<li>
+					 Natural computing (Binning et al. 2002)
+				</li>
+				<ul style="font-size: 80%; width:80%">
+					<div class="fragment" id="f26_2_f_1">
+					<li>
+						Parallel nature of natural thinking and	computing
+					</li>
+					<li>
+						Expert systems with <strong>net‐like </strong> character
+					</li>
+					</div>
+					<div class="fragment" id="f26_2_f_2">
+					<li>
+						<strong>Self‐organizing, semantic,</strong> and <strong>self‐similar</strong> network (<strong>Triple‐S</strong>)
+					</li>
+					</div>
+					<div class="fragment" id="f26_2_f_3">
+					<li>
+						Fractal machine with excitements and thresholds (activation)
+					</li>
+					<li>
+						Inheritance concept
+					</li>
+					<li>
+						Unit delineation and labelling in cyclic manner
+					</li>
+					</div>
+				</ul>
+			</ul>
+			<figure>
+				<img src="OBIA - Image Interpretation_folder/04_7_natural_computing.PNG" style="background: none; border: none;box-shadow: none; position: absolute; width:40%; right: -20%; top:30%;">
+			</figure>
+			<figcaption>
+				<p style="font-size: 50%; text-align: left;position: absolute; bottom: 15%; right:-20%">http://www.fractal.org</p>
+			</figcaption>
+			<aside class="notes">
+				<script>
+	
+					document.write(String(text.f26_2,text.f26_2_f_1, text.f26_2_f_2, text.f26_2_f_3 ))
+				</script>
+			</aside>
+			</section>
+	
+		</section>	
+		<!-- Chapter 3: Production Systems-->
+		<section id="Chapter 4.3">
+			
+			<section>
+				<h1>[4.3] Production Systems</h1>
+	
+				<aside class="notes">
+					<script>
+	
+						document.write(String(text.f27_0))
+					</script>
+				</aside>
+			</section>
+	
+			<!--Rule-based prouction system-->	
+			<section>
+			<h2>Rule-based production system</h2>
+			<ul style="text-align: left;width: 50%; font-size: 70%; "> 
+				<li style="font-size: 80%; width:60%">
+					Rule‐based approach
+				</li>
+				<ul style="font-size: 70%; width:60%">
+					<li>
+						Logical inference (if … then)
+					</li>
+					<li>
+						 Knowledge needs to be encoded in <strong>rules</strong>
+					</li>
+					<li>
+						Transparency of intelligent system
+					</li>
+				</ul>
+				<div class='fragment'id='f27_1_f_1'>
+				<li style="font-size: 80%; width:60%">
+					Challenges
+				</li>
+				<ul style="font-size:80%;width:60%">
+					<li>
+						How to <strong>encode</strong> implicit knowledge into rules?
+					</li>
+					<li>
+						How we guarantee guarantee <strong>integrity</strong> of such rule‐sets?
+					</li>
+				</ul>
+				</div>
+				<div class='fragment'id='f27_1_f_2'>
+				<li style="font-size:80%;width:60%">
+					Procedural and semantic dimension
+				</li>
+				</div>
+				<div class='fragment'id='f27_1_f_3'>
+				<li style="font-size:80%; width:60%">
+					 Considering  vagueness in class assignment &#10142 fuzzy approach
+				</li>
+			</div>
+			</ul>
+			<figure>
+				<img src="OBIA - Image Interpretation_folder/04_8_production_system.PNG" style="background: none; border: none;box-shadow: none; position: absolute; width:40%; right:-10%; top:30%;">
+			</figure>
+			<aside class="notes">
+				<script>
+	
+					document.write(String(text.f27_1, text.f27_1_f_1, text. f27_1_f_2, text.f27_1_f_3))
+				</script>
+			</aside>
+			</section>
+	
+		</section>	
+		<!-- Chapter 4: Fuzzy Sets--->
+		<section id="Chapter 4.4" >
+			
+			<section>
+				<h1>[4.4] Fuzzy Rule Sets</h1>
+	
+				<aside class="notes">
+					<script>
+	
+						document.write(String(text.f28_0))
+					</script>
+				</aside>
+			</section>
+			<!-- Fuzzy rule sets- part 1-->
+			<section>
+			<h2> Fuzzy Rule Sets</h2>
+			<ul style="text-align: left; width: 70%; font-size: 70%;">
+				<li>
+					We would all consider freshly brewed tea as something <font color="red">“hot”</font>
+				</li>
+				<div class='fragment' id='f28_1_f_1'>
+				<li>
+					Eventually the tea gets cold … just when exactly and at which temperature?
+				</li>
+							
+				<li>
+					We do not know precisely, but:
+				</li>
+				</div>
+				
+				<ul style="font-size: 70%; width:50%">
+					<div class='fragment' id='f28_1_f_2'>
+					<li>
+						We all have a concept of “warm”, “cold”
+					</li>
+					</div>
+					<div class='fragment' id='f28_1_f_3'>
+					<li>
+						We <strong>simplify</strong> a gradual phenomenon and <strong>categorize</strong> it
+					</li>
+					</div>
+					<div class='fragment' id='f28_1_f_4'>
+					<li>
+						Boundaries between these concepts are not <strong>crisp</strong> 
+					</li>
+					</div>
+					<div class='fragment' id='f28_1_f_5'>
+					<li>
+						The category becomes <strong>clearer</strong> with increasing distance from boundaries
+					</li>
+					</div>
+				</ul>
+			</ul>
+			<figure>
+				<img src="OBIA - Image Interpretation_folder/03_9_tea.PNG" style="background: none; border: none;box-shadow: none; position: absolute; width:30%; right: 0%; top:50%;">
+			</figure>
+			<figcaption>
+				<p style="font-size: 60%; text-align: left; position: absolute; bottom:0%; right:0%; font-size: 40%;">www.screenplay-contest.com</p>
+			</figcaption>
+			<aside class="notes">
+				<script>
+	
+					document.write(String(text.f28_1, text.f28_1_f_1, text.f28_1_f_2, text.f28_1_f_3, text.f28_1_f_4, text.f28_1_f_5))
+				</script>
+			</aside>
+			</section>
+	
+			<!-- Fuzzy rule sets- part 2-->
+			<section >
+			<h2> Fuzzy Rule Sets</h2>
+			<ul style="text-align: left;width:40%; font-size: 70%;">
+				
+				<li>
+					Vagueness in class description
+				</li>
+			
+				<ul style="font-size: 70%;">
+					<div class='fragment' id='f28_2_f_1'>
+					<li>
+						Imprecise human thinking and vague (linguistic) class descriptions
+					</li>
+					</div>
+					<div class='fragment' id='f28_2_f_2'>
+					<li>
+						Uncertainty in sensor measurements
+					</li>
+					</div>
+					<div class='fragment' id='f28_2_f_3'>
+					<li>
+						Class mixtures due to limited (spatial and spectral) resolution
+					</li>
+					</div>
+				</ul>
+				<div class='fragment' id='f28_2_f_4'>
+				<li>
+					Potential Potential of fuzzy rule sets
+				</li>
+				</div>
+				<ul style="font-size: 70%;">
+					<div class='fragment' id='f28_2_f_5'>
+					<li>
+						Express each object’s membership to more than one class
+					</li>
+					</div>
+					<div class='fragment' id='f28_2_f_6'>
+					<li>
+						Probability of class assignments
+					</li>
+				</div>
+				</ul>
+				</ul>
+				<figure>
+					<img src="OBIA - Image Interpretation_folder/04_10_fuzzyRuleSets.PNG" style="background: none; border: none;box-shadow: none; position: absolute; width:30%; right: -5%; top:20%;">
+				</figure>
+				<figcaption>
+					<p style="font-size: 40%; text-align: left; position: absolute; right:0% ; bottom:8%">Source: unkown</p>
+				</figcaption>
+				<aside class="notes">
+					<script>
+	
+						document.write(String(text.f28_2, text.f28_2_f_1, text.f28_2_f_2, text.f28_2_f_3, text.f28_2_f_4, text.f28_2_f_5, text.f28_2_f_6))
+					</script>
+				</aside>
+			
+			</section>
+	
+			<!-- Fuzzy rule sets- part 3-->
+			<section >
+			<h2>Fuzzy Rule Sets</h2>
+			<ul style="text-align: left; width:70%; font-size: 60%;">
+				<li style="font-size: 80%;"> 
+					Transition from a crisp to a fuzzy system (To decide if a feature value belongs to a fuzzy set)
+				</li>
+				<ul style="font-size:70%; width:50%">
+					<li>
+						The fuzzy set (A):
+					</li>
+					<ul  >
+						<li>
+							Is a certain subset of values of the whole range of an object feature X (e.g. NIR‐band)
+						</li>
+						<li>
+							Represents an object feature class (e.g. forest) within one object feature
+						</li>
+					</ul>
+					<li>
+						Replace boolean logic (“false“ and “true“) of the membership value μ by acontinuous continuous range of [0, …, 1]
+					</li>
+					<li>
+						Define membership function μ(x)
+					</li>
+					<ul >
+						<li>
+							Assigning to every object feature value x a membership value μ
+						</li>
+						<li>
+							If μ > 0, then x belongs to the fuzzy set A
+						</li>
+						<li>
+							Relation between object feature and	classification
+						</li>
+						<p style="margin-top: 0%; margin-bottom: 0%;">
+							&#8658 Choice and parameterisation of the membership function influence the quality of the classification
+						</p>
+						<p style="margin-top: 0%;">
+							&#8658 Introducing expert knowledge
+						</p>
+	
+					</ul>
+				</ul>
+			</ul>
+			<figure>
+				<img src="OBIA - Image Interpretation_folder/04_11_MembershipFunction.PNG" style="background: none; border: none;box-shadow: none; position: absolute; width:40%; right: -5%; top:40%;">
+				<div class='fragment' id='f28_3_f_1'>
+					<img src="OBIA - Image Interpretation_folder/04_11_MembershipFunction_1.png" style="background: none; border: none;box-shadow: none; position: absolute; width:40%; right: -5%; top:40%;">
+				</div>
+				<div class='fragment' id='f28_3_f_2'>
+					<img src="OBIA - Image Interpretation_folder/04_11_MembershipFunction_2.PNG" style="background: none; border: none;box-shadow: none; position: absolute; width:40%; right: -5%; top:40%;">
+				</div>
+				<div class='fragment' id='f28_3_f_3'>
+					<img src="OBIA - Image Interpretation_folder/04_11_MembershipFunction_3.PNG" style="background: none; border: none;box-shadow: none; position: absolute; width:40%; right: -5%; top:40%;">
+				</div>
+				<div class='fragment' id='f28_3_f_4'>
+					<img src="OBIA - Image Interpretation_folder/04_11_MembershipFunction_4.PNG" style="background: none; border: none;box-shadow: none; position: absolute; width:40%; right: -5%; top:40%;">
+				</div>
+				<div class='fragment' id='f28_3_f_5'>
+					<img src="OBIA - Image Interpretation_folder/04_11_MembershipFunction_5.PNG" style="background: none; border: none;box-shadow: none; position: absolute; width:40%; right: -5%; top:40%;">
+				</div>
+				<div class='fragment' id='f28_3_f_6'>
+				<img src="OBIA - Image Interpretation_folder/04_11_MembershipFunction_6.PNG" style="background: none; border: none;box-shadow: none; position: absolute; width:40%; right: -5%; top:40%;">
+				</div>
+			</figure>
+			<aside class="notes">
+				<script>
+	
+					document.write(String(text.f28_3, text.f28_3_f_1, text.f28_3_f_2, text.f28_3_f_3, text.f28_3_f_4, text.f28_3_f_5, text.f28_3_f_6 ))
+				</script>
+			</aside>
+			</section>
+	
+			<!-- Fuzzy rule sets- part 4-->
+			<section >
+			<h2> Fuzzy Rule Sets</h2>
+			<ul style="text-align: left;width:70%; font-size: 70%;">
+				<li>
+					Fuzzy rule-base
+				</li>
+				<ul style="font-size: 75%; width:50%">
+					<li>
+						Fuzzy rule “if – then” for assigning an object to a class
+					</li>
+					<ul style="font-size: 70%;">
+						<li>
+							If feature value x (of the object) is member of the fuzzy set (e.g. associated with the class forest), the image object is a member of the land-cover forest
+						</li>
+					</ul>
+					<li>
+						Combination of fuzzy sets to create advanced fuzzy rules
+					</li>
+					<ul style="font-size: 70%;">
+						<li>
+							Operator “AND” – Minimum operation
+						</li>
+						<li>
+							▪ Operator “OR” – Maximum operation
+						</li>
+						<li>
+							▪ Operator “NOT” – inversion of a fuzzy value: returns 1-fuzzy value
+						</li>				
+														
+					</ul>
+					<li>
+						Fuzzy rule‐base (combination of the fuzzy rules of all classes) delivers a fuzzy classification
+					</li>
+					<ul style="font-size: 70%;">
+						<li>
+							Every object has a tuple of return values assigned to it  with the degrees of membership to each class/degrees of class assignment
+						</li>
+						<li>
+							Since these values are possibilities to belong to a class, they don’t have to add up to 1 (unlike probabilities)
+						</li>
+					</ul>
+				</ul>
+			</ul>
+			<figure>
+				<img src="OBIA - Image Interpretation_folder/04_12_fuzzy_rule_base.PNG" style="background: none; border: none;box-shadow: none; position: absolute; width:35%;  right: 0%; top:20%;">
+			</figure>
+			<aside class="notes">
+				<script>
+	
+					document.write(String(text.f28_4))
+				</script>
+			</aside>
+			</section>
+	
+			<!-- Fuzzy rule sets- part 5-->
+			<section>
+			<h2> Fuzzy Rule Sets</h2>
+			<ul style="text-align: left; width: 70%; font-size: 70%;">
+				<li>
+					Comparison of membership degrees
+				</li>
+				<ul style="font-size: 80%">
+					<li >
+						Reliability of class assignment
+					</li>
+					<ul style="font-size: 80%; width:60%">
+						<li>
+						 The higher the degree of the most possible class, the more reliable is the assignment
+						</li>
+					</ul>
+					<li>
+						Stability of classification
+					</li>
+					<ul style="font-size: 80%;width:60%">
+						<li>
+							Stable classification for differences between highest membbership value and other values
+						</li>
+					</ul>
+					<li>
+						Equal membership degrees
+					</li>
+					<ul style="font-size: 80%; width:60%">
+						<li>
+							High values – reliability for both classes: classes cannot be distinguished distinguished with the provided provided classification
+						</li>
+						<li>
+							Low values – unreliable classification (use threshold of a least required membership degree to ensure quality of classification)
+						</li>
+					</ul>
+				</ul>
+				<li>
+					Defuzzification
+				</li>
+					<ul style="font-size: 80%;; width:70%">
+						<li>
+							Maximum membership degree of fuzzy classification used as crisp classification
+						</li>
+					</ul>
+				<figure>
+					<img src="OBIA - Image Interpretation_folder/04_12_Membershipfunctions.PNG" style="background: none; border: none;box-shadow: none; position: absolute;  right: -20%; top:30%;">
+				</figure>
+	
+				
+				<aside class="notes">
+					<script>
+	
+						document.write(String(text.f28_5))
+					</script>
+				</aside>
+			
+			</section>
+	
+		</section>
+	
+		<!-- Chapter 5: Image understanding-->
+		<section id="Chapter 4.5" >
+			
+			<section >
+				<h1>[4.5] Image Understanding</h1>
+	
+				<aside class="notes">
+					<script>
+	
+						document.write(String(text.f29_0))
+					</script>
+				</aside>
+			</section>
+	
+			<!-- Image understanding-->
+			<section >
+				<h3 style= "position: absolute;top: -100%; text-align: left; right:20%"> Image Understanding</h3>
+			<ul style="font-size: 70%;">
+				<div class='fragment' id='f29_1_f_1'>
+				<p style="position: absolute; top:-20%; left:0%; width: 15%;font-size:70%;text-align: left; padding:1px; border:2px solid blue">
+					 <strong>a. Definition</strong>
+				</p>
+			
+				<p style="position: absolute; top:-50%; left:18%;width: 50%;font-size:70%;text-align: left; background-color: lightblue;">
+					Image understanding <strong>UI</strong> is a process leading to the description of the image content (= <strong>reconstruction</strong> of an image scene) (Prinz, 1994)
+				</p>	
+	
+				<p style="position: absolute; top:-15%; right:15%;width: 15%;font-size:70%;text-align: left; padding:2px; border:2px solid blue">
+					<strong>b. Extent of UI</strong>
+				</p>
+								
+				<p style="position: absolute; top:40%; right:5%;width: 30%;font-size:70%;text-align: left; background-color: lightblue;">
+				Reaching from signals (image data) to a <strong>symbolic representation</strong> of the scene content
+				</p>
+							
+				<p style="position: absolute; bottom:-150%; right:10%;width: 20%;font-size:70%;text-align: left; padding:2px; border:2px solid blue">
+					<strong> c. Conditions for IU</strong>
+				</p>
+				</div>	
+				<div class='fragment' id='f29_1_f_2'>
+				<div  style="position: absolute; bottom:-460%; right:5%;width: 30%;font-size:70%;text-align: left; background-color: lightblue;">
+					<ul>
+						Outcome depends on the domain of interest of the interpeter, defined by:
+					<li>
+						Underlying <strong>research question</strong>
+					</li>
+					<li>
+						Specific <strong> field of application</strong>
+					</li>
+					<li>
+						<strong> A priori knowledge</strong> and <strong> experience</strong> of the interpreter
+					</li>
+					</ul>
+					
+				</div>	
+	
+				<div  style="position: absolute; bottom:-200%; right:45%;width: 20%;font-size:70%;text-align: left; padding:2px; border:2px solid blue">
+					<strong> d. Output description</strong>
+				</div>
+										
+				<div  style="position: absolute; bottom:-430%; right:38%;width: 30%;font-size:70%;text-align: left; background-color: lightblue;">
+					<ul>
+						<li>
+							Description of real-world objects and their <strong>relationship</strong> in the specific scene
+						</li>
+						<li>
+							Resulting in thoroughly described <strong> features</strong> (not mere listing and labelling of features)
+						</li>
+					</ul>
+				</div>
+						
+				<div  style="position: absolute; bottom:-200%; left:0%;width: 20%;font-size:70%;text-align: left; padding:2px; border:2px solid blue">
+					<strong> e. Knowledge input</strong>
+				</div>
+							
+				<div  style="position: absolute; bottom:-350%; left:0%;width: 30%;font-size:70%;text-align: left; background-color: lightblue;">
+					<ul>
+					Process is driven by
+					<li>
+						Utilisation of procedural <strong>knowledge</strong>
+					</li>
+					<li>
+						Transformation of <strong>structural</strong> knowledge
+					</li>
+				</ul>
+				</div>			
+				
+				<div  style="position: absolute;  bottom:-20%; left:0%;width: 20%;font-size:70%;text-align: left; padding:2px; border:2px solid blue">
+					<strong> f. Involved disciplines</strong>					
+				</div>		
+				
+				<div  style="position: absolute;  bottom:-120%; left:0%;width: 30%;font-size:70%;text-align: left; background-color: lightblue;">
+					<ul>
+					<li>
+						Image preprocessing
+					</li>
+					<li>
+						Pattern recognition
+					</li>
+					<li>
+						Artificial intelligence
+					</li>
+				</ul>
+				</div>
+			
+				<figure>
+					<img src="OBIA - Image Interpretation_folder/arrow_gebogen.PNG" style="background: none; border: none;box-shadow: none; position: absolute;  left: 40%; bottom:-120%;width:15% ">
+				</figure>
+			</div>	
+			</ul>
+			<aside class="notes">
+				<script>
+	
+					document.write(String(text.f29_1, text.f29_1_f_1, text.f29_1_f_2))
+				</script>
+			</aside>
+		
+	
+	
+	
+			</section>
+	
+			<!--IU and OBIA -part 1-->
+			<section >
+			<h2>IU and OBIA</h2>
+			<figure>
+				<img src="OBIA - Image Interpretation_folder/04_14_IU.PNG"	style="background: none; border: none;box-shadow: none; width:60% ">
+				<img src="OBIA - Image Interpretation_folder/04_17_arrrow_script.PNG"	style="background: none; border: none;box-shadow: none; position: absolute;left:0% ; width:20%">
+			</figure>
+			<aside class="notes">
+				<script>
+	
+					document.write(String(text.f29_2))
+				</script>
+			</aside>
+			</section>
+	
+			<!--IU and OBIA -part 2-->
+			<section>
+				<h2>IU and OBIA</h2>
+				<figure>
+					<img src="OBIA - Image Interpretation_folder/04_18_UI_part2.PNG" style="background: none; border: none;box-shadow: none; width:60% ">
+					<img src="OBIA - Image Interpretation_folder/04_18_UI_arrow_box.PNG"	style="background: none; border: none;box-shadow: none; position: absolute;top:20%;left:5% ; width:15%">
+				</figure>
+				<aside class="notes">
+					<script>
+	
+						document.write(String(text.f29_3))
+					</script>
+				</aside>
+				</section>
+	
+			<!--IU and OBIA -part 3-->
+			<section >
+				<h2>IU and OBIA</h2>
+				<figure>
+					<img src="OBIA - Image Interpretation_folder/04_18_UI_part3.PNG" style="background: none; border: none;box-shadow: none; width:70% ">
+					<img src="OBIA - Image Interpretation_folder/04_18_arrow_box_2.PNG"	style="background: none; border: none;box-shadow: none; position: absolute;top:20%;left:0% ; width:15%">
+				</figure>
+				<aside class="notes">
+					<script>
+	
+						document.write(String(text.f29_4))
+					</script>
+				</aside>
+				</section>
+	
+			<!--IU and OBIA -part 4-->
+			<section >
+				<h2>IU and OBIA</h2>
+				<figure>
+					<img src="OBIA - Image Interpretation_folder/04_20_UI_part4.PNG" style="background: none; border: none;box-shadow: none; width:70% ">
+					<img src="OBIA - Image Interpretation_folder/04_20_arrow_box_3.PNG"	style="background: none; border: none;box-shadow: none; position: absolute;top:20%;left:0% ; width:15%">
+				</figure>
+				<aside class="notes">
+					<script>
+	
+						document.write(String(text.f29_5))
+					</script>
+				</aside>
+				</section>
+	
+	
+		</section>			
+	
+		<!-- Chapter 6: Object categories-->
+		<section id="Chapter 4.6" >
+			
+			<section >
+				<h1>[4.5] Object Categories</h1>
+	
+				<aside class="notes">
+					<script>
+						document.write(String(text.f30_0))
+					</script>
+				</aside>
+			</section>
+	
+			<!-- Object categories -part 1-->
+			<section >
+			<h2>Object categories</h2>
+			<ul style="text-align: left; width:60%">
+				<li>
+					<strong> Lang, S., F. Albrecht, S. Kienberger & D.Tiede (2010),Object validity for operational tasks in a policy context. Journal for Spatial Science, 55(1),9-22. </strong>
+				</li>
+				<li>
+					Implications of OBIA image understanding and basic objct ontology in general
+				</li>
+			</ul>
+			<figure>
+				<img src="OBIA - Image Interpretation_folder/04_21_object_categories.PNG" style="background: none; border: none;box-shadow: none; position:absolute; right:0%; top:15%">
+			</figure>
+			<aside class="notes">
+				<script>
+					document.write(String(text.f30_1))
+				</script>
+			</aside>
+			</section>
+	
+			<!-- Object categories -part 2-->
+			<section >
+			<h2> Object Categories</h2>
+			<div style="position: absolute">
+			<figure >
+				<img src="OBIA - Image Interpretation_folder/04_22_bona_fide.PNG" style="background: none; border: none;box-shadow: none;">
+			</figure>				
+			<div style="text-align: left;width: 80%; font-size:50%; position: absolute;bottom:-50%; left:0%">
+			<ul >
+				<li>
+					<strong>Bona Fide objects</strong>
+				</li>
+				<li> With 'natural' boundaries</li>
+				<li>Correspond to local physical discontinuities</li>
+				<li> Perceived by people in more or less the same way</li>
+			</ul>
+			</div>
+			<div style="text-align: left;width:90%; font-size:50%; position: absolute; left:80%; top:15%">
+				<ul>
+					<li>
+						<strong> Composite Objects</strong>
+					</li>
+					<li>
+						Real-world modelled objects
+					</li>
+					<li>
+						Correspond to functional homogeneity
+					</li>
+					<li>
+						Perceived by experts in similar way (convention)
+					</li>
+				</ul>
+			</div>					
+			<figure >
+				<img src="OBIA - Image Interpretation_folder/04_22_composite_objects.PNG" style="background: none; border: none;box-shadow: none; position:absolute; left:90%; top:80%">
+			</figure>
+			<figure >
+				<img src="OBIA - Image Interpretation_folder/04_22_fiat_objcts.PNG" style="background: none; border: none;box-shadow: none;position:absolute; right:-170%; top:10%">
+			</figure>
+			<div style="text-align: left;width:90%; font-size:50%; position: absolute; right:-160%; bottom:-50%">
+				<ul>
+					<li>
+						<strong> (Conceptual) Fiat objects</strong>
+					</li>
+					<li>
+						With 'un-natural' boundaries
+					</li>
+					<li>
+						Correspond to no genuine heterogeneity
+					</li>
+					<li>
+						Objects not obvious in the landscape
+					</li>
+				</ul>
+	
+			</div>
+			<div style="text-align: left;width:90%; font-size:30%; position: absolute; right:-190%; bottom:-70%">
+				<p>cf.Lang et al., 2010 </p>
+			</div>
+	
+			</div>	
+			<aside class="notes">
+				<script>
+					document.write(String(text.f30_2))
+				</script>
+			</aside>					
+			</section>
+	
+			<!-- Object categories -part 3-->
+			<section >
+			<h2> Object Categories</h2>
+			<figure>
+				<img src="OBIA - Image Interpretation_folder/04_23_object_categories.PNG" style="background: none; border: none;box-shadow: none;" >
+			</figure>
+			<figcaption>
+				<p style="font-size: 50%;"> From: Lang et al., 2010</p>
+			</figcaption>
+			<aside class="notes">
+				<script>
+					document.write(String(text.f30_3))
+				</script>
+			</aside>
+			</section>
+	
+	
+		</section>	
 			
 
 		</div>
