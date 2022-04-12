@@ -295,93 +295,91 @@ var text={
 	
 // Capitel 3: Basic concepts of hierarchy theory
 	
-	f17_0:'Welcome to Lesson 3 - Basic concepts of hierarchy theory. Here we will take a closer look on the concept of scale, and dig a bit into the secrets of hierarchy theory. We will see how this can be used for multi-scale image analysis. This is the content of lesson 3 – again 5 subchapters: (1) Relevance of multi-scale representation; (2) Scales and scaled representation; (3) Decomposition and holarchy; (4) Multi-scale approach with remote sensing; (5) Hierarchical patch dynamics paradigm (HPDP)',
+	f17_0:'Welcome to Lesson 3 - Basic concepts of hierarchy theory. Here we will take a closer look on the concept of scale, and dig a bit deeper into the secrets of hierarchy theory. We will see how it is useful for multi-scale image analysis. This is the content of lesson 3 with 5 subchapters: (1) Relevance of multi-scale representation; (2) Scales and scaled representation; (3) Decomposition and holarchy; (4) Multi-scale approach with remote sensing; (5) Hierarchical patch dynamics paradigm.',
 	
 	// 3.1 Multi-Scale Representation
-	f18_0:'At first we want to start with closer explaining multi-scale representation.',
+	f18_0:'At first we want to explore multi-scale representation a bit further.',
 		//3.1.1 Multi-scale representation- part 1
-		f18_1:'This lesson is framed with some principal assumptions. These are:',
+		f18_1:'This lesson is framed by some principal assumptions. These are:',
 		f18_1_f_1:'The word in its complexity is hierarchically structured.',
-		f18_1_f_2:'This complexity can be decomposed and structured in scaled representations.',
-		f18_1_f_3:' Objects are interlinked and on different scales requiring spatial concepts.',
+		f18_1_f_2:'This complexity can be decomposed by scaled representations.',
+		f18_1_f_3:' Objects are interlinked on different scales.',
 		f18_1_f_4:'Multi-scale segmentation mimics our way of perception.', 
 		
 		//3.1.12 Multi-scale representation- part 2
-		f18_2:'Objects have an inherent scale. We perceive our outside world in several scales instantly and simultaneously. Just think when you drive a car, what your eyes would perceive on various levels.',
+		f18_2:'Objects have an inherent scale. We perceive our outside world in several scales instantly and simultaneously. Just think, when driving a car, what your eyes would see on various levels, the traffic around your car, the scenary in the background, the fly on your knee.',
 		
 		// 3.1.3 Multi-scale representation.- part 3
 		f18_3:'An image can be represented in different scales sequentially, depending on the respective scale domain of target objects. We call this multi-scale representation. ',
 		
 		// 3.1.4 Multi-scale representation -part 4
-		f18_4:'When representing ecological complexity in hierarchical levels, for instance a landscape, this does not happen independently from any human conception.  Allen and Starr (1982) point out that “discrete levels need to be recognised as convenience, not truth”. The statement “levels emerging as device of the observer” tells us that instead of questioning the ontological truth, we should rather focus on epistemological relevance of examinable target objects. ',
-		
+		f18_4:'Consider, for example, representing the complexity of a landscape in several hierarchical levels. Allen and Starr in their book on "Hierarchy" from 1982 point out that “discrete levels need to be recognised as convenience, not truth”. The statement “levels emerging as device of the observer” tells us that instead of questioning the ontological truth, we should rather focus on epistemological relevance of examinable target objects. ',
 		
 		
 	
 	// 3.2 Scale
-	f19_0:' After looking at multi-scale representation we have to closer exaime the term scale.',
+	f19_0:' After having looked at multi-scale representation we want to examine the term scale.',
 	
 		// 3.2.1 Scales part- 1
-		f19_1:' We come back to the example of Abraham Lincoln. We realize that the content of an image appears in several scales. We are not going into deeper into face recognition, but we realize that hierarchical levels do appear. When looking at an image of bad resolution as this one, we refuse to perceive the single picksel and to suppress this disturbance (by twinkling our eyes or moving backwards).',
-		f19_1_f_1:'Usually we perceive a complex pattern of colour and form, structured in various levels throughout the image.',
+		f19_1:' We return to the example of Abraham Lincoln for a moment. We realize that the content of an image appears in several scales. We are not going deeper into face recognition at this stage, but we realize that hierarchical levels do appear. When looking at an image with a poor resolution as this one, we refuse to encounter single picksels and try to compensate by twinkling our eyes, removing our glasses, or moving backwards).',
+		f19_1_f_1:'We perceive a complex pattern of colour and form, structured in various levels throughout the image.',
 		f19_1_f_2:'Fine structured features appear but we simultaneously aggregate them into larger ones. ',
-		f19_1_f_3:'That means that the content of a scene appears in several scales at the same time. All in all, exactly two scale domains are visible, namely the one of the face, and the one of its constituting parts (like eyes, nose, beard, hair, forehead). ',
+		f19_1_f_3:'That means, the content of a scene appears in several scales at the same time. All in all, two scale domains are visible, the level of the face, and the level of its constituting parts such as eyes, nose, beard, hair, forehead. ',
 		
 		// 3.2.2 Scales part- 2 // text nochmal überarbeiten!!
-		f19_2:'What about scale? In a very generic definition Allan and Star in 1982 stated: ‘Scale is the period of time or space over which signals are integrated to give a message.’ In our case, it refers more or less to the average size of objects in the real world or in a representation of it.',
-		f19_2_f:'The different objects have different inherent scale. They only appear in a certain region. But it is not only about the point of elevation  but it also depends on how we scale our entire environment and specific behaviors. As it is illustrated with these three animals.',
+		f19_2:'What about scale? In a very generic definition Allan and Star in 1982 stated: ‘Scale is the period of time or space over which signals are integrated to give a message.’ In this definition, scale is conceived as the mathematical concept of a filter. In our case, this refers to the meaningfulness of objects in the real world or in a representation of it.',
+		f19_2_f:'The different objects have different inherent scales. This depends on how we (and other organisms) perceive our environment and develop specific behaviors.',
 		
 		// 3.2.3 Grain and extent
-		f19_3:'In landscape ecology the terms like grain and extent are used to consider scale in a raster representation.',
-		f19_3_f_1:'Grain is the minimum area at which an Organism response. It is somehow comparable to resolution in an image.',
-		f19_3_f_2:'Extent is the course scale of spatial heterogeneity in an extant of the whole scene, total area or any related measures.',
-		f19_3_f_3:'So, we have two representations of the same landscape. It is the same landscape, the same extent, but its a different grain size. Its different grain sizes again corresponds to the way how, for example certain Organism perceive the landscape.',
+		f19_3:'In quantitative landscape ecology the terms grain and extent are used to operationalise scale in a gridded representations.',
+		f19_3_f_1:'Grain is the minimum area at which an organism may response. It is comparable to resolution of an image.',
+		f19_3_f_2:'Extent corresponds to the extension of the study area or image, which is often determined pragmatically.',
+		f19_3_f_3:'Here we see two representations of the same landscape. Same extent, but different grain size.',
 		
 	// 3.3 Hierarchy theory
-	f20_0:'Multi-scale segmentation has often been linked with hierarchy theory. This is an appealing concept, and the comparison seems obvious as both hierarchy theory and multi-scale segmentation deal with hierarchical organization.',
+	f20_0:'Multi-scale segmentation has often been linked with hierarchy theory. The comparison seems to be obvious as both hierarchy theory and multi-scale segmentation deal with hierarchical organization.',
 		// 3.3.1 Holons
-		f20_1:'Still, we need to be careful: hierarchy theory proposes the decomposability of complex (living) systems, but imagery is just a representation of such systems. An imaged representation is in several aspects’ reductionism: it is a plane picture only revealing reflection values. So, hierarchy theory forms a strong conceptual anchor, rather than a methodological term for multiple segmentation cycles.We should be aware that hierarchical segmentation at first hand produces regions of increasing average size (or number of picksels, respectively). But hierarchy theory is not about size, it deals with increasing degree of organization. What makes a strong link to hierarchy theory is not multi-segmentation alone, but the way we approach complexity, how we model and decompose it, and how we integrate our knowledge about it.',
-		f20_1_f:'In hierarchy theory fundamental parts interacting in a complex system are called holons. Separating and ordering the system components according to their scale can be done by means of multi-scale analysis. From a remote sensing perspective, image objects are at the same time aggregates of smaller objects, as well as parts of larger objects. Koestler (1967) has elaborated on the idea that a system on any level can be considered as both self-assertive and integrative, and suggested the term ‘holon’ (from Greek holos and –on) to emphasize this dialectic property. Whereas the first underlines the independent and singular character of a system, the latter emphasizes the part-being of a constituting element.',
+		f20_1:'But we need to be careful: hierarchy theory proposes the decomposability of complex (living) systems, but imagery is just a representation of such systems. An imaged representation means reductionism: it is a plane picture showing reflection values. So, hierarchy theory provides a conceptual framework, rather than a methodological how-to in terms of multiple segmentation cycles. We should be aware that hierarchical segmentation at first hand produces regions of increasing average size. But hierarchy theory is not about size, it deals with increasing degree of organization. What makes a strong link to hierarchy theory is not segmentation alone, but the way we approach complexity, how we model and decompose it, and how we integrate our knowledge about it.',
+		f20_1_f:'In hierarchy theory fundamental parts interacting in a complex system are called holons. Separating and ordering the system components according to their scale can be achieved by means of multi-scale analysis. From a remote sensing perspective, image objects are at the same time aggregates of smaller objects, as well as parts of larger objects. Arthur Koestler, back in 1967, has elaborated on the idea that a system on any level can be considered as both self-assertive and integrative. He proposed the term ‘holon’, from Greek holos and on, to emphasize this dialectic property. Whereas the first underlines the independent and singular character of a system, the latter emphasizes the part-being of a constituting element.',
 		
 	// 3.4 HPDP
-	f21_0:'Drawing on this theory, the Hierarchical Patch Dynamics Paradigm (HPDP) has been introduced in landscape ecology.',
+	f21_0:'Drawing on this theory, the hierarchical patch dynamics paradigm has been introduced in landscape ecology.',
 		
 		//3.4.1 Decomposability,holarchy- part 1
-		f21_1:'The term holarchy from hierarchy theory has been applied to the hierarchical organization of landscapes (hierarchically structured patches of increasing average size). Note that applying a coarser scale does not necessarily mean reaching a higher hierarchical level. In fact, hierarchy theory is talking about the level of organization, which is not restricted to average size or extent alone.',
-		f21_1_f:'The strategy provided by HPDP combines the idea of hierarchically organized patches, their interactions within the ecological system, and the relation between the observed patterns and underlying processes that change with scale. Systems structure can be characterized in terms of hierarchical interaction. A system is nearly decomposable into constituting sub-systems and hierarchical organization is an overarching principle in all living systems.',
+		f21_1:'The term holarchy stemming from hierarchy theory denotes the hierarchical organization of landscapes, i.e. hierarchically structured patches of increasing average size.',
+		f21_1_f:'The hierarchical patch dynamics paradigm combines the idea of hierarchically organized patches, their interactions within the ecological system, and the relation between the observed patterns and underlying processes, which may change with scale. Systems structure can be characterized in terms of hierarchical interaction. A system is nearly decomposable into constituting sub-systems. This is an overarching principle in all living systems.',
 		
 		//Quotation
 		f21_2:'Ecological systems are hierarchical patch mosaics. On different scales, a patch may be a continent surrounded by oceans, a tract of forest surrounded by agricultural lands and urban areas, a tree gap within a forest, a fire-burned area of bare ground in a plant community, or a plankton aggregate in an aquatic system. Patches can be characterized by their size, shape, content, duration, structural complexity, and boundary characteristics. The theory of patch dynamics indicates that the structure, function, and dynamics of such patches are important to understanding the systems they comprise, be they populations, communities, ecosystems, or landscapes.',
 		f21_2_f:'The existence of vertical and horizontal loose couplings is exactly the basis of the decomposability of complex systems. While the word “loose” suggests “decomposable”, the word “coupling” implies resistance to decomposition. Strictly speaking, complete decomposability only occurs when coupling between components becomes zero, which seems a trivial case because, by definition, a system is composed of interacting parts. Thus, hierarchical complex systems are only nearly completely decomposable or nearly decomposable.',
 		
 		// 3.4.2 Decomposability,holarchy- part 2
-		f21_3:'The metaphor of a ‘scaling ladder’ marks adjacent scale domains in a continuous scale spectrum. According to hierarchy theory it is assumed that a series of scales is inherent in any portion of land (landscape) no matter what the actual size is. O’Neill et al. (1986) have proposed to consider at least three nested scales in any study: the level of interest (‘focal level’ or ‘reporting level’) is constrained by controlling conditions of the level above, which provides significance; lower-level components supply explanations (Turner, et al., 2001). Burnett & Blaschke (2003) use the term ‘candidate discretisation’s’ to illustrate the formation of scaled representations when working on image data with several inherent scale levels. ',
+		f21_3:'The metaphor of a scaling ladder denotes adjacent scale domains in a continuous scale spectrum. According to hierarchy theory it is assumed that a series of scales is inherent in any portion of land no matter what the actual size is. O’Neill and others back in 1986 have proposed to consider at least three nested scales in any study: the level of interest, also called the focal level or target level) is constrained by controlling conditions of the level above, which provides significance; the lower-level components instead provide explanations. Burnett & Blaschke use the term candidate discretisations to consider scale levels when applying multi-scale segmentation. ',
 		
 		// 3.4.3 Decomposability,holarchy- part 3
-		f21_4:'This means that constituent elements of a larger system operate in a rather independent way with self-assertive and self-integrative tendencies. The single levels interact with each other by lose coupling. To highlight the dynamic character of a hierarchy of nested holons, Koestler proposed the term ‘holarchy’.',
+		f21_4:'This means that constituent elements of a larger system operate in a rather independent way with self-assertative and self-integrative tendencies. The single levels interact with each other by so-called lose coupling. To highlight the dynamic character of a hierarchy of nested holons, Koestler proposed the term holarchy, as already mentioned before.',
 		
 	// 3.5 Multi-scale imagery
-	f22_0:'One image cannot have only one scale, but can be a multi-scale image due to the different hierarchical levels.',
-	
-		
+	f22_0:'One single image may exhibit several inherent scales in different hierarchical levels.',
+			
 		//3.5.1 Multi-Scale imagery
-		f22_1:'Anthropogenic features usually cover a narrow scale window. They demand a shallow hierarchy. Natural objects demand a multi-scale representation, reflecting several scales which are corresponding to functional hierarchies. A ‘shallow’ hierarchical representation is faced with a ‘deep’ or flexible one, the bottom of which is not clearly defined.',
-		f22_1_f_1:'This also leads to the question whether one pan-hierarchical representation would be enough and sufficient for representing the entire scale variability in an image. ',
-		f22_1_f_2:'In this case we have three characteristic landscape types: pastured, meadows and forest. They all have different scale patterns. So, the question comes up whether we need here regionalized representation, sometimes called class specific segmentation.',
+		f22_1:'Anthropogenic features usually cover a narrow scale window. They demand a shallow hierarchy. Natural objects demand a broader multi-scale representation, reflecting several scales which are corresponding to functional hierarchies. Thus, a shallow hierarchical representation is complemented by deep one, whose bottom sort of is not clearly defined.',
+		f22_1_f_1:'This also leads to the question whether one single multi-scale representation would be  sufficient for representing the entire scale variability in an image. ',
+		f22_1_f_2:'In this case we have three characteristic landscape types: pastured, meadows and forest. They all have different scale patterns. We may need a multi-scale representation, which is regionalised; meaning it considers the different land cover types, sometimes called class specific segmentation.',
 		
 	// 3.6 Scale-Space Analysis
-	f23_0:'Another approach to investigate objects analytically in  an image is linear scale space analysis.',
+	f23_0:'Scale space analysis is an approach to investigate objects analytically.',
 		
 		//3.6.1 Scale-Space Analysis- part 1
-		f23_1:' Mathematically, it is a kind of repetitive application of a smoothing filter.In this case specifically the Gauss filter, which is a unidirectional filter. If you apply a filter many, many times to an image and then stack the results on top of each other. From the finest scale, the original data, to the courses scale, the smoothest data. You will observe that there are certain objects emerging and disappearing. So, you can kind of simulate a multiscale representation. ',
+		f23_1:' Mathematically speaking, it is a repetitive application of a smoothing filter. In this case a Gaussian filter, which is unidirectional. When applying a filter many times to an image and then stack the results on top of each other, ranging from the finest scale, the original data, to the coursest scale, the smoothest data, you may observe that certain objects emerge, while others disappear. ',
 		
 		//3.6.2 Scale-Space Analysis- part 2
-		f23_2:'This is what leads to blobs. Blobs are dynamic image objects. These are growing and shrinking if you move through space. We have four categories of dynamic movement.',
-		f23_2_f_1:'The start of the filtering, the point where some object is emerging. This is C, the Creation point.',
-		f23_2_f_2:'And then it goes through the different scales until it would disappear again.',
-		f23_2_f_3:'This is A, the annihilation.',
-		f23_2_f_4:'Then there is something in between. It could be that two objects which come closer emerge at Point M and they also would split again and grow further in apart. All these things you can observe here in this kind of hyper blob- diagram.',
-		f23_2_f_5:'Application would be for example to detect tree crowns in a laser point cloud or other similar features.',
+		f23_2:'This observation leads to the concept of blobs. Blobs are dynamic image objects. They are growing and shrinking when moving through space. We may differentiate between four stages of dynamic movement.',
+		f23_2_f_1:'At the point where some object are emerging we have C, the creation point.',
+		f23_2_f_2:'Then it passes through the different scales until it would disappear again.',
+		f23_2_f_3:'This is A, the annihilation point.',
+		f23_2_f_4:'Then there is something in between. It could be that two objects which come closer emerge at point M and they also would split again and grow further in apart. All this you may observe in this kind of hyper blob- diagram.',
+		f23_2_f_5:'An application would be for example the detection of tree crowns.',
 		
 // Capitel 4 Knowledge Representation
 	f24_0:'This is lesson 4. Knowledge representation is one of the crucial prerequisites to work with intelligent image analysis systems. While there are many ways to reach a higher intelligent level in image analysis, we are focusing on rule-based systems, which we believe foster transparency and transferability utmost. This is the content of lesson 4, with 5 subchapters: (1) Why knowledge representation? (2) Experience and learning (3) Rule-based production systems; (4) Crisp vs. fuzzy rulesets; (5) Image understanding and OBIA; (6) Object categories.',
