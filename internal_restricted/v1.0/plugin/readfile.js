@@ -582,45 +582,50 @@ f31_0:'Welcome to lesson 5! Here we will explore one of the two crucial pillars 
 	// 5.5 Multi-Scale Segmentation
 	f36_0:'No we will go deeper into multi-resolution segmentation, as this is the most powerful and flexible tool we have at our hand, both mimicking the simultaneous (human) multi-scale perception and reflecting the multi-scale organization of geographical reality.',
 	
+		
 		// 5.5.1 Multi-scale Segmentation- part 1
-		f36_1:'',
+		f36_1:'A special, but very powerful, type of region-based segmentation is multi-resolution segmentation that will be discussed in detail a little later. We can hardly speak of one single algorithm; it may better be considered a segmentation strategy. The multi-resolution segmentation algorithm implemented in eCognition software is a region-based, local mutual best fitting approach. The algorithm is utilizing a combined homogeneity and shape concept and allows several segmentation levels to be established within one image.',
 		
 		
 		//5.5.2 Multi-scale Segmentation- part 2
-		f36_2:'',
+		f36_2:'The guiding principle for image segmentation is both conceptually simple and ambitious to be realized in mathematical routines. It is the principle of a maximum internal homogeneity within regions, and likewise a clear heterogeneity between them. Now it remains among us how we define internal homogeneity. The term ‘homogeneity’ stems from Greek and literally means “of the same origin”. What we mean by that is not a complete equality, but a similarity in certain properties.  In image analysis, such a homogeneity criterion is obviously similarity in spectral behaviour, in other words a similar digital number caused by close distance in multi-spectral feature space. In the examples given above we used different criteria of homogeneity. In the example of the fire alarm the homogeneity criterion was the very class they belong to. In the example of creating the United Regions of Europe, we used language as the criterion of homogeneity. Note that in these examples we used non-ratio scaled data to illustrate the concepts. In our examples we can truly think of homogeneity in the sense of being equal, while in image analysis we should keep in mind, that homogeneity means similarity. ',
+		f36_2_f_1:'If segmentation is about similarity in properties, so is classification, we may argue. We may argue that any segmentation results in a kind of unsupervised classification. But not quite!  Classification groups single elements according to their properties, no matter where they are located or how they are spatially organized. The result of a pixel-by-pixel classification is a categorical map, where each pixel is assigned to a specific class. Of course, this also leads to areas where neighbouring pixels are assigned to the same category. Otherwise, there might be groups of pixels or even single pixels also assigned to this specific category. This results in ‘types of space’ (in German: Raumtypen), but not regions. Regions are always spatially connected, that means contagious.  But segmentation is not simply a product of converting each class occurrence in space to a region. Then we would end up with having some large and overlapping regions, and otherwise very small, down to 1-pixel regions. Sticking with the example of European regions, we would not create an own region, if there are only very few people speaking a specific language. Note that in this example the target of creating about 30 regions controls an average size of the regions. It is prohibitive, at least indirectly, to creating tiny or massive regions.',
+		f36_2_f_2:'Segmentation always involves spatial aspects a priori. As we learnt earlier in the introductory statement, the primary objective of segmentation is the dissection of space into parts which are fairly the same size and covering – without gaps or overlaps – the entire space. Similarity in properties is just an auxiliary means to do that',
+		f36_2_f_3:'Segmentation employs some (quite basic or rather advanced) routines for optimizing the spatial arrangements of regions. Means to accomplish this are for example: controlling the degree of complexity of the border line or the compactness of the created regions.',
 		
 		//5.5.3 Multi-scale Segmentation- part 3
-		f36_3:'',
+		f36_3:'Recent developments in image segmentation routines support multi-resolution segmentation. The common principle of these routines is to represent the image scene content in multiple scales.',
+		f36_3_f:'In other words, image dissection is performed in several levels so that we have several levels of object delineations derived from one single image. In multi-resolution segmentation, the segmentation process will group lower level image objects again and again. Image information is represented in various scales, so we may also call it multi-scale segmentation. Whereas a produced hierarchy of image objects may reflect our own way of aggregating information, the interpreter has to decide which levels to maintain as relevant and which ones to dismiss.',
 		
 		//5.5.4 Multi-scale Segmentation- part 4
-		f36_4:'',
+		f36_4:'This is not a trivial task and a sometimes matter of trial and error. In an early contribution reflection on this problem, Lang (2002) has asked the question “How to hit the relevant scale?” He showed the concept of regionalized hierarchies, where – according to predominating land use types, certain hierarchy levels apply. We will come back to that shortly.',
 				
 		//5.5.5 Multi-scale Segmentation- part 5
-		f36_5:'',
+		f36_5:'Dragut et al. have developed a tool, the so-called Estimate Scale Parameter (ESP) tool, by which users can determine a proper scale of delineation. It is based on the notion of the rate of change in variance and is applied to the entire image layer.',
 				
 		//5.5.6 Multi-scale Segmentation- part 6
-		f36_6:'',
+		f36_6:'It is also interesting to note that in a scene with natural features it is even more ambiguous to find the appropriate level of segmentation than in a built-up environment with dominant anthropogenic features. Object-based image analysis techniques have opened the door to technically implement the way our visual perception works. Multi-scale image analysis enables a skilled user to draw a hierarchical representation of a landscape from a single remotely sensed image. The scene under investigation is represented in several scales containing fine-scaled image objects on a detailed level and coarse-scaled ones on a broader level. Besides the closer proximity to human perception, this way of multi-leveled structural representation of natural habitats reflects the idea that natural living systems are hierarchically structured and therefore near-decomposable, as discussed in lesson 3.',
 		
 		// 5.5.7 Multi-scale Segmentation- part 7
-		f36_7:'',
+		f36_7:'But there are differences in how these object hierarchies are built. There are two strategies in terms of geometrical coherence: One is to build up a strict hierarchical system. That means boundaries of a sub-object fully coincide with boundaries of a super-object. In other words, one super-object has exactly n sub-objects. One sub-object belongs to exactly one super-object. This is the case of scale-adaptive segmentation. The other strategy, closer to human delineation, is scale-specific segmentation. Here, we have a generalized and truly scaled representation of each level. The coincidence of boundaries is not fully accomplished any longer, but there is a spatial congruence of higher and lower-level objects.',
 		
 		// 5.5.8 Multi-scale Segmentation- part 8
-		f36_8:'',
+		f36_8:'The following sequence shows how the multiscale segmentation algorithm, implemented in eCognition, works. Please stop now the presentation and study the following slides on your own. ',
 		
 		// 5.5.9 Multi-scale Segmentation- part 9
-		f36_9:'',
+		f36_9:'Please take a look at this slide by yourself.',
 		
 		// 5.5.10 Multi-scale Segmentation- part 10
-		f36_10:'',
+		f36_10:'Please study this slide on your own.',
 		
 		// 5.5.11 Multi-scale Segmentation- part 11
-		f36_11:'',
+		f36_11:'Please take a look at this slide by yourself.',
 		
 		// 5.5.12 Multi-scale Segmentation- part 12
-		f36_12:'',
+		f36_12:'This is the last slide to study on your own. On the next slide we will continue our lesson.',
 		
 		//5.5.13 Multi-scale Segmentation- part 13
-		f36_13:'',
+		f36_13:'Looking back on what we said before about ‘regionalized hierarchies. This can be operationalized by first establishing so-called image domains. This could be a pre-classified forest area or open land. Within these domains, we can perform specific segmentation, by controlling the parameters independently. ',
 	
 	
 	
@@ -629,19 +634,17 @@ f31_0:'Welcome to lesson 5! Here we will explore one of the two crucial pillars 
 	f37_0:'We will now  have a quick look at the object features that we have at our disposal after performing multi-scale segmentation. ',
 	
 		// 5.6.1 Object Features Overview
-		f37_1:'',
+		f37_1:'Pixels are characterized by one single feature only: spectral reflectance. The same applies to individual grid cells of a Digital Elevation Model. Objects instead, which are created by regionalization of neighbouring similar pixels, have a multitude of features. Such object features include, at first hand, the aggregated pixel (or grid) values. When segmenting an image this means that average spectral values are the prime characteristics of the generated objects. When segmenting a DEM, the mean elevation is the first object feature to be derived. However, there is much more to offer. Let’s just think what we can do with a bunch of pixels values? Let’s again go back to our classroom example. A group of students belonging to the same class has a certain average age, which is close to every single student’s age; so we can say the standard deviation of that parameter is low. That’s clear because otherwise they would not be in the same class. But what other features we can derive from a bunch of students? We can ask: who is the eldest? Or: who is the youngest? Going back to our image objects we can do the same. Every object has a mean spectral value, but likewise a standard deviation, a min, a max, so all kinds of basic descriptive statistics. But with image objects we can also look at spatial features, such as size, form, or perimeter. We can look at neighbouring features: What’s the length of a shared boundary? Then we can look at hierarchical features: how many sub-objects are related to one super-object?  ',
 	
 	// 5.7 Adaptive parcel-based Segmentation
 	f38_0:'We conclude this lesson with some practical aspects when using existing boundaries in the segmentation process.',
 	
 		//5.7.1 Adaptive parcel-based Segmentation -part 1
-		f38_1:'',
+		f38_1:'We may think why bothering with creating boundaries, as often it happens that boundaries are already available! For example, when analysing an image showing agricultural fields, we may use the existing field boundaries to guide our segmentation. As the example of field boundaries is the most obvious, we may use the term per-parcel or parcel-based segmentation, even for applications where existing boundaries other than parcel borders are used. More and more, the digital cadastral map is seen the favourite target geometry, that decision makers and planners often like to see reflected in the data set. The reason is simple, cadastre boundaries are the ultimate spatial reference, precise and legitimate, and thereby undisputable. Some problems arise from that: 1.) Digital cadastre data are the most precisely mapped administrative data. If combined with e.g. a 5m SPOT scene, we run into a methodological trap. The cadastre data have been captured at scale of 1:500 up to 1:1000 and the SPOT scene serves a scale range of up to 1:50 000 or more. 2.) Even if we had the highest resolution imagery, we still face the challenge that (1) not all of the cadastre boundaries have meaning in the image, and (2) there are boundaries that are missing! ',		
+		f38_1_f_1:'A strategy how to work along this challenge has been proposed by the authors introducing the concept of ‘adaptive, parcel-based segmentation’. This concept follows a threefold strategy when using cadastre boundary in an image segmentation process: (1) a parcel whose internal homogeneity is suffice, remains the same; (2) neighbouring parcels with similar spectral characteristics are merged; (3) a single, heterogeneous parcel is split and new boundaries are generated. By this process, landscape objects are finally generated where there are objects, which are spectrally homogenous, and can be used for class modelling.',
 		
 		//5.7.2 Adaptive parcel-based Segmentation -part 2
-		f38_2:'',
-		
-		
-		
+		f38_2:'This slide illustrates the three cases again. The initial number of (cadastral) units usually drops significantly. Probably, the majority of the units will be merged due to trans-boundary homogeneity; a smaller part will be subdivided. Assets of this approach are its cost-efficiency, the high matching degree of the produced geometry and the transferability to similar cases because of the standardized character of the data sets involved. ',
 		
 	
 		
