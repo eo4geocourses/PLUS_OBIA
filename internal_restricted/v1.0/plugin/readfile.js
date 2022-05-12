@@ -645,7 +645,167 @@ f31_0:'Welcome to lesson 5! Here we will explore one of the two crucial pillars 
 		
 		//5.7.2 Adaptive parcel-based Segmentation -part 2
 		f38_2:'This slide illustrates the three cases again. The initial number of (cadastral) units usually drops significantly. Probably, the majority of the units will be merged due to trans-boundary homogeneity; a smaller part will be subdivided. Assets of this approach are its cost-efficiency, the high matching degree of the produced geometry and the transferability to similar cases because of the standardized character of the data sets involved. ',
+	
+// Capitel 6: Object-based Classification (including Class Modelling)
+f39_0:"Welcome to lesson 6, object-based classification, the second central pillar of the OBIA process. This is the content of lesson 6, organized in six subchapters: (1) (Strengths of) object-based classification. (2) Sample- vs. rule-based classification. (3) Fuzzy vs. crisp rule-based classification. (4) Class hierarchy. (5) Class-related features. (6) Class modelling. As any classification process, also object-based classification aims at delivering information classes. We will realize, however, that we can use much more features for classification as we can use in a pixel-based environment. We have provided an overview on object features in the last lesson on image segmentation. All these features can be used for classifying objects, but of course, not all of them make sense. If, for example, we want to distinguish a soccer field from a grassland patch, we can use the rectangular shape and the typical size as a distinctive feature. On the other hand, if we use the fact that a soccer field is surrounded by built-up structures, we may fail in cases where the soccer field is situated in a larger recreational area. So, we need be aware which features are distinctive, and which are more individual. Of course, we could use such individual features for even finer classifying such objects, for example telling soccer stadiums from recreational soccer fields. As we will also see, object-based classification goes beyond a simple labelling of generated objects, as often the final classes of concern are more complex, the object delineations are limited, or we not get delineations at all, as in the case of conceptual boundaries.  ",
+
+	//6.1 (Strengths of) object-based classification
+	f40_0:"At first we will consider the strengthes of object-based classification",
+
+		// 6.1.1 Object-based classification part 1
+		f40_1:"As mentioned before, we can use a sheer endless number of different features for the classification of objects. The more intuitive ones are the basic spectral stats of any object (mean reflectance, etc.) or the size of an object. But there are many more, related to hierarchical properties, or the relationships to neighbouring objects. Burnett & Blaschke in 2003 have used to term object-relationship modelling to illustrate the concept of both vertical and horizontal relationships among objects. ",
+		f40_1_f_1:"The classification process, as we will see later, can be based on selecting suitable samples as objects training objects. Or it can be based on rule sets that we create step-by-step to describe the particular features of the objects to be classified, or the relationships among them.",
+		f40_1_f_2:"In some cases it may happen that objects are well delineated and large enough to simply go over the image and assign a class label by selecting objects. This ‘click-and-classify’ approach is sometimes very useful, for example when re-labelling objects after classification is performed. But on the other hand it jumps a crucial step of OBIA, the system-inherent in-built classification logic.",
 		
+		//6.1.2 Object-based classifcation part 2
+		f40_2:"The classification of objects is particularly strong when looking at images of very high fidelity. The recent generation of meter or sub-meter resolutions, not only provide great detail, but also lots of noise. Such noise is does not much disturb our visual capacity but needs to be tackled in an automated approach. The regionalisation techniques implemented in segmentation routines, average out, to some extent, the disturbing noise. So, there is a much better signal to noise ratio. ",
+		f40_2_f:"Logically it follows, that the number of units is dropping significantly. We have lesser objects to be classified, especially when looking at higher levels, and compare it to the number of pixels. On the other hand, we have a higher complexity in describing such objects because they not only integrate signal over a certain fixed area (as a pixel), but also include a correspondence to real-world objects.  ",
+
+		// 6.1.3 Object-based classification part 3
+		f40_3:"We may recall the yin-yang analogy we have used in chapter 1. We said segmentation and classification are interrelated, and a cyclic rather than a linear process. While conceptually, it may be easy to have two distinct processes, the reality is often different. It is tempting to think, one should invest time and effort in finding the optimum segmentation results to have the ‘perfect objects’, which then only need to be labelled. But that is sometimes wishful thinking. Even if we try to establish a full hierarchical system of super- and sub-objects, we may realize that eventually we need some intermediate pre-classification. We often need to have some idea of what is there on finer level to know what we are looking at on coarser level. Or vice versa some understanding of broader classes to better delineate finer structures. We showed this in the previous chapter when using the term domain-specific segmentation. Also think of what we have learnt about human vision, and its simultaneous processing of both geometrical and attributive information.",
+
+	
+	// 6.2 Sample- vs. rule-based classification
+	f41_0:"There are two different ways to classify objects. Sample and rule-based.",
+
+		//6.2.1 Sample- vs. rule-based classification part 1
+		f41_1:"A sample-based classification works, as in a supervised pixel-based classification, with the help of samples. But here the samples are not training areas, but training objects. Such training objects need to be representative for the class they belong to. That may sound trivial, but we need to be careful, as sample objects potentially all features that can be assigned to an object. When we sample a grassland class using a patch which is by chance very much elongated, this form feature may be considered as one of the critical features, and we end up classifying only elongated grassland areas. If this is the intention, fine, but we need to make sure to know which features are decisive and which not.",
+		f41_1_f:"In terms of classifiers, we may use a simple nearest neighbour classifier, as object samples are statistically more robust as pixel samples. Class assignment will be performed according to the shortest Euclidean distance in the feature space. Note that here we cannot use the term ‘spectral distance’ the feature space is no longer confined to spectral features (band A, band B, etc.), but augmented by all the additional features. They can be established in an object-based environment (see comment above). Other more advanced classifiers, such as support vector machines (SVM), may be used as well. This is a machine learning methodology, strong in pattern recognition, and especially for supervised classification of high-dimensional datasets.",
+
+		//6.2.2 Sample- vs. rule-based classification part 2
+		f41_2:"Heuristics, which means experiences or empirical knowledge to tackle the analysis problems, can be encoded in rules. By means of such rules, we build a knowledge-based production system. As we have learnt in lesson 4, a production system formalizes implicit knowledge using a set of specific rules which allocate sub-spaces of the feature space explicitly to classes. Such rules can work on one feature or several features. For example, a woody area on Landsat imagery may be described by spectral values in the NIR band ranging between 80 and 100. That means objects with a mean NIR value of more than 80 and less than 100 are assigned to the class ‘woodland’.  If we combine this rule with heuristics about the typical shape of different woody areas, we may be able to distinguish between a natural woody area, and a managed forest. We could find out that in our scene the natural woody patches have compact forms with a shape index smaller than 1.5. So we could use an additional feature to classify a subclass ‘managed forest’ within the class ‘woodland’. ",
+		f41_2_f_1:"In this case we have built a small class hierarchy with parent and child classes. The parent class woodland has n children; one of them is managed forest. If we now transfer these rulesets to a different Landsat scene, we can probably use the same heuristics, but it is likely that we need to slightly adapt the parameterization.",
+		f41_2_f_2:"The rules can address object features or so-called class-related features. This special case which is specific to an object-based environment will be discussed below.",
+		f41_2_f_3:"As already explained in lesson 4, rules can be crisp or fuzzy. Considering the example of forest, we may now better understand why fuzzy rules in most of the cases are more appropriate than crisp ones. It is very difficult to say, why object with a mean spectral value of 81 are definitely woodland, while those with 79 aren’t. The same applies to the form: who can say that an abstract form measure like the shape index is so sensitive to the human use of wooded areas that there would be a crisp boundary at 1.5.",
+		f41_2_f_4:"Summarizing, the advantages of a rule-based classification system over a sample-based one, are the following: ",
+		f41_2_f_5:"Expert knowledge can be explicitly considered in the classification process. Any step and setting during the entire classification process is documented, and can be assessed and adopted if needed; ",
+		f41_2_f_6:"Complex class descriptions can be formulated, by chaining and combining rules quite flexibly; ",
+		f41_2_f_7:"The entire process is becoming transparent. Experts (including the one who created the rule sets) can check anytime, what caused a specific classification, and where potential conflicts are. When comparing to neural networks, we can always analyse where the weaknesses of a classification are, and where improvements should be made (again explicitly). ",
+		f41_2_f_8:"Although the result is not necessarily more accurate, it can be reproduced, and the process is to a high degree comprehensible. The formalized approach of analysis (i.e. the class definitions and composition and the documentation of the workflow and settings in the semi-automated process) technically allows for a transfer of the classification to other scenes.",
+
+	// 6.3 Fuzzy vs. crisp rule-based classification
+	f42_0:"We have explored the characteristics of fuzzy rules already in lesson 4. Here we just want to re-emphasise that in many cases, a fuzzy class description is more appropriate than crisp rules. ",
+
+		//6.3.1 Fuzzy vs. crisp rule-based classification
+		f42_1:"We are classifying objects which often are characterized more by gradual transitions than sharp boundaries – both spatially and conceptually. The picture shows the example of a bog system which is in the process of being transformed from an active raised bog to a degraded bog. While it is clear from looking at this false colour orthophoto that the dynamic is going on, and there are strong indications for less or more degraded areas, we hardly find sharp boundaries that would support the delineation of classes straight away. The ambiguity in boundary delineation usually corresponds to fuzzy boundaries in class definitions. If we have a very distinctive pattern of forest and clear-cuts on a black-and-white imagery, we are facing less ambiguity in both delineating such patches, and second attributing it to either of the classes, forest or clear-cut. We will return to the bog example later on.",
+
+	// 6.4 Class hierarchy
+	f43_0:"First, we would like to have a closer look at the concept of class hierarchy. ",
+
+		// 6.4.1 Class hierarchy
+			f43_1:"In general a class hierarchy assembles the relationships of classes in a hierarchical system. This implies that classes are not only nominal categories next to and individual from each other. They are instead organised in a hierarchical structure, reflecting either their relationship in terms of class definitions or semantics. Here we use the term ‘hierarchy’ in a more taxonomic meaning, to describe a hierarchical classification scheme in the sense of an ontological inheritance system. When looking at remote sensing data that represent real world geographical objects, we may distinguish between two aspects of a class hierarchy. ",
+			f43_1_f_1:"The first is the hierarchy that controls inheritance of class descriptors. In here, the characteristics of a parent class are inherited by child classes. For example the class forest is an instance of the parent class vegetation and inherits all spectral properties of that parent class, which are for example defined by an NDVI threshold of greater than 1.0. The instance forest has specific properties, though, which distinguish it from grassland. So this is the point where the hierarchical system bifurcates into two branches, forest and grassland, as we move further ‘down’ in the hierarchy. ",
+			f43_1_f_2:"Again, within OBIA, such a feature inheritance system is not confined to spectral values (as it would be in a knowledge-based pixel-based classification). All other features may be used for such a hierarchy, for example we may argue that all anthropogenic features do have a high compactness value. Whenever objects reveal an area/perimeter ratio above a certain threshold, they may belong to the parent class anthropogenic, whether they are managed forest patches or urban settlements. We may, however, realize that these geo-spatial descriptors are more restrictive than spectral ones, and only very stable notions may be used for that, for example an area threshold in the detection and classification of different tree species by delineating the corresponding tree crowns. ",
+			f43_1_f_3:"The other aspect of the hierarchy is that of logical grouping. One may say this is a hierarchy of semantic meaning of objects to be classified. Irrespective of the actual definition of the class, a semantic inheritance may be given, if objects belong to the same logical class. Instances of a semantic parent class ‘urban’ may have very diverse instances in terms of spectral behaviour (sealed surfaces, urban green, water bodies), all belonging logically to the class ‘urban’. Other examples of semantic parent classes are: protected conservation areas, dwelling structures in a refugee camp, destroyed structures after an earthquake, and so forth. ",
+			f43_1_f_4:"Sometimes semantic classes may turn into property-related classes if additional data sets are available. For example, we may group all classes occurring in a specific elevation zone (including types of wood- or grassland, and some other classes) in a semantic class ‘alpine zone’. If, in addition, we have a digital elevation model at our disposal, we may group such classes instantly under the parent class ‘alpine zone’ which is defined in a certain altitude range by means of that DEM. ",
+
+		//6.4.2 Cognition Network
+			f43_2:"Feature inheritance and semantic view can also be represented in a cognition network. This example shows a cognition network for the classification of urban green. Looking from the left-hand side we apply a diagnostic view, which means we are distinguishing classes according to their feature-related inheritances and specifics. The semantic view, looking from right, allows for a logical grouping of the classes. Such a simple cognition network has the great advantages, not only to visualize the interrelationships among the classes, but also the conceptual structure of the classification system when it comes to semantic grouping. One can easily change the assignments of diagnostic classes to the actual target classes ‘green’ or ‘not green’. In this case the dashed lines, connecting the semantic class ‘green’ and the water classes, indicate a certain ambiguity in the assignment of the classes. When looking at land cover properties we would not consider water bodies as belonging to the class ‘green’. But from a semantic point of view, class ‘urban green’ allows accommodating all kinds of classes. In the underlying study these classes were indeed included under ‘urban green’, according to the outcomes of an interview-based survey.",
+
+	//6.5 Class-related features
+	f44_0:"In the next slide we will look at class-related features.",
+
+		//6.5.1 Class-related features
+		f44_1:"Class-related features are a specific case of object-based classification; this term stems from its implementation in the eCognition software. The underlying idea is simple, yet difficult to operationalize in a software environment. The classification of an object is often depending on the classification of its surrounding objects. Such context-related classification can be found quite often: a grassland patch may be classified as an urban park if surrounded by built-up structures. Or a water body may be classified as eutrophic if surrounded by agricultural fields. The eCognition User Guide reads as follows: ",
+		//Quotation
+		f44_1_f:"The use of class-related features is more complex. When an object changes its classification because of the classification of networked objects, the problem arises that the object itself might be a context feature for the evaluation of other objects. Therefore, classification must be an iterative process in cycles in which each object is classified over and over taking into account the changes in the classification of networked objects. The number of cycles can be specified for this purpose. With context classification a new complexity arises: while classification without context is a deterministic process, context classification can become indeterministic and even unstable due to the possibility of circular dependencies between different classes. Classification becomes an optimizing problem in which convergence to a global best classification must be ensured.",
+	//6.6 Class modelling
+	f45_0:"Often, objects to be classified are not internally homogenous. In fact, we may observe that with the increasing complexity of the image analysis tasks, and the increasing resolution of the image data, they may encounter challenges both in automated delineation and labelling. We have several times discussed the orchard problem to illustrate the challenge of finding an outline when the object is predominantly defined by its specific internal structure. When recalling what we have said about object categories in lesson 4, we refer to composite objects. These are objects which have an internal structure or body plan and can be modelled by their specific arrangements of (sub-)objects.",
+
+		// 6.6.1 class modelling part 1
+		f45_1:"To illustrate this, we shall return to the example of the degraded bog. This is a typical example where the information demand is rather simple, namely to understand the degradation of the near-natural active raised bog. The implementation, however, is tricky, considering the complexity of the image content and the fact that different image sources are used: a false colour orthophoto from 1976, and a true colour orthophoto from 1999. As we will see later on, we will focus on the development of four different classes whose distribution reflects the stage of degradation. The user, in this case a regional nature protection agency, is interested in understanding the overall dynamic of the bog to monitor the effectiveness of management measures taken. ",
+
+		// 6.6.2 class modelling part 2
+		f45_2:"We may readily understand that accommodating the complexity of the mire system into a set of four distinct classes may be difficult, as these classes are – at least – composite classes. Beyond that we realize that usually the intended categories may not be pure in terms of their internal structure, but there may be some noise which can be accommodated. So, some of them are actually defined through their internal structure, in other cases, internal structure may be rather considered as noise and can be to a certain case suppressed. ",
+		f45_2_f_1:"The class ‘active raised bog’ is a more homogenous class, which is mainly characterised by the presence of Sphagnum vegetation. This altogether reveals a pale tone, and rather smooth. Still, a certain portion of disturbing features may be accepted, while still considering it an active raised bog. ",
+		f45_2_f_2:"The same applies to the first degradation stage, when the bog gets drier, heath dominated bog. The presence of Calluna species makes the colour changing slightly, but still classes are rather homogenous.",
+		f45_2_f_3:"If we enter to the next stage of degradation, a bog stadium where bush encroachment takes place, we encounter a class, which is clearly defined by its internal structure. This internal structure is distinctive for this class. We may also say this class is homogenous in terms of its internal structure, so applying a more comprehensive concept of ‘homogeneity’. Taking account this effect, Lang and Langanke in 2006 have introduced the term ‘structural signatures. This term should emphasize the fact that classes are internally structured, and this structure is a key feature of this specific class. The class bush bog is characterized by the presence in an otherwise homogenous matrix. But there shouldn’t be too many bushes, because otherwise it would be a bushy area, and no longer a bush bog.",
+		f45_2_f_4:". On the other hand, there should be a certain portion of bushes conceivable, otherwise we would consider this as noise and assign it to one of the other mentioned classes, Sphagnum- or Calluna dominated bog. So how to encode such heuristics into rules?",
+
+		// 6.6.3 class modelling part 3
+		f45_3:"There are two aspects to be considered that relate to the occurrence of bush vegetation: first, the fact that there is certain minimum amount of bushes present. We may set this threshold at 10%, assuming that such a value is prescribed in some interpretation key. Second, the specific arrangement of these bushes, which are very much like little islands rather than fully covering the entire area. This island character we may operationalize with a distance feature. We say there is a certain minimum and a certain maximum distance these islands take from each other. These distance margins can be reflected using fuzzy logic, because it would not make sense to work with sharp limits here. This example is further explored in the exercises.",
+		
+		// 6.6.4 Quotation
+		f45_4:"Class modelling (as for example realized by the modular programming language CNL, cognition network language), provides flexibility in providing problem-oriented solutions for advanced analysis tasks. Examples are scene-specific high-level segmentation and region-specific multi-scale modelling or the composition of structurally defined classes as proposed by Lang & Langanke (2006). From a methodological point of view, one may observe a convergence of various techniques from formerly distinct GIS and remote sensing embankments; aiming at the aforementioned purpose, OBIA is trying to bridge these. OBIA rests upon two interrelated methodological pillars, i.e. (1) segmentation / regionalization for nested, scaled representations; (2) rule-based classifiers for making explicit the required spectral and geometrical properties as well as spatial relationships for advanced class modeling. We speak of ‘image analysis’ and not merely of ‘image classification’, since the process of OBIA is iterative rather than a linear and strict subsequent one. The process of OBIA is a cyclic one. It is usually not enough to think of (a) delineation and (b) labeling. By its iterative nature, the process is highly adaptive and open for accommodating different categories of target classes, from specific domains, with different semantics, etc. Class modeling (Tiede et al., 2006; Tiede & Hoffmann, 2006) enables operators to tailoring transformation of scene contents into ready-to-use information according to user requirements. It supports data integration and the utilization of geo-spatial data other than images (e.g. continuous data like altitude or data representing administrative units).",
+
+		// 6.6.5 class modelling part 4
+		f45_5:"We are recalling what we have said about composite objects previously. What we see here, are so-called biotope complexes.",
+
+		// 6.6.6 class modelling part 5
+		f45_6:"Biotope complexes are units which are of central concern for a regional planning authority. In terms of their ecological significance, they are delineated according to criteria of functional homogeneity. While spectrally such complexes may be very heterogeneous, as being composed by sub-objects, the very arrangements of sub-objects make up their specific meaning in an ecological sense. A mixed arable land is a biotope complex with reasonable shares of both grassland and crop fields, with none of them dominating, and the entire structure not exceeding a certain size limit. ",
+
+		// 6.6.7 class modelling part 6
+		f45_7:"In fact, a strong emphasis is set on the composition of such objects by lower level elementary units. As this arrangement of sub-units allows for a certain degree of freedom, the result of such compositions is not completely bona fide. It is rather an expert-based delineation, whose ‘correctness’ or better quality requires specific means of validation. We shall explore this deeper in the next lesson. ",
+		f45_7_f:"In this case, we have medium size objects and at least four examples of complex biotope classes, which are composed by a specific arrangements of elementary units. This is realized in Cognition Network Language (CNL) ",
+		// 6.6.8 class modelling part 7
+		f45_8:"Here we can see the workflow.",
+		f45_8_f_0:" So we start with the initial level, where we have all kinds of optical data. ",
+		f45_8_f_1:"We then have some optimized level 0. This is the level of elementary units, where we  start the class modeling. ",
+		f45_8_f_2:"From here we reach up to the level of biotope complexes using different kinds of classification routines and combinations.",
+		f45_8_f_3:"This is then the final class model. Ultimately we would also end up with an optimization of the generated outlines. This would then provide additional information.",
+
+		// 6.6.9 class modelling part 8
+		f45_9:"So we end up with a thematic conditioning, where we ultimately deliver functionally homogeneous units with a certain minimum size.",
+		f45_9_f_1:"Here we now see the level of elements of the elementary units.",
+		f45_9_f_2:"They are then modelled together to get a new outline delineating the biotope complex showed in this image. In addition as mentioned before, we also optimizing the outline, by implementing semantic and geometric conditioning to obtain geospatial information. These are then provided in a ready to be used format to the user. In this case, we managed to automatically delineated over 30,000 biotope complexes for the entire region, which is about 3000 square kilometers. The average size of these biotope complex was 11.5 hectar. Again this is an expert based delineation. The appropriateness of this delineation-you can imagen there are different options- requires specific means of validation as already mentioned before. In the next chapter we will see some of the functions and aspects that needs to be considered.",
+
+		
+
+// Capitel 7: Accuracy Assessment
+f46_0:"",
+	//7.1 Definitons
+	f47_0:"",
+
+		//7.1.1 Definitions
+		f47_1:"",
+
+	// 7.2 Non-site-specific accuracy assessment
+	f48_0:"",
+
+		//7.2.1 Non-site-specific accuracy assessment
+		f48_1:"",
+
+	// 7.3 Site specific accuracy assessment
+	f49_0:"",
+
+		//7.3.1 Site specific accuracy assessment
+
+	// 7.4 Error Matrix
+	f50_0:"",
+
+		//7.4.1 Error Matrix part 1
+		f50_1:"",
+
+		//7.4.2 Kappa
+		f50_2:"",
+
+		//7.4.3 Error Matrix part 2
+		f50_3:"",
+
+	// 7.5 Towards object-based accuracy assessment
+	f51_0:"",
+
+		//7.5.1 Towards object-based accuracy assessment- part 1
+		f51_1:"",
+
+		// 7.5.2 Towards object-based accuracy assessment- part 2
+		f51_2:"",
+
+
+	// 7.6 Object fate analysis and object loyalty
+	f52_0:"",
+
+		//7.6.1 Object fate analysis - part 1
+		f52_1:"",
+
+		//7.6.2  Object fate analysis - part 2
+		f52_2:"",
+
+		//7.6.3  Object fate analysis - part 3
+		f52_3:"",
+
+		//7.6.4 Object loyalty
+		f52_4:"",
 	
 		
 		
