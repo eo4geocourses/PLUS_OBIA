@@ -567,7 +567,7 @@
 						automated delineation
 					</p>
 					<p style="position:absolute; top:82%; right:0%; width:45%; font-size: small;">
-						Tiede et al., 2004; Lang et al., 2006
+						Tiede et al. 2004, Lang et al. 2006
 					</p>
 				</div>
 				
@@ -3543,7 +3543,7 @@
 		<p></p>
 		<p style="font-size: 70%;">
 			<b>[1]</b> Knowledge Representation - why? | <b>[2]</b> Experience and Learning |
-			<b>[3]</b> Production Systems | <b>[4]</b> Fuzzy Sets| <b>[5]</b> Image Understanding| <b>[6]</b> Object Categories
+			<b>[3]</b> Production Systems | <b>[4]</b> Fuzzy Sets| <b>[5]</b> Image Understanding| <b>[6]</b> Object categories
 		</p>
 		<p><small>University of Salzburg | Department of Geoinformatics | (c) 2010-2022<br></small></p>
 			
@@ -3842,7 +3842,7 @@
 			</section>
 			<!-- Fuzzy rule sets- part 1-->
 			<section>
-			<h2> Fuzzy Rule Sets</h2>
+			<h2> Fuzzy rule sets</h2>
 			<ul style="text-align: left; width: 70%; font-size: 70%;">
 				<li>
 					We would all consider freshly brewed tea as something <font color="red">“hot”</font>
@@ -3896,7 +3896,7 @@
 	
 			<!-- Fuzzy rule sets- part 2-->
 			<section >
-			<h2> Fuzzy Rule Sets</h2>
+			<h2> Fuzzy rule sets</h2>
 			<ul style="text-align: left;width:40%; font-size: 70%;">
 				
 				<li>
@@ -4027,7 +4027,7 @@
 
 			<!-- Fuzzy rule sets- part 4-->
 			<section >
-			<h2> Fuzzy Rule Sets</h2>
+			<h2> Fuzzy rule sets</h2>
 			
 			<ul style=" text-align: left;font-size: 45%; width:40%; margin-right: 20%;">
 				<li>
@@ -4081,7 +4081,7 @@
 	
 			<!-- Fuzzy rule sets- part 5-->
 			<section>
-			<h2> Fuzzy Rule Sets</h2>
+			<h2> Fuzzy rule sets</h2>
 			<ul style="text-align: left; width: 60%; font-size: 70%; margin-right: 10%;">
 			<li>
 				Comparison of membership degrees
@@ -4154,7 +4154,7 @@
 	
 			<!-- Image understanding-->
 			<section >
-				<h3 style= "position: absolute;top: -100%; text-align: left; right:20%"> Image Understanding</h3>
+				<h3 style= "position: absolute;top: -100%; text-align: left; right:20%"> Image understanding</h3>
 			<ul style="font-size: 70%;">
 				<div class='fragment' id='f29_1_f_1'>
 				<p style="position: absolute; top:-20%; left:0%; width: 15%;font-size:70%;text-align: left; padding:1px; border:2px solid blue">
@@ -4327,7 +4327,7 @@
 		<section id="Chapter 4.6" >
 			
 			<section >
-				<h1>[4.6] Object Categories</h1>
+				<h1>[4.6] Object categories</h1>
 	
 				<aside class="notes">
 					<script>
@@ -4359,7 +4359,7 @@
 	
 			<!-- Object categories -part 2-->
 			<section >
-			<h2> Object Categories</h2>
+			<h2> Object categories</h2>
 			<div style="position: absolute">
 			<figure >
 				<img src="OBIA - Image Interpretation_folder/04_22_bona_fide.PNG" style="background: none; border: none;box-shadow: none;">
@@ -4414,7 +4414,7 @@
 	
 			</div>
 			<div style="text-align: left;width:90%; font-size:30%; position: absolute; right:-190%; bottom:-70%">
-				<p>cf.Lang et al., 2010 </p>
+				<p>cf. Lang et al. 2010 </p>
 			</div>
 	
 			</div>	
@@ -4427,12 +4427,12 @@
 	
 			<!-- Object categories -part 3-->
 			<section >
-			<h2> Object Categories</h2>
+			<h2> Object categories</h2>
 			<figure>
 				<img src="OBIA - Image Interpretation_folder/04_23_object_categories.PNG" style="background: none; border: none;box-shadow: none;" >
 			</figure>
 			<figcaption>
-				<p style="font-size: 50%;"> From: Lang et al., 2010</p>
+				<p style="font-size: 50%;"> From: Lang et al. 2010</p>
 			</figcaption>
 			<aside class="notes">
 				<script>
@@ -4440,8 +4440,1612 @@
 				</script>
 			</aside>
 			</section>
+		</section>
+		
+	<!-- Lesson 5 Image Segmentation -->
 	
+	<section section id="Chapter 5.0">
+					
+		<h1>Object-based Image Analysis (OBIA)</h1>
+		<h2>Image Segmentation</h2>
+		<small>Stefan LANG & Dirk TIEDE</small>
+		<p></p>
+		<p></p>
+		<p style="font-size: 50%;">
+			<b>[1]</b> Brief History| <b>[2]</b>What is Segmentation? |
+			<b>[3]</b> Image Segmentation in RS |
+			<b>[4]</b> Groups of Segmentation| <b>[5]</b> Mulit-scale Segmentation| <b>[6]</b> Object Features|  <b>[7]</b> Adaptive Parcel-Based Segmentation|
+		</p>
+		<p><small>University of Salzburg | Department of Geoinformatics | (c) 2010-2022<br></small></p>
+			
+			
+		<aside class="notes">
+		
+		<script>
+			document.write(String(text.f31_0));
+		</script>					
+		
+		</aside>
+	</section>
+
+			<!-- Chapter 1: Brief History-->
+
+			<section id="Chapter 5.1">
+				
+			<section >
+				<h1>[5.1] Brief History</h1>
+
+				<aside class="notes">
+					<script>
+
+						document.write(String(text.f32_0))
+					</script>
+				</aside>
+				</section>
+
+			
+				<!--Brief History-->
+				<section>
+				<h2>Brief history</h2>
+				<ul style="text-align: left; font-size: 70%;">
+					<li>
+						1980s
+					</li>
+					<ul style="font-size: 70%;">
+						<li>
+							First milestone: Haralick & Shapiro 1985 “Image segmentation techniques"
+						</li>
+						<li>
+							Major driver: industrial computer vision
+						</li>
+					</ul>
+					<li>
+						1990s
+					</li>
+					<ul style="font-size: 70%;">
+						<li>
+							Discovery of image segmentation in remote sensing
+						</li>
+						<li>
+							Challenge: multi‐spectral, geo‐referenced data
+						</li>
+					</ul>
+					<li>
+						2000s+
+					</li>
+					<ul style="font-size: 70%;">
+					<li>
+						Advent of VHSR data boosted development
+					</li>
+					<li>
+						Key role in semi‐automated analysis of EO data (e.g., Copernicus information layers)
+					</li>
+					</ul>
+					<figure>
+						<img src="OBIA - Image Interpretation_folder/05_04_soil.PNG" style="background: none; border: none;box-shadow: none; margin-top: 0%; width:90%">
+					</figure>
+				</ul>
+					<figcaption>
+						<p style="text-align: left; font-size: 60%; background-color: lightblue; position: absolute; bottom: 3%; left:13%;">Nature performs segmentation as well...since when, we don't know</p>
+					</figcaption>
+				
+				<p style="text-align: left; font-size: 40%; position: absolute; bottom:0%; right:10%">
+					Source: unkown
+				</p>
+				<aside class="notes">
+					<script>
+
+						document.write(String(text.f32_1))
+					</script>
+				</aside>
+			
+				</section>
+
+			</section>
+
+			<!-- Chapter 2: What is segmentation?-->
+			<section id="Chapter 5.2" >
+				
+				<section>
+					<h1>[5.2] What is segmentation?</h1>
 	
+					<aside class="notes">
+						<script>
+	
+							document.write(String(text.f33_0))
+						</script>
+					</aside>
+				</section>
+
+				<!--What is segmentation?- part 1-->
+				<section >
+				<h2> What is segmentation?</h2>
+				<div style="position: absolute; left:-5%">
+				<ul style="text-align: left; font-size:80%; width:50%">
+					<li>
+						Segments
+					</li>
+					<ul style="font-size:70%;width:70%">
+						<li>
+							Portions of a linear object (such as a road)
+						</li>
+						<li>
+							Pieces of a wooden snake, limbs of a chain, etc.
+						</li>
+					</ul>
+					<li>
+						Segmentation of linear geographical features	
+					</li>
+					<ul style="font-size:70%;width:70%">
+						<li>
+							Road segments	
+						</li>
+						<li>
+							1‐dimensional discrete georeferencing (milestone, km‐post)
+						</li>
+						<li>
+							‘Dynamic segmentation’ (according to address data)
+						</li>
+					</ul>
+				</ul>
+				<figure>
+					<img src="OBIA - Image Interpretation_folder/05_05_highway.PNG" style="background: none; border: none;box-shadow: none; position: absolute; right:-20%; top:15% ">
+				</figure>
+				<figcaption style="font-size:30%;position: absolute; right:-5%; bottom:25% ">
+					<p>from: wds-internetwerbung.com</p>
+				</figcaption>
+				<figure>
+					<img src="OBIA - Image Interpretation_folder/05_05_wooden_snacke.PNG" style="background: none; border: none;box-shadow: none; position: absolute; right:30%; bottom:-20%">
+				</figure>
+				<div style="text-align: left; font-size:50%; width:40%; background-color: lightblue; position: absolute; right:-15%; bottom:-10% ">
+					<p>
+						Wooden snakes have segments and so have roads. Segments from exit to exit have irregular lengths, segments from milestone to milestone regular ones.
+					</p>
+				</div>
+			</div>
+			<aside class="notes">
+				<script>
+
+					document.write(String(text.f33_1))
+				</script>
+			</aside>
+				
+				</section>
+
+
+				<!--What is Segmentation?- part 2-->
+				<section >
+					<h2> What is segmentation ?</h2>
+					<ul style="text-align: left; width:60%; font-size: 80%; margin-right: 60%;">
+						<li>
+							But let's move to 2-D (or 3-D) <strong> geographical space</strong>
+						</li>
+						<div class='fragment' id='f33_2_f_1'> 
+						<li>
+							Principles of 2D (areas) segmentation
+						</li>
+						<ul style="font-size: 70%; width:60%">
+							<li>
+								<strong>Space</strong> is cut into pieces
+							</li>
+							<li>
+								Pieces should be of <stong> similar size</stong>
+							</li>
+							<li><strong>Entire space</strong> covered
+							</li>
+							<li>
+								No <strong>gaps</strong> or <strong> overlaps</strong>
+							</li>
+						</ul>
+						</div>
+						<div class='fragment' id='f33_2_f_2'> 
+						<li>
+							Perfect 2D 'segmentation'
+						</li>
+						<ul  style="font-size: 70%; width:60%">
+							<li>
+								Hierarchical systems of administrative units (states, provinces, districts, ,etc.)
+							</li>
+							<li>
+								Number of units >>1
+							</li>
+						</ul>
+						<li>
+							Top-down view
+						</li>
+						</div>
+						</ul>
+					
+					<div style="text-align: left; width: 40%; font-size: 50%; background-color: lightblue; position: absolute; top:20%; right:-5%">
+						<p> 
+							Hierarchical segmentation of a territory into administrative units: 1 state (Austria), 9 provinces(Bundesländer), 127 districts (Bezirke) 2379 communities(Gemeinden, not shown)
+						</p>
+					</div>
+					
+					<figure>
+						<img src="OBIA - Image Interpretation_folder/05_06_admin_bound.PNG"  style="background: none; border: none;box-shadow: none; position: absolute; right:0%; bottom:-5%; width:60%">
+					</figure>
+					<aside class="notes">
+						<script>
+								document.write(String(text.f33_2, text.f32_2_f_1, text.f32_2_f_2))
+						</script>
+					</aside>
+
+				</section>
+
+
+				<!--What is Segmentation?- part 3-->
+				<section >
+				<h2> What is segmentation ?</h2>
+				<ul style="text-align: left; width:60%; margin-right: 40%;">
+					<li>
+						<strong> Regionalization</strong> (bottom-up)
+					</li>
+					<li>
+						Think of a...
+					</li>
+					<ul style="font-size: 60%; width:70%; margin-right: 60%;"> 
+						<div class='fragment' id='f33_3_f_1'>
+						<li>
+							Re‐organization of Europe towards the …
+						</li>
+					
+						<li>
+							United Regions of Europe (URE)
+						</li>
+						</div>
+						<div class='fragment' id='f33_3_f_2'>
+						<li>
+							Regions should be <strong>quite distinct</strong> to each other, yet internally internally <strong>homogenous</strong> 
+						</li>
+						</div>
+						<div class='fragment' id='f33_3_f_3'>
+						<li>
+							Politicians decide to take ‘natural language’ as the <strong>criterion</strong>  to group neighbouring communities
+						</li>
+												
+						<li>
+							Some <strong>pragmatic</strong> decisions to be taken
+						</li>
+						</div>
+						<div class='fragment' id='f33_3_f_4'>
+						<li>
+							... better stop here :)
+						</li>
+						</div>
+					</ul>
+				<figure>
+					<img src="OBIA - Image Interpretation_folder/05_07_EUR.PNG"  style="background: none; border: none;box-shadow: none; position: absolute; right:0%; top:25%; width:40% ">
+				</figure>
+				<div style="text-align: left;font-size: 50%; width:50%; background-color: lightblue; position: absolute; right:0%;bottom:0%">
+					<p>
+						Fictitious example of the ‘United regions of Europe'(illustration usin NUTS-1 level units)
+					</p>
+				</div>
+				<aside class="notes">
+					<script>
+
+						document.write(String(text.f33_3, text.f33_3_f_1, text.f33_3_f_2, text.f33_3_f_3, text.f33_3_f_4))
+					</script>
+				</aside>
+				</section>
+
+				<!--What is Segmentation?- part 4-->
+				<section >
+				<h2> What is segmentation?</h2>
+				<ul style="text-align: left; width: 60%; margin-right: 60%; font-size: 80%;">
+					<li>
+						Another example for 'spontaneous' (bottom-up) regionalization
+					</li>
+					<li>
+						Students practicing a fire alarm
+					</li>
+					<ul style="font-size: 80%;">
+						<div class='fragment' id='f33_4_f_1'>
+						<li>
+							When arriving in the gym, clusters of students are built
+						</li>
+						<li>
+							 Students cluster according to their class
+						</li>
+					</div>
+					<div class='fragment' id='f33_4_f_2'>
+						<li>
+							Chance is very high to meet the majority of students at their class cluster, even if some of them move around
+						</li>
+					</div>
+					<div class='fragment' id='f33_4_f_3'>
+						<li>
+							The class cluster will gather around one place, and should not occupy several spaces
+						</li>
+					</div>
+					</ul>
+				</ul>
+				<figure>
+					<img src="OBIA - Image Interpretation_folder/05_08_firealarm.PNG" style="background: none; border: none;box-shadow: none; position: absolute; right:00%; top:30%; width:30% ">
+				</figure>
+				<div style="text-align: left; width: 30%; font-size: 40%; background-color: lightblue; position: absolute; bottom:15%; right:0%">
+					<p>
+						After a fire-alarm pupils reconvene in the gym...
+					</p>
+				</div>
+				<aside class="notes">
+					<script>
+
+						document.write(String(text.f33_4, text.f33_4_f_1, text.f33_4_f_2, text.f33_4_f_3))
+					</script>
+				</aside>
+				</section>
+
+			</section>
+
+			<!--Chapter 3: Image Segmentation in RS-->
+			<section id="Chapter 5.3" >
+				
+			<section style="top: 287px; display: block;" class="" aria-hidden="true" data-index-h="3" data-index-v="0">
+				<h1>[5.3] Image segmentation in RS </h1>
+
+				<aside class="notes">
+					<script>
+
+						document.write(String(text.f34_0))
+					</script>
+				</aside>
+			</section>
+
+			<!-- Image Segmentation in RS- part 1-->
+
+			<section >
+			<h2>Image segmentation in RS</h2>
+			<div class='fragment' id='f34_1_f'>
+			<ul style="text-align: left; width: 50%;margin-right: 50%; font-size: 80%;">
+			<li>
+				Digital image data are <strong>arrays</strong> of pixels
+			</li>
+			<li>
+				Each pixel has as <strong> n-tupel of values</strong>,
+			</li>
+			<li>
+				Here: Pixel <strong>P1</strong> and <strong>P2</strong> for two bands (<strong>A,B</strong>)
+			</li>
+			<li>
+				But where are the <strong>regions</strong>?
+			</li>
+			</ul>
+			</div>
+			<figure>
+				<img src="OBIA - Image Interpretation_folder/05_09_spectral_reflectance.PNG" style="background: none; border: none;box-shadow: none; position: absolute; right:0%; top:20%; width:40%">
+				<img src="OBIA - Image Interpretation_folder/05_09_bandAB.PNG" style="background: none; border: none;box-shadow: none; position: absolute; right:20%; bottom:-40%;width:30% ">
+			</figure>
+			<figcaption style="position: absolute;bottom:-30%; font-size: 40%; right: 0%;">
+				<p>
+					By Lang,2004
+				</p>
+			</figcaption>
+			<aside class="notes">
+				<script>
+
+					document.write(String(text.f34_1, text.f34_1_f))
+				</script>
+			</aside>
+			
+			
+		
+			</section>
+
+			<!-- Image Segmentation in RS- part 2-->
+			<section >
+			<h2> Image segmentation in RS </h2>
+			<ul>
+				<li>
+					Objects against background (matrix) represented on image
+				</li>
+				<li>
+					Region (<strong>token</strong>): neighbouring pixels with similar value
+				</li>
+				<figure>
+					<img src="OBIA - Image Interpretation_folder/05_10_token.PNG" style="background: none; border: none;box-shadow: none;  ">
+				</figure>
+			</ul>	
+			<aside class="notes">
+				<script>
+
+					document.write(String(text.f34_2))
+				</script>
+			</aside>	
+			
+			</section>
+
+			<!-- Image Segmentation in RS- part 3-->
+			<section >
+				<h2> Image segmentation in RS </h2>
+				<figure>
+					<img src="OBIA - Image Interpretation_folder/05_10_bandA.PNG" style="background: none; border: none;box-shadow: none;">
+				</figure>
+				<aside class="notes">
+					<script>
+
+						document.write(String(text.f34_3))
+					</script>
+				</aside>
+
+			</section>	
+
+			<!-- Image Segmentation in RS- part 4-->
+			<section >
+				<h2> Image segmentation in RS </h2>
+				<ul  style="text-align: left; width: 50%;margin-right: 50%; font-size: 80%;">
+					<li>
+						Image segmentation is a form of (dual) regionalisation
+					</li>
+					<ul style="font-size: 70%;">
+						<li>
+							Regionalisation within the feature space and (at the same time)
+						</li>
+						<li>
+							Within real space
+						</li>
+					</ul>
+					<div class='fragment' id='f34_4_f'>
+					<li>
+						Level of detail of objects to be resolved depends on pixel size
+					</li>
+					<ul style="font-size: 70%;width:60%">
+						<li>
+							3 to 4 times smaller than objects of interest
+						</li>
+						<li>
+							Depending (again) on experience, contextual information, etc.
+						</li>
+					</ul>
+					</div>
+					<figure>
+						<img src="OBIA - Image Interpretation_folder/05_12_nd_feature_space.PNG" style="background: none; border: none;box-shadow: none; position: absolute; top:20%; right:0%">
+						<img src="OBIA - Image Interpretation_folder/05_12_2d_space.PNG" style="background: none; border: none;box-shadow: none;position: absolute; bottom:0%; right:15%; width:20%">
+						<img src="OBIA - Image Interpretation_folder/05_12_level_of_detail.PNG " style="background: none; border: none;box-shadow: none; position: absolute; bottom:-10%; right:38%; width:20%">
+						<img src="OBIA - Image Interpretation_folder/05_12_plus.PNG" style="background: none; border: none;box-shadow: none; position: absolute; bottom:33%; right:25%">
+						
+					</figure>
+					<div style="font-size:60%;text-align:left;position: absolute; bottom:0%; right:-6%; width: 20%;">
+						<p>
+							<strong> 2-dimensional geographical space</strong>
+						</p>
+					</div>
+					<aside class="notes">
+						<script>
+	
+							document.write(String(text.f34_4, text.f34_4_f))
+						</script>
+					</aside>
+			</section>
+
+			<!-- Image Segmentation in RS- part 5-->
+			<section >
+				<h2> Image segmentation in RS </h2>
+				<ul style="text-align: left; width: 50%;margin-right: 40%; font-size: 70%;">
+					<li >
+						How well does segmentation do?
+					</li>
+					<ul style="width:60%; font-size:80%">
+						<li>
+							<strong>Good</strong> matches, <strong>poor</strong> matches with real‐world objects
+						</li>
+						<li>
+							What about our own <strong>object hypotheses</strong> ?
+						</li>
+					</ul>
+				</ul>
+				<figure>
+					<img src="OBIA - Image Interpretation_folder/05_13_regionbased_seg.PNG" style="background: none; border: none;box-shadow: none; position: absolute; top:50%; right:5%">
+				</figure>
+				<div>
+					<p style="text-align: left;font-size: 40%; background-color: lightblue; position: absolute; bottom:-40%; left:10%; width:40%">
+						Region‐based segmentation of a multi‐spectral QuickBird image (0.6 m GSD)
+					</p>
+				</div>
+				<aside class="notes">
+					<script>
+
+						document.write(String(text.f34_5))
+					</script>
+				</aside>
+			</section>
+
+			<!-- Image Segmentation in RS- part 6-->
+			<section >
+				<h2> Image segmentation in RS </h2>
+				
+				<figure>
+					<img src="OBIA - Image Interpretation_folder/06_1_manual_delineation.png" style="background: none; border: none;box-shadow: none; position: absolute; top:50%; left:10%">
+					<img src="OBIA - Image Interpretation_folder/05_14_groupOfTrees.PNG" style="background: none; border: none;box-shadow: none; position: absolute; top:50%; left:35%">
+					<img src="OBIA - Image Interpretation_folder/05_14_mixedForestPatch.PNG" style="background: none; border: none;box-shadow: none; position: absolute; top:50%; right:20%">
+
+					<img src="OBIA - Image Interpretation_folder/05_14_grassLand.PNG" style="background: none; border: none;box-shadow: none; position: absolute; top: 180%; left:10%">
+					<img src="OBIA - Image Interpretation_folder/05_15_RS_trees.PNG" style="background: none; border: none;box-shadow: none; position: absolute; top:180%; left:35%">
+					<img src="OBIA - Image Interpretation_folder/05_14_RS_forest.PNG" style="background: none; border: none;box-shadow: none; position: absolute; top:180%; right:20%">
+				</figure>
+				<div style="font-size: 60%;">
+					<p style="position: absolute;top:150%; left:10%">
+						Grassland patch
+					</p>
+					<p style="position: absolute;top:150%; left:35%">
+						Group of trees
+					</p>
+					<p style="position: absolute;top:150%; right:20%">
+						Mixed forest patch
+					</p>
+					<p style="position: absolute;top:260%; right:10%; background-color: lightblue; width: 30%; font-size: 65%;">
+						Visual delineation on 0.25 m FCIR orthophotos (top row) vs automated segmentation on 0.6 m QuickBird image
+					</p>
+					<p style="position: absolute;top:252%; right:10%; font-size: 40%;">
+						From: Weinke& Lang, 2007
+					</p>
+
+				</div>
+		
+				<aside class="notes">
+					<script>
+
+						document.write(String(text.f34_6))
+					</script>
+				</aside>
+			</section>
+
+			<!-- Image Segmentation in RS- part 7-->
+			<section >
+				<h2> Image segmentation in RS </h2>
+			<figure>
+				<img src="OBIA - Image Interpretation_folder/03_9_object_delineation.png" style=" border: 1px; width:60%;margin-right: 40%;  background-color: lightgray; padding:2px;transform:rotate(350deg)">
+				<div class='fragment' id='f34_7_f_1'>
+				<img src="OBIA - Image Interpretation_folder/03_12_orchard1.png" style=" border: none; position: absolute; top:40%; right:10%; width:30%; background-color: lightgray; padding:2px; transform:rotate(20deg);">
+			
+			<div style="text-align: left; font-size: 50%; width: 50%; background-color: lightblue; position:absolute; bottom: -25%; left:5%">
+				<p>
+				Segmentation results are challenged by the 'ultimate Benchmark', our <strong> visual perception</strong>. Conceptual boundaries are hardly to be detected by segmentation algorithms while perceived by the human eye with ease (<strong>orchard problem</strong>).
+				</p>
+			</div>
+		</div>
+		</figure>
+		<aside class="notes">
+			<script>
+
+				document.write(String(text.f34_7_f, text.f34_7_f_1))
+			</script>
+		</aside>
+			</section>
+
+			<!--Quotation-->
+			<section >
+				<h2> Quotation </h2>
+				<figure>
+					<img src="OBIA - Image Interpretation_folder/01_06_quotation.jfif" style="background: none; border: none;box-shadow: none;">
+				</figure>
+				<figcaption>
+					<p style="text-align: left; font-size: 80%; position: absolute; bottom: 0%; left:40%">Lang 2008,p.15</p>
+				<aside class="notes">
+						<script>
+	
+							document.write(String(text.f34_8))
+						</script>
+				</aside>
+
+			</section>	
+
+			</section>		
+
+			<!-- Chapter 4: Groups of Segmentation-->
+			<section id="Chapter 5.4" >
+			<section >
+				<h1>[5.4] Groups of segmentation </h1>
+
+				<aside class="notes">
+					<script>
+
+						document.write(String(text.f35_0))
+					</script>
+				</aside>
+			</section>
+
+			<!--Groups of Segmentation-->
+			<section >
+				<h2>Groups of segmentation </h2>
+				<ul style="text-align: left; width: 50%;margin-right: 50%; font-size: 80%;">
+					<li>
+						Pixel-based or histogram-based
+					</li>
+					<ul style="width: 60%; font-size: 70%;">
+						<li>
+							Thresholding techniques
+						</li>
+						<li>
+							Segmentation of feature space
+						</li>
+					</ul>
+					<li>
+						Region-based
+					</li>
+					<ul style="width: 70%; font-size: 70%;">
+						<li>
+							Region growing
+						</li>
+						<li>
+							Split and merge
+						</li>
+					</ul>
+					<li>
+						Edge-based
+					</li>
+					<ul style="width: 70%; font-size: 70%;">
+						<li>
+							Laplace filter, Sobel-operator, representativeness,...
+						</li>
+					</ul>
+					<div class='fragment' id='f35_1_f'>
+					<li>
+						Non-image related
+					</li>
+					<ul style="width: 70%; font-size: 70%;">
+						<li>
+							Non content expecting
+						</li>
+						<li>
+							Tiling image with a honeycomb or chessboard structure
+						</li>
+					</ul>
+					</div>
+				</ul>
+					<div style="text-align: left;">
+						<p style="position: absolute;left:60%; top:20%; font-size: 70%; width:20%;">
+							<i>Finding homogenous objects</i>
+						</p>
+						<p style="position: absolute;left:60%; top:45%; font-size: 70%; width:20%;">
+							<i>Detecting edges between objects [and background (matrix)]</i>
+						</p>
+						<p style="position: absolute;left:60%; top:75%; font-size: 70%; width:20%;">
+							<i>Regions defined without information from image</i>
+						</p>
+					</div>
+					<figure>
+						<img src="OBIA - Image Interpretation_folder/04_17_groups_of_segmentation.PNG" style="background: none; border: none;box-shadow: none; position:absolute; top:20%; right:0%">
+					</figure>
+					<figcaption>
+						<p style="font-size: 50%; text-align: left; position: absolute; bottom: -5%; right: 0%;">Source: unkown</p>
+					</figcaption>
+					<aside class="notes">
+						<script>
+	
+							document.write(String(text.f35_1, text.f35_1_f))
+						</script>
+					</aside>
+			</section>
+						
+
+			<!--Histogram segmentation-->
+			<section >
+				<h2>Histogram segmentation </h2>
+				<ul style="text-align: left; width: 50%;margin-right: 50%; font-size: 80%;">
+					<li>
+						Histogram Thresholding
+					</li>
+					<ul style="font-size:70%;">
+						<li>
+							Simplest way to accomplish an exhaustive segmentation
+						</li>
+						<li>
+							One‐ or multi ‐modal distribution of grey values, threshold has to be determined
+						</li>
+						<li>
+							Only works in feature space &#8594 'pseudo-segmentation'
+						</li>
+					</ul>
+				</ul>
+				<figure>
+				<img src="OBIA - Image Interpretation_folder/04_18_hidtogram.PNG"  style="background: none; border: none;box-shadow: none; position: absolute; left:20%; bottom: -50%">
+				<img src="OBIA - Image Interpretation_folder/04_18_image.PNG"   style="background: none; border: none;box-shadow: none; position: absolute; right: 0%; top:30%">
+				</figure>
+				<div style="text-align: left;width: 50%; font-size: 60%; background-color: lightblue; position: absolute;right:0%; bottom:-40%">
+					<p>
+						'Segmentation' by thresholding band 1 of a Quickbird image. This does not result in regions per se.
+					</p>
+				</div>
+				<aside class="notes">
+					<script>
+
+						document.write(String(text.f35_2))
+					</script>
+				</aside>
+			</section>
+
+			<!--Edge-based Segmentation part-1-->
+			<section >
+				<h2>Edge-based segmentation </h2>
+				<ul  style="text-align: left; width: 50%;margin-right: 50%; font-size: 75%;">
+					<li>
+						A segmentation routine when elongated structures (e.g. roads) separate otherwise homogenous areas
+					</li>
+					<li>
+						Edge: clear boundary between homogenousareas, detectable by edge-sensitive algorithms (filter)
+					</li>
+					<li>
+						E.g. Lee-Sigma filter
+					</li>
+				</ul>
+				<figure>
+					<img src="OBIA - Image Interpretation_folder/04_19_sobl_filter.PNG" style="background: none; border: none;box-shadow: none; position: absolute; top:20%; right:10%; width:30%">
+					<img src="OBIA - Image Interpretation_folder/04_19_egde.PNG"	style="background: none; border: none;box-shadow: none; position: absolute; left:5%; bottom:-40%">
+					<img src="OBIA - Image Interpretation_folder/arrow.png"			style="width:20%;background: none; border: none;box-shadow: none; position: absolute; bottom:-30%; right: 45%; ">	
+					<img src="OBIA - Image Interpretation_folder/04_19_line.PNG"	style="background: none; border: none;box-shadow: none; position: absolute; bottom: -40%; right: 10%;">
+					
+				</figure>
+				<div style="text-align: left;font-size: 60%; background-color: lightblue; position: absolute; bottom:5%; right: 0%; font-size: 50%; width:30% ">
+					<p>The first derivative helps detecting edges</p>
+				</div>
+
+				<aside class="notes">
+					<script>
+
+						document.write(String(text.f35_3))
+					</script>
+				</aside>
+
+			</section>
+
+			<!-- Edge-based Segmentation part-2-->
+			<section >
+				<h2>Edge-based segmentation </h2>
+				<ul style="text-align: left; width: 50%;margin-right: 50%;">
+					<li>
+						Edge detection
+					</li>
+					<ul style="font-size: 70%;">
+						<li>
+							Filtering – smoothing to decrease noise in the image
+						</li>
+						<li>
+							Enhancement Enhancement – revealing revealing local changes changes in intensities
+						</li>
+						<li>
+							Detection – select edge pixels, e.g. by thresholding
+						</li>
+						<li>
+							Closing of gaps / deleting artefacts
+						</li>
+						<li>
+							Combining, extending of lines
+						</li>
+					</ul>
+					<li>
+						Linking the edge pixels to form the region boundaries
+					</li>
+				</ul>
+				<figure>
+					<img src="OBIA - Image Interpretation_folder/04_20_egde_based_seg.PNG" style="background: none; border: none;box-shadow: none; position: absolute; top:15%; right:0%;">
+				</figure>
+
+				<aside class="notes">
+					<script>
+
+						document.write(String(text.f35_4))
+					</script>
+				</aside>
+
+			</section>
+
+			<!-- Region-based Segmentation-->
+			<section >
+				<h2>Region-based segmentation </h2>
+				<ul style="text-align: left; width: 70%;margin-right: 50%; font-size: 80%;">
+					<li>
+						Region growing routine
+					</li>
+					<ul style="width:60%; font-size: 80%;">
+						<li>
+							Seed cells are distributed over image
+						</li>
+						<li>
+							Bottom up (randomly)
+						</li>
+						<li>
+							Top‐down (content expected)
+						</li>
+					</ul>
+					<li>
+						Strategy
+					</li>
+					<ul style="width:70%;font-size: 80%;">
+						<li>
+							Neighbours (4‐ or 8‐neighbourhood) are included into region if
+						</li>
+						<ul >
+							<li>
+								They do not belong to another region yet
+							</li>
+							<li>
+								A <strong>homogeneity criterion H</strong> applies
+							</li>
+							<li>
+								Two neighbouring regions are unified, if <strong>H</strong> applies
+							</li>
+						</ul>
+					</ul>
+				</ul>
+				<figure>
+					<img src="OBIA - Image Interpretation_folder/04_21_region_based_seg.PNG" style="background: none; border: none;box-shadow: none; position: absolute; top:20%; right:0%; width:30%">
+				</figure>
+				<figcaption>
+					<p style="text-align: left;font-size: 40%; position: absolute; right:0%; bottom: 5%;"> Campbell, P.346</p>
+				</figcaption>
+				<aside class="notes">
+					<script>
+
+						document.write(String(text.f35_5))
+					</script>
+				</aside>
+
+			</section>
+
+			<!--Watershed Segmentation-->
+			<section >
+				<h2>Watershed segmentation </h2>
+				<ul style="text-align: left; width: 80%;margin-right: 50%; font-size: 80%;">
+					<li>
+						Watershed segmentation
+					</li>
+					<ul style="font-size: 70%; width:60%">
+						<li>
+							Grey values as relief
+						</li>
+						<li>
+							Virtual flooding
+						</li>
+						<li>
+							Watersheds separate pools
+						</li>
+						<li>
+							Controlled by markers
+						</li>
+					</ul>
+					<div class='fragment' id='f35_6_f'>
+					<li>
+						Split& Merge
+					</li>
+					<ul style="font-size: 70%; width:60%">
+						<li>
+							Top down following quadtree principle
+						</li>
+						<li>
+							Scene is subdivided into n (usually 4) equally sized parts / cells.
+						</li>
+						<li>
+							Cell is  maintained as is, if <strong>H</strong> applies applies, otherwise subdivided again.
+						</li>
+						<li>
+							Repeated until <strong>H</strong> applies
+						</li>
+						<li>
+							Merging of neighboring  quadtree quadtree cells, if	homogenous.
+						</li>													
+					</div>
+					</ul>
+
+				</ul>
+				<figure>
+					<img src="OBIA - Image Interpretation_folder/04_22_relief.PNG" style="background: none; border: none;box-shadow: none; position: absolute; top:10%; right:0%; width:30% ">
+					<img src="OBIA - Image Interpretation_folder/04_22_watershed_seg.PNG"	style="background: none; border: none;box-shadow: none; position: absolute; top:40%; right:0%;width:25%  ">
+				</figure>
+				<aside class="notes">
+					<script>
+
+						document.write(String(text.f35_6, text.f35_6_f))
+					</script>
+				</aside>
+
+			</section>
+			</section>
+
+			<!-- Chapter 5: Multi-scale Segmentation-->
+			<section id="Chapter 5.5" >
+			<section >
+				<h1>[5.5] Multi-scale segmentation </h1>
+
+				<aside class="notes">
+					<script>
+
+						document.write(String(text.f36_0))
+					</script>
+				</aside>
+			</section>
+
+			<!--Multi-scale Segmentation- part 1-->
+			<section>
+				<h2>Multi-scale segmentation </h2>
+				<ul style="text-align: left; width: 50%;margin-right: 50%; font-size: 70%;">
+					<li>
+						Segmentation in hierarchical scale domains
+					</li>
+					<li>
+						Principles
+					</li>
+					<ul>
+						<li>
+							Mimic human eye
+						</li>
+						<li>
+							Reflect hierarchical structure of (geographical) reality
+						</li>
+						<li>
+							Segmentation layers interlinked
+						</li>
+						<li>
+							Reproducibility and universality
+						</li>
+					</ul>
+					<li>
+						In eCognition
+					</li>
+					<ul>
+						<li>
+							region-based, <strong> local mutual best fitting</strong> appraoch (see below)
+						</li>
+						<ul>
+							<li>
+								Colour homogeneity
+							</li>
+							<li>
+								From homogeneity
+							</li>
+						</ul>
+						<li>
+							Strictly hierarchical
+						</li>
+					</ul>
+				</ul>
+				<figure>
+					<img src="OBIA - Image Interpretation_folder/05_23_multi_scale_seg.PNG" style="background: none; border: none;box-shadow: none; position:absolute; top:40%; right:-5%">
+				</figure>
+				<figcaption>
+					<p style="font-size: 50%; position: absolute; right:0%; bottom: 10%;">Lang et al., 2003</p>
+				</figcaption>
+				<aside class="notes">
+					<script>
+
+						document.write(String(text.f36_1))
+					</script>
+				</aside>
+			</section>
+
+			<!--Multi-scale Segmentation- part 2-->
+			<section >
+				<h2>Multi-scale segmentation </h2>
+				<ul  style="text-align: left; width: 50%;margin-right: 50%; font-size: 70%;">
+					<li>
+						Homogeneity
+					</li>
+					<ul>
+						<li>
+							Central concept in region‐based	segmentation
+						</li>
+						<li>
+						 Regions: maximum <strong>internal homogeneity </strong>, and
+						</li>
+						<li>
+							Maximum <strong>external heterogeneity</strong> ('difference')
+						</li>
+					</ul>
+					<div class='fragment' id='f36_2_f_1'>
+					<li>
+						Segmentation ≠ unsupervised classification
+					</li>
+				</div>
+
+					<ul>
+						<div class='fragment' id='f36_2_f_2'>
+						<li>
+							Involves <i>a priori </i> spatial aspects
+						</li>
+					</div>
+					<div class='fragment' id='f36_2_f_3'>
+						<li>
+							Employs <strong>spatial optimization</strong> techniques (e.g. compactness)
+						</li>
+					</div>
+					</ul>
+				</ul>
+			
+				<figure>
+					<img src="OBIA - Image Interpretation_folder/05_24_mulit_sclae_seg.PNG" style="background: none; border: none;box-shadow: none; position:absolute; top:25%; right:-5%">
+				</figure>
+				<aside class="notes">
+					<script>
+
+						document.write(String(text.f36_2, text.f36_2_f_1), text.f36_2_f_2, text.f36_2_f_3)
+					</script>
+				</aside>
+			</section>
+
+			<!--Multi-scale Segmentation- part 3-->
+			<section >
+				<h2>Multi-scale segmentation </h2>
+				<ul style="text-align: left; width: 50%;margin-right: 50%; font-size: 80%;">
+					<li>
+						Recent advances support <strong>multi‐resolution</strong> segmentation
+					</li>
+					<li>
+						Key characteristics
+					</li>
+					<ul>
+						<li>
+							Several levels of object delineations
+						</li>
+						<li>
+							Derived from one single image
+						</li>
+						<li>
+							Multi‐resolution means mulit‐scale
+						</li>
+					</ul>
+					<li>
+							But which scales.... ?
+					</li>
+				</ul>
+				<div class='fragment' id='f36_3_f'>
+				<figure>
+					<img src="OBIA - Image Interpretation_folder/05_13_selected_feature.png" style="background: none; border: none;box-shadow: none; position:absolute; top:25%; right:5%; width:40%">
+				</figure>
+				<div>
+					<p style="text-align: left; font-size: 70%;position: absolute; bottom:5%; right: 0%; background-color: lightblue; width: 50%;">
+						2-scale representation of scene with bush encroachment</p>
+				</div>
+			</div>
+
+				<aside class="notes">
+					<script>
+
+						document.write(String(text.f36_3, text.f36_3_f))
+					</script>
+				</aside>
+			</section>
+
+			
+			<!--Multi-scale Segmentation- part 4-->
+			<section >
+				<h2>Multi-scale segmentation </h2>
+			<ul style="text-align: left; width: 50%;margin-right: 50%; font-size: 70%;">
+				<li>
+					What are relevant segmentation layers?
+				</li>
+				<ul>
+					<li>
+						<strong>Regionalized</strong> hierarchies (Lang,2002)
+					</li>
+				</ul>
+			</ul>
+			<figure>
+				<img src="OBIA - Image Interpretation_folder/05_26_mulit_scale_seg.PNG"  style="background: none; border: none;box-shadow: none; position:absolute; top:40%; right:5%; width:60%">
+			</figure>
+			<div>
+				<p style="font-size: 50%; position: absolute;bottom:-30%; left:15%; width:20%; background-color: lightblue;">
+					Different patterns of increasing object size with incremental multi‐resolution segmentation
+				</p>
+			</div>
+			<aside class="notes">
+				<script>
+
+					document.write(String(text.f36_4))
+				</script>
+			</aside>
+			</section>
+
+
+			<!--Multi-scale Segmentation- part 5-->
+			<section >
+				<h2>Multi-scale segmentation </h2>
+				<ul style="text-align: left; width: 50%;margin-right: 50%; font-size: 70%;">
+					<li>
+						What are relevant segmentation layers?
+					</li>
+					<ul>
+						<li>
+							<strong> Statistical</strong> estimation of scale parameter
+						</li>
+						<li>
+							<strong>ESP</strong> Tool by Dragut et al.
+						</li>
+					</ul>
+				</ul>
+				<figure>
+					<img src="OBIA - Image Interpretation_folder/05_27_edit_process.PNG" style="background: none; border: none;box-shadow: none; position:absolute; top:60%; right:0%; width:50%">
+					<img src="OBIA - Image Interpretation_folder/05_27_diagram.PNG" style="background: none; border: none;box-shadow: none; position:absolute; bottom:-60%; left:5%; width:40% ">
+				</figure>
+				<div>
+					<p style="font-size: 60%; width:40%; position: absolute;right:0%; top:30%;background-color: lightblue;">
+						ESP tool taking into account local variance among objects and rate of change between levels
+					</p>
+				</div>
+				<aside class="notes">
+					<script>
+	
+						document.write(String(text.f36_5))
+					</script>
+				</aside>
+
+			</section>
+			
+			<!--Multi-scale Segmentation- part 6-->
+			<section>
+				<h2> Mulit-scale segmentation </h2>
+				
+				<figure>
+					<img src="OBIA - Image Interpretation_folder/29_multi_scale_seg.png" style="background: none; border: none;box-shadow: none; width:120% ">
+					
+				</figure>
+				<aside class="notes">
+					<script>
+	
+						document.write(String(text.f36_6))
+					</script>
+				</aside>
+		
+			</section>		
+
+
+			<!--Multi-scale Segmentation- part 7-->
+			<section >
+				<h2>Multi-scale segmentation </h2>
+			<ul style="text-align: left; width: 50%;margin-right: 50%; font-size: 60%; width:60%">
+				<li>
+					SCRM (Size constrained region merging) (G.Castilla)
+				</li>
+				<ul style="font-size:70%; width:60%">
+					<li>
+						The desired <strong>mean size</strong> of output polygons (DMS ‐ in hectares)
+					</li>
+					<li>
+						The <strong>minimum size</strong> required for polygons, or minimum mapping unit (MMU ‐ in hectares)
+					</li>
+					<li>
+						The <strong>maximum allowed </strong>size (MAS ‐ in hectares)
+					</li>
+					<li>
+						The <strong>minimum distance</strong> between vertices in the vector layer, or minimum vertex interval (MVI ‐in meters)
+					</li>
+				</ul>	
+				<li>
+					eCognition
+				</li>	
+				<ul style="font-size:70%;width:50%">
+					<li>
+						<strong>Scale Parameter</strong> (average size of generated objects)
+					</li>
+					<li>
+						<strong>Colour</strong> homogeneity (spectral similarity)
+					</li>
+					<li>
+						<strong>Shape</strong> homogeneity homogeneity (compactness (compactness of form)
+					</li>
+				</ul>		
+			</ul>
+			<figure style="position:absolute; right:0%; top:10%">
+				<img src="OBIA - Image Interpretation_folder/29_01_SCRM.PNG" style="background: none; border: none;box-shadow: none; ">
+			</figure>
+			<figure style="position:absolute; right:1%; top:60%">
+				<img src="OBIA - Image Interpretation_folder/29_2_ecognition.PNG" style="background: none; border: none;box-shadow: none; ">
+			</figure>
+			<div style="background-color: lightblue; text-align: left;font-size: 40%; position:absolute; right:35%; bottom:-20%">
+				<p>SCRM (yellow lines) vs.eCog</p>
+			</div>
+			<div style=" text-align: left;font-size: 30%; position:absolute; right:3%; bottom:-28%">
+				<p>G. Hay, oral presentation, at ASPRS 2007</p>
+			</div>
+			<aside class="notes">
+				<script>
+
+					document.write(String(text.f36_7))
+				</script>
+			</aside>	
+			</section>
+
+			<!--Multi-scale Segmentation- part 8-->
+			<section >
+				<h2>Multi-scale segmentation </h2>
+				<ul style="text-align: left; width: 50%;margin-right: 50%; font-size: 70%; width:60%">
+					<li>
+						Bottom up region merging technique
+					</li>
+					<ul style="width:70%;font-size: 70%;">
+						<li>
+							Starting with each pixel being a region
+						</li>
+						<li>
+							A pair of regions is merged into one region, each merge	having a merging cost (degree of fitting)
+						</li>
+						<li>
+							Objects are merged into bigger objects as long as the cost is below a ‘least degree of fitting’ (scale parameter) = the merge fulfils the homogeneity criterion
+						</li>
+						<li>
+							Starting points for merging distributed with maximum distance
+						</li>
+						<li>
+							Pair wise clustering process considering smallest growth of heterogeneity
+						</li>
+					</ul>
+					<li>
+						Establishing segmentation levels on several scales using different scale parameters
+					</li>
+					<p style="width:70%;font-size: 70%;">
+						(e.g. 2nd level based on 1st level: larger scale parameter results in larger objects consisting of the objects of the 1st level)
+					</p>
+				</ul>
+				<figure style="position:absolute; right:0%; top:10%">
+					<img src="OBIA - Image Interpretation_folder/30_1_level.PNG" style="background: none; border: none;box-shadow: none; width:80% ">
+				</figure>
+				<aside class="notes">
+					<script>
+	
+						document.write(String(text.f36_8))
+					</script>
+				</aside>
+			</section>
+
+			<!--Multi-scale Segmentation- part 9-->
+			<section >
+				<h2>Multi-scale segmentation </h2>
+				<ul style="text-align: left; width: 50%;margin-right: 50%; font-size: 60%; width:60%">
+					<li>
+						Decision heuristics
+					</li>
+					<ul style="width:60%;">
+						<li>
+							Finding an adjacent object B for an arbitrary object A for merging them
+						</li>
+						<li>
+							<strong>Fitting</strong>: when the homogeneity criterion is fulfilled
+						</li>
+						<li>
+							<strong>Best fitting</strong>: when the homogeneity citerion is fulfilled, and the merge between B and A produces the best degree of fitting compared to the merge between A and any other adjacent object A
+						</li>
+					</ul>
+				</ul>
+				<figure style="position:absolute; right:-5%; top:15%">
+					<img src="OBIA - Image Interpretation_folder/31_01_fitting.PNG" style="background: none; border: none;box-shadow: none; width:60% ">
+				</figure>
+				<figure style="position:absolute; right:-5%; top:50%">
+					<img src="OBIA - Image Interpretation_folder/31_02_best_fitting.PNG" style="background: none; border: none;box-shadow: none; width:60% ">
+				</figure>
+				<aside class="notes">
+					<script>
+	
+						document.write(String(text.f36_9))
+					</script>
+				</aside>
+
+			</section>
+
+			<!--Multi-scale Segmentation- part 10-->
+			<section >
+				<h2>Multi-scale segmentation </h2>
+				<ul style="text-align: left; width: 50%;margin-right: 50%; font-size: 50%; width:60%">
+					<li>
+						Decision heuristics (cont.)
+					</li> 
+				<ul style="width:60%; font-size: 90%">
+				<li>
+					Local mutually best fitting: find the best fitting object B for the	object A, then find the best fitting object C for the object B
+				</li>
+				<li>
+					Confirm that object C is the object A, otherwise take B for A and C for	B and repeat the procedure
+				</li>
+				<li>
+					Find best fitting pair of objects in the local vicinity of A following  the gradient of homogeneity
+				</li>
+				<li>
+					Global mutually best fitting:merge the pair of objects for which the homogeneity criterion is fulfilled fulfilled best in the whole image
+				</li>
+				<li>
+					Distributed treatment order
+				</li>
+				<ul>
+					<li>
+						Use starting points with maximum distance to all other points treated before (treatment order defined over pixels or segments)
+					</li>
+				</ul>
+				</ul>
+				</ul>
+
+				<figure style="position:absolute; right:-5%; top:15%">
+					<img src="OBIA - Image Interpretation_folder/32_01_mutually_best_fitting.PNG" style="background: none; border: none;box-shadow: none; width:70% ">
+				</figure>
+				<figure style="position:absolute; right:-10%; top:50%">
+					<img src="OBIA - Image Interpretation_folder/31_02_best_fitting.PNG" style="background: none; border: none;box-shadow: none; width:70% ">
+				</figure>
+				<aside class="notes">
+					<script>
+	
+						document.write(String(text.f36_10))
+					</script>
+				</aside>
+			</section>
+
+			<!--Multi-scale Segmentation- part 11-->
+			<section >
+				<h2>Multi-scale Segmentation </h2>
+				<p style="text-align: left; font-size: 80%;">Definition of the degree of fitting</p>
+				<ul>
+				<li style="text-align: left;font-size:70%">
+					Colour and shape homogeneity are weighted against each other
+				</li>
+				<li style="text-align: left; font-size:70%">
+					Compactness Compactness and smoothness smoothness make up the shape homogeneity and are weighted against each other
+				</li>
+				</ul>
+				<figure >
+					<img src="OBIA - Image Interpretation_folder/33_01_multi_res.PNG" style="background: none; border: none;box-shadow: none;  ">
+				</figure>
+				<div >
+					<p style="position:absolute; left:5%;text-align: left;font-size: 50%;background-color: lightblue;width:30%"> Two objects are similar when close to each other in feature space</p>
+					<p style="position:absolute; left:50%;text-align: left;font-size: 50%;background-color: lightblue;width:40%"><strong>Compactness:</strong> ideal compact form of objects (objects don't become lengthy) <strong>Smoothness:</strong> boundaries of the edge don't become fringed </p>
+				</div>
+				<aside class="notes">
+					<script>
+	
+						document.write(String(text.f36_11))
+					</script>
+				</aside>
+			</section>
+
+			<!--Multi-scale Segmentation- part 12-->
+			<section >
+				<h2>Multi-scale segmentation </h2>
+				<ul style="font-size:70%">
+					<li>
+						Segmentation parameters
+					</li>
+				
+				<ul style="width:60%; font-size:70%">
+					<li>
+						<strong>'Scale parameter'</strong>(- relative average size)
+					</li>
+					<li>
+						<strong>Compactness</strong> and <strong>smoothness</strong>
+					</li>
+				</ul>
+			</ul>
+				<figure>
+					<img src="OBIA - Image Interpretation_folder/34_01_compact_smooth.PNG" style="background: none; border: none;box-shadow: none; position: absoulte; bottom:30% ">
+				</figure>
+			<div>
+				<p style="position:absolute;bottom:0%; text-align: left;font-size: 50%;background-color: lightblue; width: 90%">Relation between boundary length l of the object and the perimeter of the bounding box of the object (bounding box: shortest possible boundary length)</p>
+			</div>
+			<div>
+				<p style="position:absolute;top:30%; right: 0%; text-align: left;font-size: 50%;background-color: lightblue; width: 40%">Relation between boundary length l of the object and the square root of the number n of the pixels of the object (square root of n equals the side of a square with n pixels)</p>
+			</div>
+			<aside class="notes">
+				<script>
+
+					document.write(String(text.f36_12))
+				</script>
+			</aside>
+			</section>
+
+			<!--Multi-scale Segmentation- part 13-->
+
+			<section >
+				<h2>Multi-scale segmentation </h2>
+				<ul style="text-align: left; width: 50%;margin-right: 50%; font-size: 60%; width:50%">
+					<li>
+						Domain-specific segmentation
+					</li>
+					<ul>
+						<li>
+							Within ‚image domains‘, i.e. broader classes such as forest or open land
+						</li>
+						<li>
+							Independent segmentation parameters control specific segmentation within domains
+						</li>
+					</ul>
+				</ul>
+				<figure style="position: absolute; right:0%; top:20%;width:40%" >
+					<img src="OBIA - Image Interpretation_folder/35_01_domain_specific.PNG" style="background: none; border: none;box-shadow: none">
+				</figure>
+				<figcaption>
+					<p style="text-align: left;font-size: 40%; position: absolute;bottom:-85%;right:0%">From Tiede at el, 2008</p>
+				</figcaption>
+				<aside class="notes">
+					<script>
+	
+						document.write(String(text.f36_13))
+					</script>
+				</aside>
+			</section>
+			</section>
+
+			<!-- Chapter 6: Object Features-->
+
+			<section id="Chapter 5.6" >
+			<section >
+				<h1>[5.6] Object Features </h1>
+
+				<aside class="notes">
+					<script>
+
+						document.write(String(text.f37_0))
+					</script>
+				</aside>
+			</section>
+
+			<!--Object Features Overview-->
+			<section >
+			<h2>Object features -overview</h2>
+			<ul style="text-align:left;font-size: 45%; width:50%">
+				<div style="padding:20px; border: 5px solid greenyellow">
+					<li>
+						<strong>layer</strong> values
+						<ul>
+							<li>
+								mean
+							</li>
+							<li>
+								std-dev
+							</li>
+						</ul>
+					</li>
+					<li>
+						<strong>geometrical</strong> properties
+						<ul>
+							<li>
+								size, shape, ...
+							</li>
+						</ul>
+					</li>
+					<li>
+						<strong>textural</strong> properties
+						<ul>
+							<li>
+								layer value texture (e.g. mean of sub objects: std-dev)
+							</li>
+							<li>
+								shape texture (e.g. directions of sub objects)
+							</li>
+						</ul>
+					</li>
+					<li>
+						<strong>hierarchical</strong> properties
+						<ul>
+							<li>
+								number of higher levels
+							</li>
+							<li>
+								number of super or sub objects
+							</li>
+						</ul>
+					</li>
+					<figure style="position: absolute; right: 0%; top: 25%;">
+						<img src="OBIA - Image Interpretation_folder/38_01_object_feature.PNG" style="background: none; border: none;box-shadow: none">
+					</figure>
+				</div>
+				<div style="padding:20px; border: 5px solid rgba(248, 204, 8, 0.863)">
+					<li>
+						<strong>relations</strong> to classes of...
+						<ul>
+							<li>
+								neighbour objects
+							</li>
+							<li>
+								sub objects (relative area of...)
+							</li>
+							<li>
+								super objects
+							</li>
+						</ul>
+					</li>
+					<li>
+						<strong>membership</strong> to...
+							
+					</li>	
+					<figure style="position: absolute; right: 0%; bottom: -2%;">
+						<img src="OBIA - Image Interpretation_folder/38_02_class_related_feature.PNG" style="background: none; border: none;box-shadow: none">
+					</figure>				
+
+				</div>
+			</ul>
+			<aside class="notes">
+				<script>
+
+					document.write(String(text.f37_1))
+				</script>
+			</aside>
+			
+			</section>
+
+
+			</section>
+
+			<!-- Chpater 7: Adaptive parcel-based Segmentation-->
+			<section id="Chapter 5.7" >
+			<section >
+				<h1>[5.7] Adaptive parcel-based segmentation </h1>
+
+				<aside class="notes">
+					<script>
+
+						document.write(String(text.f38_0))
+					</script>
+				</aside>
+			</section>
+
+			<!--Adaptive parcel-based Segmentation -part 1-->
+			<section>
+				<h2> Adaptive-parcel based segm.</h2>
+				<ul style=" text-align:left; font-size:70%; width: 60%; position: absolute; left: -5%">
+					
+					<li>
+						Modified per-parcel approach
+					</li>
+					<li>
+						Based on digital cadastre data and multispectral image data (e.g. SPOT)
+					</li>
+					<li>
+						Depending on internal characteristics, objects are <strong> retained, aggregated</strong> or <strong> split apart</strong> 
+					</li>
+					<li>Finally: spectrally homogenous elementary units ( as basis for e.g. class modelling process)
+					</li>
+					<figure>
+						<img src="OBIA - Image Interpretation_folder/39_01_field.PNG" style="background: none; border: none;box-shadow: none">
+						<p style="position: absolute;bottom:15%; right:50%; font-size: 130%; color: aquamarine;"> &#10152</p>
+						<img src="OBIA - Image Interpretation_folder/39_02_field_seg.PNG" style="position: absolute; left: 50%;background: none; border: none;box-shadow: none">
+					</figure>
+				
+				<div class='fragment' id="f38_1_f_1">
+					<figure>
+						<img src="OBIA - Image Interpretation_folder/39_03_adaptive_parcel_seg.PNG" style="position: absolute; right:-55%; bottom: 0%;background: none; border: none;box-shadow: none" >
+					</figure>
+				</div>
+				</ul>	
+				<aside class="notes">
+					<script>
+	
+						document.write(String(text.f38_0, text.f38_1_f_1))
+					</script>
+				</aside>
+			</section>
+
+			<!--Adaptive parcel-based Segmentation -part 2-->
+			<section>
+				<h2>Adaptive-parcel based segm.</h2>
+				<ul style="font-size: 70%; width:60%; position: absolute;left:-3%">
+					<li>Three cases</li>
+					<ul>
+						<li>
+							(1) <u>boundaries retained:</u> parcel corresponds to one, single homogenous image object, no change or updatae of the geometry required
+						</li>
+						<li>
+							(2) <u>boundaries removed:</u> parcels are merged because of internal homogeneity, change of geometry
+						</li>
+						<li>
+							(3) <u>boundaries introduced:</u> a single parcel is spectrally heterogeneous and split according to spectral behavior, change of geometry (mainly forest)
+						</li>
+					</ul>
+					<figure>
+						<img src="OBIA - Image Interpretation_folder/40_01_three_cases.PNG"  style="position: absolute; right:-60%; bottom: 0%;background: none; border: none;box-shadow: none" >
+					</figure>
+					<figcaption>
+						<p style="font-size: 40%; position: absolute; right:-50%; bottom:-5%"> <i> From Lang & Tiede 2008 </i></p>
+					</figcaption>
+				</ul>
+				<aside class="notes">
+					<script>
+
+						document.write(String(text.f38_2))
+					</script>
+				</aside>
+			</section>
+			
+
+			</section>
+	
+
+		<!-- Lesson 6-->
+		<!-- Lesson 7-->
 		</section>	
 			
 
