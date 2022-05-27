@@ -641,7 +641,7 @@ f31_0:'Welcome to lesson 5! Here we will explore one of the two crucial pillars 
 		//5.7.2 Adaptive parcel-based Segmentation -part 2
 		f38_2:'This slide illustrates the three cases again. The initial number of cadastral units usually drops significantly. Probably, the majority of the units will be merged due to trans-boundary homogeneity; a smaller part will be subdivided. Assets of this approach are its cost-efficiency, the high matching degree of the produced geometry and the transferability to similar cases because of the standardized character of the data sets involved. ',
 	
-// Capitel 6: Object-based Classification (including Class Modelling)
+// Chapter 6: Object-based Classification (including Class Modelling)
 f39_0:"Welcome to lesson 6, object-based classification, the second central pillar of the OBIA process. This is the content of lesson 6, organized in six subchapters: (1) (Strengths of) object-based classification. (2) Sample- vs. rule-based classification. (3) Fuzzy vs. crisp rule-based classification. (4) Class hierarchy. (5) Class-related features. (6) Class modelling. As any classification process, also object-based classification aims at delivering information classes. We will realize, however, that we can use much more features for classification as we can use in a pixel-based environment. We have provided an overview on object features in the last lesson on image segmentation. All these features can be used for classifying objects, but of course, not all of them make sense. If, for example, we want to distinguish a soccer field from a grassland patch, we can use the rectangular shape and the typical size as a distinctive feature. On the other hand, if we use the fact that a soccer field is surrounded by built-up structures, we may fail in cases where the soccer field is situated in a larger recreational area. So, we need be aware which features are distinctive, and which are more individual. Of course, we could use such individual features for even finer classifying such objects, for example telling soccer stadiums from recreational soccer fields. As we will also see, object-based classification goes beyond a simple labelling of generated objects, as often the final classes of concern are more complex, the object delineations are limited, or we not get delineations at all, as in the case of conceptual boundaries.  ",
 
 	//6.1 (Strengths of) object-based classification
@@ -742,12 +742,11 @@ f39_0:"Welcome to lesson 6, object-based classification, the second central pill
 		// 6.6.9 class modelling part 8
 		f45_9:"So we end up with a thematic conditioning, where we ultimately deliver functionally homogeneous units with a certain minimum size.",
 		f45_9_f_1:"Here we now see the level of elements of the elementary units.",
-		f45_9_f_2:"They are then modelled together to get a new outline delineating the biotope complex showed in this image. In addition as mentioned before, we also optimizing the outline, by implementing semantic and geometric conditioning to obtain geospatial information. These are then provided in a ready to be used format to the user. In this case, we managed to automatically delineated over 30,000 biotope complexes for the entire region, which is about 3000 square kilometers. The average size of these biotope complex was 11.5 hectar. Again this is an expert based delineation. The appropriateness of this delineation-you can imagen there are different options- requires specific means of validation as already mentioned before. In the next chapter we will see some of the functions and aspects that needs to be considered.",
-
+		f45_9_f_2:"They are then modelled together to get a new outline delineating the biotope complex showed in this image. In addition as mentioned before, we also optimizing the outline, by implementing semantic and geometric conditioning to obtain geospatial information. These are then provided in a ready to be used format to the user. In this case, we managed to automatically delineated over 30,000 biotope complexes for the entire region, which is about 3000 square kilometers. The average size of these biotope complex is 11.5 hectar. Again this is an expert based delineation. Such delineation requires specific means of validation as already mentioned before. In the next chapter we will see some of the aspects that needs to be considered.",
 		
 
-// Capitel 7: Accuracy Assessment
-f46_0:"",
+// Lesson 7: Accuracy Assessment
+f46_0:"(no explanation as yet)",
 	//7.1 Definitons
 	f47_0:"",
 

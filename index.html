@@ -6042,7 +6042,846 @@
 	
 
 		<!-- Lesson 6-->
+
+		<section section id="Chapter 6.0">			
+					
+			<h1>Object-based Image Analysis (OBIA)</h1>
+			<h2>Object-based Classification </h2>	
+			<!-- <h4>(incl. class modelling)</h4> -->
+			<small >Stefan LANG & Dirk TIEDE</small>
+			
+			<p style="font-size: 50%; margin-top: 1%; ">
+				<b>[1]</b> Strengths of object-based classification <b>[2]</b>Sample- vs. rule-based classification
+				<b>[3]</b> Fuzzy vs. crisp classification <b>[4]</b> Class hierarchy <b>[5]</b> Class-related features <b>[6]</b> Class modelling  
+			</p>
+			<p><small>University of Salzburg | Department of Geoinformatics | (c) 2010-2022<br></small></p>
+				
+				
+			<aside class="notes">
+			
+			<script>
+				document.write(String(text.f39_0));
+			</script>					
+			
+			</aside>
+		</section>
+					<!-- Chapter 1: (Strengths of) object-based classification-->
+		
+					<section id="Chapter 6.1">
+						<section>
+							<h1>[6.1] Strengths of object-based classification</h1>
+		
+						<aside class="notes">
+							<script>
+		
+								document.write(String(text.f40_0))
+							</script>
+						</aside>
+						</section>
+						<!-- Object-based classification part 1-->
+		
+						<section>
+							<h2>Object-based classification - why and how?</h2>
+							<ul style="text-align: left; font-size: 70%; width: 70%">
+								<li> Additional information can be utilized</li>
+								<ul>
+									<li>
+										shape, texture, relationship to neighbours
+									</li>
+									<li>
+										'object-relationship modelling' (Burnett & Blaschke 2003)
+									</li>
+								</ul>
+								<div class="fragment" id="f40_1_f_1">
+								<li> Classification</li>
+								<ul>
+									<li> Based on samples (training objects) </li>
+									<li> Based on rules (advanced object feature database query) </li>
+								</ul>
+								</div>
+								<div class="fragment" id="f40_1_f_2">
+								<li> 'Click and classify'</li>
+								<ul>
+									<li> Direct labeling of well delineated objects</li>
+									<li> Easy re-classification</li>
+								</ul>
+							</div>
+							</ul>
+								<figure>
+									<img src="OBIA - Image Interpretation_folder/40_2_object features.png" style=" background: none; border: none;box-shadow: none; position: absolute; right:0%; bottom: 0%;">
+								</figure>
+								<aside class="notes">
+									<script>
+				
+										document.write(String(text.f40_1, text.f40_1_f_1, text.f40_1_f_2))
+									</script>
+								</aside>
+						</section>
+		
+						<!-- Object-based classification part 2-->
+						<section>
+							<h2>Object-based classification - why and how?</h2>
+							<ul style="text-align: left; font-size: 60%;  position: absolute; left:-3%">
+								<li style="width:60%"> 'Overcoming' noise through segmentation</li>
+								<ul>
+									<li> Especially useful at VHSR data</li>
+									<li> Improved signal/noise ratio </li>
+									<li> Adaptable image resolution</li>
+								</ul>
+								<div class="fragment" id="f40_2_f">
+								<li> Decreasing number of units</li>
+								<ul style="width:50%">
+									<li> Lesser units to be classified ( in comparison to number of pixels) </li>
+									<li> But increasing complexity in class description </li>
+								</ul>
+							</div>					
+							
+								<figure>
+									<img src="OBIA - Image Interpretation_folder/41_01_Units.png"   style=" background: none; border: none;box-shadow: none; " >
+									<img src="OBIA - Image Interpretation_folder/41_02_fields.png"   style=" background: none; border: none;box-shadow: none; position: absolute; right:0%; top: 0%; width:40%" >
+								</figure>
+							</ul>
+							<aside class="notes">
+								<script>
+			
+									document.write(String(text.f40_2, text.f40_2_f))
+								</script>
+							</aside>
+						</section>
+		
+						
+						<!-- Object-based classification part 3-->
+						<section>
+							<h2>Object-based classification - why and how?</h2>
+							<ul style="text-align:left; font-size: 70%; width:60%; position: absolute;left:-3%">
+								<li>
+									Recall the Yin - Yang analogy
+								</li>
+								<ul>
+									<li>
+										Classification interlinked with segmentation
+									</li>
+									<li>
+										Intermediate pre-classification, before performing next step of segmentation (e.g. <strong> domain-specific</strong> segmentation)
+									</li>
+								</ul>
+								<figure>
+									<img src="OBIA - Image Interpretation_folder/42_01_ying_yang.png"   style=" background: none; border: none;box-shadow: none; " >
+									<img src="OBIA - Image Interpretation_folder/42_02_forest.png"   style=" background: none; border: none;box-shadow: none; position: absolute; left:100%; top:0%; width: 60%;" >
+								</figure>
+							</ul>
+							<aside class="notes">
+								<script>
+			
+									document.write(String(text.f40_3))
+								</script>
+							</aside>
+						</section>
+		
+						
+					</section>
+		
+					<!-- Chapter 2: Sample- vs. rule-based classification-->
+					<section id="Chapter 6.2">
+		
+					<section>
+							<h1>[6.2] Sample- vs. rule-based classification</h1>
+		
+						<aside class="notes">
+							<script>
+		
+								document.write(String(text.f41_0))
+							</script>
+						</aside>
+					</section>
+		
+					<!-- Sample- vs. rule-based classification part 1-->
+					<section>
+						<h2> Sample- vs. rule-based</h2>
+						<ul style="text-align: left; font-size: 60%; width:50%; position: absolute; left:3%">
+							<li>
+								Sample-based classification
+							</li>
+							<ul>
+								<li>
+									Define class membership by similarity to selected samples (training objects)
+								</li>
+								<ul style="font-size: 70%;">
+									<li>
+										Sample has to be representative for its class
+									</li>
+									<li>
+										Use features clearly distinguishing the sampled class from other classes
+									</li>
+									<li>
+										<i>Attention:</i> only a few of potential fetaures ma be <strong> distinctive</strong>
+									</li>
+								</ul>
+								<div class="fragment" id="f41_1_f">
+								<li>
+									Classifier
+								</li>
+								<ul style="font-size: 70%;">
+									<li>
+										E.g. <strong> nearest neighbour</strong> Classifier
+									</li>
+									<li>
+										Object will be assigned to the class whose samples are closest in feature space distance
+									</li>
+								</ul>
+								<li>
+									Useful approach, if knowledge about the scene's content is limited
+								</li>
+							</div>
+							</ul>
+						
+							<figure>
+								<img src="OBIA - Image Interpretation_folder/43_01_sample_vs_rule_based.png"   style=" background: none; border: none;box-shadow: none; position: absolute; left:100%; bottom:20%; width:50% " >
+							</figure>
+							
+						</ul>
+						<aside class="notes">
+							<script>
+		
+								document.write(String(text.f41_1, text.f41_1_f))
+							</script>
+						</aside>
+					</section>
+		
+					<!-- Sample- vs. rule-based classification part 2-->
+					<section>
+						<h2> Sample- vs. rule-based</h2>
+						<ul style="text-align: left; font-size: 80%; width:50%; position: absolute; left:5%">
+							<li>
+								Rule-based classification
+							</li>
+							<ul style="font-size: 60%;">
+								<li>
+									<strong>Heuristics</strong> are encoded in a set of rules
+								</li>
+								<li> Define a class by single rule on one feature or by several rules on several features</li>
+								<div class="fragment" id="f41_2_f_1" >
+								<li>
+									<strong> Hierarchical</strong> relations of classes
+								</li>
+							</div>
+							<div class="fragment" id="f41_2_f_2">
+								<li>
+									Rules can address different kinds of features
+								</li>
+								<ul>
+									<li>
+										Object features
+									</li>
+									<li>
+										<strong> Class-related</strong> features
+									</li>
+								</ul>
+							</div>
+							<div class="fragment" id="f41_2_f_3">
+								<li>
+									Fuzzy or crisp rule definition
+								</li>
+							</div>
+							<div class="fragment" id="f41_2_f_4">
+								<li>Advantages compared to sample-based cassification</li>
+							</div>
+								<ul>
+							<div class="fragment" id="f41_2_f_5">
+		
+									<li>
+										Incorporation of expert knowledge in the classification
+									</li>
+							</div>
+							<div class="fragment" id="f41_2_f_6">					
+									<li>
+										Formulation of complex class description 
+									</li>
+							</div>
+							<div class="fragment" id="f41_2_f_7">
+									<li> 
+										Transparency (especially compared to neutral networks)
+									</li>
+							</div>
+							<div class="fragment" id="f41_2_f_8">
+		
+									<li>
+										Transferability
+									</li>
+							</div>
+								</ul>
+							</ul>
+							<figure>
+								<img src="OBIA - Image Interpretation_folder/44_01_rule_based_classification.png"   style=" background: none; border: none;box-shadow: none; position: absolute; left:100%; top:0%; width:50% " >
+							</figure>
+						</ul>
+						<aside class="notes">
+							<script>
+		
+								document.write(String(text.f41_2, text.f41_2_f_1,text.f41_2_f_2, text.f41_2_f_3, text.f41_2_f_4, text.f41_2_f_5, text.f41_2_f_6, text.f41_2_f_7, text.f41_2_f_8))
+							</script>
+						</aside>
+		
+					</section>
+					
+					</section>
+		
+					<!-- Chapter 3: Fuzzy vs. crisp rule-based classification-->
+					<section id="Chapter 6.3">
+						
+						<section>
+							<h1>
+								[6.3] Fuzzy vs. crisp rule-based classification
+							</h1>
+							<aside class="notes">
+								<script>
+			
+									document.write(String(text.f42_0))
+								</script>
+							</aside>	
+						</section>
+		
+						<!-- Fuzzy vs. crisp rule-based classification-->
+						<section>
+							<h2>
+								Fuzzy vs. crisp rule-based classification 
+							</h2>
+							<ul style="text-align: left; font-size: 70%; width: 50%; position: absolute; left:2%">
+								<li>
+									Sharp boundaries vs. gradual changes 
+								</li>
+								<ul>
+									<li>
+										Especially under natural conditions 
+									</li>
+									<li>
+										Fuzzy rule sets account for this uncertainty 
+									</li>
+								</ul>
+								<figure>
+									<img src="OBIA - Image Interpretation_folder/45_01_clear_cuts.png"   style=" background: none; border: none;box-shadow: none; width:50%; position: absolute; left:0% ; " >
+								</figure>
+								<figcaption style="position: absolute; bottom:-10%; font-size: 40%;">
+									<p> Formann, 1995</p>
+								</figcaption>
+								<div style="position: absolute; left:55% ; font-size: 70%; ">
+									<p style="background-color: lightblue; padding:2px"> Clear-cuts in a forest are less ambiguous, both in terms of boundaries and class assignment</p>
+								</div>
+							</ul>
+								<figure>
+									<img src="OBIA - Image Interpretation_folder/45_02_fuzzy.png "  style=" background: none; border: none;box-shadow: none; width:30%; position: absolute; right:5%;   " >
+								</figure>
+								
+		
+								<div style="position:absolute; right:0%; bottom:-150%; font-size: 50%; width:30% ">
+								<p style="background-color: lightblue; padding:2px"> Bog areas have different classes (e.g. open raised bog, heath bog, etc.) but no sharp boundaries. FCIR ortho 1976</p>
+							</div>
+							<aside class="notes">
+								<script>
+			
+									document.write(String(text.f42_1))
+								</script>
+							</aside>
+						</section>
+		
+		
+					</section>
+		
+					<!-- Chapter 4: Class hierarchy-->
+					<section id=" Chapter 6.4">
+					<section>
+						<h1> [6.4] Class hierarchy</h1>
+					<aside class="notes">
+							<script>
+		
+								document.write(String(text.f43_0))
+							</script>
+					</aside>
+					</section>
+					
+		
+						<!--Class hierarchy-->
+						<section>
+							<h2> Class hierarchy</h2>
+							<ul style="text-align: left; font-size: 70%; width:50%;">
+								<li>
+									Classes are embedded in a hierarchical heritage scheme
+								</li>
+								<li>
+									(1) Feature-based inheritance
+								</li>						
+								<ul>
+									<div class="fragment" id="f43_1_f_1">
+									<li>
+										child classes inherit all descriptive features from their parent classes
+									</li>
+									</div>
+									<div class="fragment" id="f43_1_f_2">
+									<li>
+										Not confident to spectral values 
+									</li>
+									</div>
+								</ul>
+								<div class="fragment" id="f43_1_f_3" >
+								<li>
+									(2) Semantic inheritance
+								</li>
+								<ul>
+									<li>
+										Classes can be grouped semantically
+									</li>
+									<li>
+										Belong to the same logical parent class 
+									</li>
+								</ul>
+								</div>
+								<div class="fragment" id="f43_1_f_4">
+								<li>
+									Semantic inheritance may turn into feature-based when additional explicit information is provided 
+								</li>
+								</div>
+		
+								<figure>
+									<img src="OBIA - Image Interpretation_folder/46_01_class_hierarchy.png"   style=" background: none; border: none;box-shadow: none; width:30%; position: absolute; right:-10% ; top:15% " >
+								</figure>
+							</ul>
+							<aside class="notes">
+								<script>
+			
+									document.write(String(text.f43_1,text.f43_1_f_1, text.f43_1_f_2, text.f43_1_f_3, text.f43_1_f_4 ))
+								</script>
+						</aside>
+						</section>
+		
+						<!-- Cognition network-->
+						<section>
+							<h2> Cognition network</h2>
+							<figure>
+								<img src="OBIA - Image Interpretation_folder/47_cognition_work.png" style=" background: none; border: none;box-shadow: none;">
+							</figure>
+							<aside class="notes">
+								<script>
+			
+									document.write(String(text.f43_2))
+								</script>
+						</aside>
+						</section>
+					
+					</section>
+		
+					<!-- Chapter 5: Class-related features-->
+					<section id=" Chapter 6.5">
+						<section>
+							<h1> [6.5] Class-related features</h1>
+							<aside class="notes">
+								<script>
+			
+									document.write(String(text.f44_0))
+								</script>
+						</aside>
+						</section>
+						
+						<!--Class-related features-->
+						<section>
+							<h2> Class-related features</h2>
+							<ul style="text-align: left;font-size: 50%; width:60%; ">
+								<li>
+									Classifying an object based on the classification of other objects
+								</li>
+								<ul style="width:60%">
+									<li>
+										(prospective) classification functions as a contextual feature 
+									</li>
+									<ul>
+										<li> E.g. a green area is classified as urban park because it is embedded in urban area</li>
+									</ul>
+									<li>
+										Classified object may become a context feature itself for other objects
+									</li>
+								</ul>
+								<div class="fragment" id="f44_1_f">
+								<li>
+									Iterative Process
+								</li>
+								<ul style="width:60%">
+									<li> Possibly in-deterministic or even unstable</li>
+									<li> Mutual and circular dependencies should be avoided</li>
+								</ul>
+							</div>
+							</ul>
+								<figure>
+									<img src="OBIA - Image Interpretation_folder/38_02_class_related_feature.png" style=" background: none; border: none;box-shadow: none; position: absolute; right:5%; top: 30%; ">
+									<img src="OBIA - Image Interpretation_folder/48_class_related_features.png" style=" background: none; border: none;box-shadow: none; position: absolute; right:5%; top:60%; ">
+								
+								</figure>
+								<aside class="notes">
+									<script>
+				
+										document.write(String(text.f44_1, text.f44_1_f))
+									</script>
+							</aside>
+		
+						</section>	
+							
+		
+					</section>
+		
+					<!-- Chapter 6: Class modelling-->
+					<section id ="Chapter 6.6" >
+						<section>
+							<h1> [6.6] Class modelling</h1>
+							<aside class="notes">
+								<script>
+			
+									document.write(String(text.f45_0))
+								</script>
+						</aside>
+						</section>
+		
+						<!--Class modelling part 1-->
+						<section>
+							<h2> Class modelling</h2>
+							<div style="text-align: left; font-size: 40%; font-family: Monospace; width:70%; background-color: lightblue;">
+								<p>
+									<strong> Aim</strong>
+								</p>
+								<p>
+									Quantifying bush encroachment for evaluating the degradation status of a sensitive ecological area 
+								</p>
+								<p> <strong> Monitoring requirement</strong></p>
+								<p> Degradation of near-natural active raised bog between 1976 and 1999 (Nature protection agencies) </p>
+							</div>
+							<div style="text-align: left; font-size: 40%; font-family: Monospace; width:70%; background-color: lightblue; position: absolute; left:0%; bottom:-70%">
+								<p>
+									<strong>Conditioned Information</strong>
+								</p>
+								<p> Irrespective of the different data sources and heterogeneity of classes the decrease of th habitat type under concern was reported</p>
+							</div>
+							<figure>
+								<img src="OBIA - Image Interpretation_folder/49_01_class_modelling.png" style="background: none; border: none;box-shadow: none;position: absolute;right:5%; top: 50%;">
+							</figure>
+							<figure>
+								<img src="OBIA - Image Interpretation_folder/49_02_class_modelling.png" style="background: none; border: none;box-shadow: none;position: absolute;left:0%; top: 80%;">
+							</figure>
+							<aside class="notes">
+								<script>
+			
+									document.write(String(text.f45_1))
+								</script>
+						</aside>
+						
+						</section>
+		
+						<!-- class modelling part 2-->
+						<section>
+							<h2> Class modelling</h2>
+							<ul style="text-align: left; font-size: 60%; width:45%;">
+								<li>
+									Mire complex wit <strong>'non-a-priori'</strong> units
+								</li>
+								<ul>
+									<li>
+										Entire bog consists of a complicated pattern of vegetation patches with sub-units if ecological relevance
+									</li>
+									<li>
+										Sub-units form habitats that show a certain degradation stage
+									</li>
+									<li>
+										In manual interpretation: habitats are delineated and aggregated by experienced interpreter (<strong>generalization</strong>)
+									</li>
+									<li>
+										Difficult to automate, since we deal with 'double complexity'
+									</li>
+									<li>
+										Spatial structure of habitats can be categorized (<strong> structural signatures</strong>), but not standardized
+									</li>
+								</ul>
+							</ul>
+							<figure>
+								<div class="fragment" id="f45_2_f_1">
+								<img src="OBIA - Image Interpretation_folder/50_01_bog_active.png" style="background: none; border: none;box-shadow: none;position: absolute;right:-3%; top: 15%; width:25%">
+								</div>
+								<div class="fragment" id="f45_2_f_2">
+								<img src="OBIA - Image Interpretation_folder/50_01_bog_heath.png" style="background: none; border: none;box-shadow: none;position: absolute;right:-3%; top:35%; width:25%">
+								</div>
+								<div class="fragment" id="f45_2_f_3">
+								<img src="OBIA - Image Interpretation_folder/50_01_bog_bush.png" style="background: none; border: none;box-shadow: none;position: absolute;right:-3%; top: 50%; width:25%">
+								</div>
+								<div class="fragment" id="f45_2_f_4">
+								<img src="OBIA - Image Interpretation_folder/50_01_bog_tree.png" style="background: none; border: none;box-shadow: none;position: absolute;right:-3%; top: 70%; width:25%">
+								</div>
+							</figure>
+							<aside class="notes">
+								<script>
+			
+									document.write(String(text.f45_2, text.f45_2_f_1, text.f45_2_f_2, text.f45_2_f_3, text.f45_2_f_4))
+								</script>
+						</aside>
+						</section>
+		
+						<!-- class modelling part 3-->
+						<section>
+							<h2> Class modelling</h2>
+							<ul style="text-align: left; font-size: 70%; width:60%">
+								<li>
+									Two aspects
+								</li>
+								<ul>
+									<li>
+										Minimum percentage of bushed
+									</li>
+									<li>
+									Distribution of bushes
+								</li>							
+								</ul>
+								
+							</ul>
+							
+							<figure style="position: absolute;right:-5%; top:20%; width:60%;">
+								<img src="OBIA - Image Interpretation_folder/51_01_Membership_function.png" style="background: none; border: none;box-shadow: none; ">
+							</figure>
+							<figure style="position: absolute;left:15%;  width:20%;">
+								<img src="OBIA - Image Interpretation_folder/51_02_bush_bog.png" style="background: none; border: none;box-shadow: none; ">
+							</figure>
+							<div style="position: absolute; bottom:-125%; left:30% ">
+								<p style="font-size: 40%; background-color: lightblue; width:60%; "> A bush bog Characterized by island-like distribution of bushes</p>
+							</div>
+							<aside class="notes">
+								<script>
+			
+									document.write(String(text.f45_3))
+								</script>
+						</aside>
+						
+						</section>
+		
+						<!--Quotation-->
+						<section>
+							<h2> Quotation</h2>
+							<figure>
+								<img src="OBIA - Image Interpretation_folder/01_06_quotation.jfif" style="background: none; border: none;box-shadow: none;">
+							</figure>
+							<figcaption style="position: absolute;bottom:0%; left:45%; font-size: 70%;">
+								<p>Lang 2008</p>
+							</figcaption>
+							<aside class="notes">
+								<script>
+			
+									document.write(String(text.f45_4))
+								</script>
+						</aside>
+		
+						</section>
+		
+						<!-- class modelling part 4-->
+						<section>
+							<h2>Class modelling</h2>
+							<div style="position: absolute">
+								<figure >
+									<img src="OBIA - Image Interpretation_folder/04_22_bona_fide.png" style="background: none; border: none;box-shadow: none;opacity: 0.2;">
+								</figure>				
+								<div style="text-align: left;width: 80%; font-size:50%; position: absolute;bottom:-50%; left:0%; opacity: 0.2;">
+								<ul >
+									<li>
+										<strong>Bona Fide objects</strong>
+									</li>
+									<li> With 'natural' boundaries</li>
+									<li>Correspond to local physical discontinuities</li>
+									<li> Perceived by people in more or less the same way</li>
+								</ul>
+								</div>
+								<div style="text-align: left;width:90%; font-size:50%; position: absolute; left:90%; top:15%; background-color: rgb(232, 192, 16);padding-bottom: 100%;">
+									<ul>
+										<li>
+											<strong> Composite Objects</strong>
+										</li>
+										<li>
+											Real-world modelled objects
+										</li>
+										<li>
+											Correspond to functional homogeneity
+										</li>
+										<li>
+											Perceived by experts in similar way (convention)
+										</li>
+									</ul>
+								</div>					
+								<figure >
+									<img src="OBIA - Image Interpretation_folder/04_22_composite_objects.png" style="background: rgb(232, 192, 16); border: none;box-shadow: none; position:absolute; left:95%; top:80%">
+								</figure>
+								<figure >
+									<img src="OBIA - Image Interpretation_folder/04_22_fiat_objcts.png" style="background: none; border: none;box-shadow: none;position:absolute; right:-170%; top:10%; opacity: 0.2;">
+								</figure>
+								<div style="text-align: left;width:90%; font-size:50%; position: absolute; right:-160%; bottom:-50%; opacity: 0.2;">
+									<ul>
+										<li>
+											<strong> (Conceptual) Fiat objects</strong>
+										</li>
+										<li>
+											With 'un-natural' boundaries
+										</li>
+										<li>
+											Correspond to no genuine heterogeneity
+										</li>
+										<li>
+											Objects not obvious in the landscape
+										</li>
+									</ul>
+				
+								</div>
+								<div style="text-align: left;width:90%; font-size:30%; position: absolute; right:-190%; bottom:-70%">
+									<p>cf.Lang et al., 2010 </p>
+								</div>
+								<aside class="notes">
+									<script>
+				
+										document.write(String(text.f45_5))
+									</script>
+							</aside>
+				
+								</div>
+							
+						</section>
+		
+						<!-- class modelling part 5-->
+						<section>
+							<h2>Class modelling</h2>
+							<ul style="font-size: 60%;text-align: left;width: 40%; position: absolute;left:10%">
+								<li>
+									Demand profile and policy scope
+								</li>
+								<ul>
+									<li> Biotope complexes as basic units for regional planning purpose</li>
+									<li> BIMS (<i>Biotope information and management system</i>)</li>
+								</ul>
+							</ul>
+							<figure style="position: absolute; top:15%; right:0%; width:50%" >
+								<img src="OBIA - Image Interpretation_folder/52_BIMS.png" style="background: none; border: none;box-shadow: none">
+							</figure>
+							<aside class="notes">
+								<script>
+			
+									document.write(String(text.f45_6))
+								</script>
+						</aside>
+			
+						</section>
+		
+						<!-- class modelling part 6-->
+						<section>
+							<h2> Class modelling</h2>
+							<ul style="text-align: left; font-size: 60%; width:40%; position: absolute; left:15%">
+								<li>
+									Establishing rule sets for the description of the structural composition of <strong> biotope complexes</strong>
+								</li>
+								<li>
+									Consideration of minimum size of biotope compexes (e.g. 4ha, 2ha)
+								</li>
+								<li>
+									Additional hint layers
+								</li>
+								<li>
+									realization in Cognition Network Language (CNL)
+								</li>
+								<div class="fragment" id="f45_7_f">
+								<figure style="width:170%" >
+									<img src="OBIA - Image Interpretation_folder/53_1_biotope_complexes.png" style="background: none; border: none;box-shadow: none">
+								</figure>
+							</div>
+							</ul>
+							
+							<figure>
+								<img src="OBIA - Image Interpretation_folder/53_2_biotope_complexes.png" style="background: none; border: none;box-shadow: none; position: absolute; right:0%; top:60%;width:35%">
+							</figure>
+						
+							<aside class="notes">
+								<script>
+			
+									document.write(String(text.f45_7, text.f45_7_f))
+								</script>
+						</aside>
+			
+							
+						</section>
+		
+						<!-- class modelling part 7-->
+						<section>
+							<h2> Class modelling</h2>
+							<div class="fragment fade-in-then-out" id="f45_8_f_0">
+							<figure>
+								<img src="OBIA - Image Interpretation_folder/54_BKT_Level0.jpg" style="background: none; border: none;box-shadow: none; width:90%; position: absolute; left:5%; width:80%">
+							</figure>
+						</div>
+							<div class="fragment fade-in-then-out" id="f45_8_f_1">
+							<figure>
+								<img src="OBIA - Image Interpretation_folder/54_BKT_Levl0_opt.jpg" style="background: none; border: none;box-shadow: none; width:90%; position: absolute; left:5%; width:80%">
+							</figure>
+							</div>
+							<div class="fragment fade-in-then-out" id="f45_8_f_2">
+							<figure>
+								<img src="OBIA - Image Interpretation_folder/54_BKT_modeling.jpg" style="background: none; border: none;box-shadow: none; width:90%; position: absolute; left:5%; width:80%">
+							</figure>
+							</div>
+							<div class="fragment fade-in" id="f45_8_f_3">
+							<figure>
+								<img src="OBIA - Image Interpretation_folder/54_BKT_class_model.jpg" style="background: none; border: none;box-shadow: none; width:30%">
+							</figure>
+							</div>
+							<aside class="notes">
+								<script>
+			
+									document.write(String(text.f45_8,text.f45_8_f0, text.f45_8_f_1, text.f45_8_f_2, text.f45_8_f_3))
+								</script>
+						</aside>
+		
+						</section>
+		
+						<!-- class modelling part 8-->
+						<section>
+							<h2> Class modelling</h2>
+							<ul style="text-align: left; font-size: 70%;">
+								<li> Thematic conditioning (functionally homogenous units, minimum size)</li>
+								<ul>
+									<li>
+										31,698 biotope complexes were delineated for the whole Stuttgart Region
+									</li>
+									<li>
+										Average size: 11.5 ha
+									</li>
+								</ul>
+								<figure>
+									<img src="OBIA - Image Interpretation_folder/55_01_StuttgartRegion.png" style="background: none; border: none;box-shadow: none; width:50%">
+								</figure>
+							</ul>
+							<div class=" fragment fade-in-then-out" id="f45_9_f_1">
+							<figure style="position: absolute; right:-5%; bottom:5%">
+								<img src="OBIA - Image Interpretation_folder/55_02_biotope_elemntary_units.png" style="background: none; border: none;box-shadow: none; width:70%">
+							</figure>
+						</div>
+						<div class=" fragment fade-in" id="f45_9_f_2">
+							<figure style="position: absolute; right:-5%; bottom:5%">
+								<img src="OBIA - Image Interpretation_folder/55_02_biotope_complex.png" style="background: none; border: none;box-shadow: none; width:70%">
+							</figure>
+						</div>
+							<figcaption>
+								<p style="font-size: 50%;text-align: left; position: absolute; bottom:0%; left:30%"> <strong> Lang et al., 2007, Tiede et al., 2007</strong></p>
+							</figcaption>
+							<aside class="notes">
+								<script>
+			
+									document.write(String(text.f45_9, text.f45_9_f_1, text.f45_9_f_2))
+								</script>
+						</aside>
+			
+						</section>
+						
+		
+		
+					</section>
+		
 		<!-- Lesson 7-->
+		
+		<!-- terminal -->
 		</section>	
 			
 
