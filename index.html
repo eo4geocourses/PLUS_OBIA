@@ -6888,9 +6888,9 @@
 			<small >Stefan LANG & Dirk TIEDE</small>
 			
 			<p style="font-size: 50%; margin-top: 1%; ">
-				<b>[1]</b> Definitions <b>[2]</b>Non-site specific accuracy assessment 
+				<b>[1]</b> Definitions <b>[2]</b> Non-site specific accuracy assessment 
 				<b>[3]</b> Site specific accuracy assessment 
-				<b>[4]</b> Error matrix <b>[5]</b> Towards object-based accuracy assessment| <b>[6]</b> Object fate analysis <b>[7]</b> Object validity
+				<b>[4]</b> Error matrix <b>[5]</b> Towards object-based accuracy assessment <b>[6]</b> Object fate analysis <b>[7]</b> Object validity
 			</p>
 			<p><small>University of Salzburg | Department of Geoinformatics | (c) 2010-2022<br></small></p>
 				
@@ -6911,7 +6911,6 @@
 		
 						<aside class="notes">
 							<script>
-		
 								document.write(String(text.f47_0))
 							</script>
 						</aside>
@@ -6926,16 +6925,16 @@
 								</li>
 								<ul style="font-size: 70%;">
 									<li>
-										Degree of correctness of a classification result (degree to which the derived image classification agrees with reality or conforms to the 'truth') (Foddy, 2002)
+										Degree of correctness of a classification result, agreement of image classification with reality
 									</li>
 									<li>
-										Quantiative quality measure judging the validity of results in scientific investigations.
+										A quantiative quality measure judging the validity of results in scientific investigations, that also ... 
 									</li>
 									<li>
-										Determines usefulness of generated thematic maps in practical applications.
+										... determines usefulness of generated thematic maps in practical applications.
 									</li>
 								</ul>
-								<ul>
+								
 								<li>
 									Error
 								</li>
@@ -6950,19 +6949,11 @@
 								</li>
 								<ul  style="font-size: 70%;">
 									<li>
-										Meaningfully quantify the accuracy of digital land cover classifications; “A classification is not complete until its accuracy is assessed” (Lillesand, Kiefer; 2000)
+										The process of assessing and quantifying the accuracy of digital image classification; Image analysis is not completed until the accuracy of the outcome is assessed (Lillesand & Kiefer 2000)
 									</li>
 									<li>
-										Comparision of
+										Comparison of pixels or polygons in a remote sensing‐derived classification (<strong>map to be evaluated</strong>) and independent evaluation data (<strong>reference map</strong>) 
 									</li>
-									<ol  style="font-size: 80%;">
-										<li>
-											Pixels or polygons in a remote sensing‐derived classification (<strong>the map to be evaluated</strong>)
-										</li>
-										<li>
-											Ground reference test information (<strong>reference map</strong>) (Jensen, 2005)
-										</li>
-									</ol>
 								</ul>
 							</ul>
 						</section>
@@ -6993,32 +6984,25 @@
 							<h2> Non-site specific accuracy assessment</h2>
 							<ul style="text-align:left ; font-size:60%; width:50%;">
 								<li>
-									Comparing area percentages of categories in classified and reference map (inventory error can be assessed)
+									Comparing area percentages of classes as occuring in the analysed image and the reference map
 								</li>
 								<li>
-									 Disadvantage:
+									 "Non-site specific" means the actual spatial distribution of classes is not considered
 								</li>
-								<ul style="font-size:80% ;">
-									<li>
-										Inaccurate method (e.g. classes have similar proportions but may appear in different locations of the mapped area)
-									</li>
-								</ul>
-								
+							
 							</ul>
-							<p style="font-size:50%;margin-bottom:0px;">
-								<i>Example of non-site specific accuracy assessment </i>
-							</p>
+							<p style="font-size:50%;margin-bottom:0px;"></p>
 								<figure>
-									<img src="OBIA - Image Interpretation_folder/56_01_non-site_spec_acc_ass.png" style="background: none; border: none;box-shadow: none;width: 60%; margin-top: 0px; position: absolute; bottom:-25%;left:20% ">
+									<img src="OBIA - Image Interpretation_folder/56_01_non-site_spec_acc_ass.png" style="background: none; border: none;box-shadow: none;width: 60%; margin-top: 0px; position: absolute; bottom:-30%;left:20% ">
 								</figure>
 								<figure>
 									<img src="OBIA - Image Interpretation_folder/56_02_two_sites.png" style="background: none; border: none;box-shadow: none;width: 60%; margin-top: 0px; position: absolute; top:50%;right:-10%; width:25% ">
 								</figure>
-								<figcaption style="position: absolute; bottom:-25%; right:-5%">
+								<figcaption style="position: absolute; bottom:-35%; right:20%">
 									<p style="font-size:30% ;"><strong>from Campbell, 2002</strong></p>
 								</figcaption>
 							<div>
-								<p style="font-size:50% ; text-align: left; position: absolute; right:-15%; top:30%; width:30%"> Two maps that are similar according to non-site specific accuracy assessment</p>
+								<p style="font-size:40% ; text-align: left; position: absolute; right:-15%; top:25%; width:30%"> Two maps with high agreement according to non-site specific assessment (<b>A</b> = agriculture, <b>F</b> = forest, <b>W</b> = water).</p>
 							</div>
 							<aside class="notes">
 								<script>
@@ -7042,29 +7026,29 @@
 						</aside>
 						</section>
 		
-					<!-- Site-specific acc. ass-->
+					<!-- Site-specific acc ass-->
 					<section>
 						<h2>
 							Site specific accuracy assessment
 						</h2>
 						<ul style="text-align:left ; font-size:60%">
 							<li>
-								Agreement between categories in classified and reference map at specific locations
+								Agreement of categories in classified image and reference map at specific locations
 							</li>
 							<ul>
 								<li>
-									Based on site‐by‐site comparison (per pixel or group of pixels, i.e. objects)
+									based on site‐by‐site comparison (pixels or objects)
 								</li>
 								<li>
-									Each location is occupied by one (and only one) class  
+									Assumption: each location is occupied by one (and only one) class  
 								</li>
 							</ul>
 							<li>
-								Calculation of error matrix
+								Calculation of error matrix as an aggregation of localised errors
 							</li>
 						</ul>
 							<figure>
-								<img src="OBIA - Image Interpretation_folder/57_01_site-spec_acc_ass.png" style="background: none; border: none;box-shadow: none;width: 78%; ">
+								<img src="OBIA - Image Interpretation_folder/57_01_site-spec_acc_ass.png" style="position: absolute; right:10%; top:85%; background: none; border: none;box-shadow: none;width: 75%; ">
 							</figure>
 							<aside class="notes">
 								<script>
@@ -7094,27 +7078,23 @@
 						<!--Error Matrix part 1-->
 						<section>
 							<h2> Error matrix</h2>
-							<ul style="text-align:left; font-size:60%; width: 45%; position: absolute;left:3%">
+							<ul style="text-align:left; font-size:60%; width: 45%; position: absolute;left:0%">
 								<li>
 									Percentage correct (overall accuracy)
 								</li>
-								<ul style="font-size:70%">
-									<li>
-									Sum of diagonal entries divided by total observations
-									</li>
-								</ul>
+								
 								<li>
-									Errors of omission &#8660 Errors of commission
+									Error of omission &#8660 commission
 								</li>
 								<ul style="font-size:70%">
 									<li>
-										Regarding an error from two different viewpoints
+										Evaluating an error from two different viewpoints
 									</li>
 									<li>
-										<strong>Error of omission:</strong> correct class hasn’t been recognised by the classification process (exclusion from category)
+										<strong>Error of omission:</strong> correct class not recognised by the classification process (false exclusion)
 									</li>
 									<li>
-										<strong>Error of comission:</strong>by mistake the unit has been assigned to the wrong class (error of inclusion)
+										<strong>Error of commission:</strong>assignment to the wrong class (false inclusion)
 									</li>
 								</ul>
 								<li> Producer's accuracy &#8660 Consumer's accuracy </li>
@@ -7123,15 +7103,15 @@
 										Accuracies of individual categories
 									</li>
 									<li>
-										<strong>Producer's accuracy</strong> (a measure of omission error): indicates probability of a reference unit being correctly classified
+										<strong>Producer's accuracy</strong>: Error in the responsibility of the <br>producer, in other words: percentage of pixels correctly <br>classified by the producer.
 									</li>
 									<li>
-										<strong> Consumer'S accuracy</strong>  (user’s accuracy, a measure of commission error): probability of	a classified unit on the map actually representing that category on the ground
+										<strong> Consumer's / User's accuracy</strong>: Error in the eyes of the <br>consumer, in other words: percentage of pixels that a <br>user can expect to be correct.
 									</li>
 								</ul>
 							</ul>
 							<figure>
-								<img src="OBIA - Image Interpretation_folder/58_error_matrix.png" style="background: none; border: none;box-shadow: none;width:50%; position: relative;right: -30%;">
+								<img src="OBIA - Image Interpretation_folder/58_error_matrix.png" style="background: none; border: none;box-shadow: none;width:50%; position: relative;right: -40%;">
 							</figure>
 							<aside class="notes">
 								<script>
@@ -7143,7 +7123,7 @@
 		
 						<!-- Kappa-->
 						<section>
-							<h2>Kappa</h2>
+							<h2>Error matrix</h2>
 							<ul style="font-size:50%; text-align:left;">
 								<li>
 									Kappa coefficient (K<sub>hat</sub>)
