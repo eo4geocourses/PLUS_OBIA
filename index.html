@@ -270,7 +270,7 @@
 			</li>
 			<li>
 			<p>To compare OBIA methods to pixel-based remote sensing concepts (e.g. multispectral classification, accuracy assessment) and understand how the latter 
-				need to be <strong>adapted </strong> </p> 
+				needs to be <strong>adapted </strong> </p> 
 			</li>
 			<li>
 				<p>To practice OBIA routines in a dedicated <strong> software environment</strong> mimicking real-world scenarios.</p>
@@ -6880,6 +6880,718 @@
 					</section>
 		
 		<!-- Lesson 7-->
+
+		<section section id="Chapter 7.0">			
+					
+			<h1>Object-based Image Analysis (OBIA)</h1>
+			<h2>Accuracy Assessment &  Object Validity</h2>	
+			<small >Stefan LANG & Dirk TIEDE</small>
+			
+			<p style="font-size: 50%; margin-top: 1%; ">
+				<b>[1]</b> Definitions <b>[2]</b>Non-site specific accuracy assessment 
+				<b>[3]</b> Site specific accuracy assessment 
+				<b>[4]</b> Error matrix <b>[5]</b> Towards object-based accuracy assessment| <b>[6]</b> Object fate analysis <b>[7]</b> Object validity
+			</p>
+			<p><small>University of Salzburg | Department of Geoinformatics | (c) 2010-2022<br></small></p>
+				
+				
+			<aside class="notes">
+			
+			<script>
+				document.write(String(text.f46_0));
+			</script>					
+			
+			</aside>
+		</section>
+					<!--Chapter 1 Definitons-->
+		
+					<section id="Chapter 7.1">
+						<section>
+							<h1>[7.1] Definitions</h1>
+		
+						<aside class="notes">
+							<script>
+		
+								document.write(String(text.f47_0))
+							</script>
+						</aside>
+						</section>
+		
+						<!-- Definitions-->
+						<section>
+							<h2> Definitions</h2>
+							<ul style="text-align:left; font-size:80%;">
+								<li>
+									Accuracy
+								</li>
+								<ul style="font-size: 70%;">
+									<li>
+										Degree of correctness of a map or classification (degree to which the derived image classification agrees with reality or conforms to the 'truth') (Foddy, 2002)
+									</li>
+								</ul>
+								<li>
+									Error
+								</li>
+								<ul  style="font-size: 70%;">
+									<li>
+										Discrepancy between the situation depicted on the thematic map and reality (Foody, 2002)
+									</li>
+								</ul>
+								<li>
+									Significance of accuracy for
+								</li>
+								<ul  style="font-size: 70%;">
+									<li>
+										Usefulness of thematic maps for land management
+									</li>
+									<li>
+										The validity of maps for scientific investigations
+									</li>
+								</ul>
+								<li>
+									Accuracy assessment
+								</li>
+								<ul  style="font-size: 70%;">
+									<li>
+										Meaningfully quantify the accuracy of digital land cover classifications; “A classification is not complete until its accuracy is assessed” (Lillesand, Kiefer; 2000)
+									</li>
+									<li>
+										Comparision of
+									</li>
+									<ol  style="font-size: 80%;">
+										<li>
+											Pixels or polygons in a remote sensing‐derived classification (<strong>the map to be evaluated</strong>)
+										</li>
+										<li>
+											Ground reference test information (<strong>reference map</strong>) (Jensen, 2005)
+										</li>
+									</ol>
+								</ul>
+							</ul>
+						</section>
+						<aside class="notes">
+							<script>
+		
+								document.write(String(text.f47_1))
+							</script>
+						</aside>
+		
+					</section>
+		
+					<!-- Chapter 2 non-site-specific accuracy assessment-->
+					<section id="Chapter 7.2">
+						<section>
+							<h1>[7.2] Non-site accuracy assessment</h1>
+		
+						<aside class="notes">
+							<script>
+		
+								document.write(String(text.f48_0))
+							</script>
+						</aside>
+						</section>
+		
+						<!--Non-site-specific accuracy assessment-->
+						<section>
+							<h2> Non-site specific accuracy assessment</h2>
+							<ul style="text-align:left ; font-size:60%; width:50%;">
+								<li>
+									Comparing area percentages of categories in classified and reference map (inventory error can be assessed)
+								</li>
+								<li>
+									 Disadvantage:
+								</li>
+								<ul style="font-size:80% ;">
+									<li>
+										Inaccurate method (e.g. classes have similar proportions but may appear in different locations of the mapped area)
+									</li>
+								</ul>
+								
+							</ul>
+							<p style="font-size:50%;margin-bottom:0px;">
+								<i>Example of non-site specific accuracy assessment </i>
+							</p>
+								<figure>
+									<img src="OBIA - Image Interpretation_folder/56_01_non-site_spec_acc_ass.png" style="background: none; border: none;box-shadow: none;width: 60%; margin-top: 0px; position: absolute; bottom:-25%;left:20% ">
+								</figure>
+								<figure>
+									<img src="OBIA - Image Interpretation_folder/56_02_two_sites.png" style="background: none; border: none;box-shadow: none;width: 60%; margin-top: 0px; position: absolute; top:50%;right:-10%; width:25% ">
+								</figure>
+								<figcaption style="position: absolute; bottom:-25%; right:-5%">
+									<p style="font-size:30% ;"><strong>from Campbell, 2002</strong></p>
+								</figcaption>
+							<div>
+								<p style="font-size:50% ; text-align: left; position: absolute; right:-15%; top:30%; width:30%"> Two maps that are similar according to non-site specific accuracy assessment</p>
+							</div>
+							<aside class="notes">
+								<script>
+			
+									document.write(String(text.f48_1))
+								</script>
+							</aside>
+						</section>
+					</section>
+		
+					<!-- Chapter 3 Site specific accuracy assessment-->
+					<section id="Chapter 7.3">
+						<section>
+							<h1>[7.3] Site specific accuracy assessment</h1>
+		
+						<aside class="notes">
+							<script>
+		
+								document.write(String(text.f49_0))
+							</script>
+						</aside>
+						</section>
+		
+					<!-- Site-specific acc. ass-->
+					<section>
+						<h2>
+							Site specific accuracy assessment
+						</h2>
+						<ul style="text-align:left ; font-size:60%">
+							<li>
+								Agreement between categories in classified and reference map at specific locations
+							</li>
+							<ul>
+								<li>
+									Based on site‐by‐site comparison (per pixel or group of pixels, i.e. objects)
+								</li>
+								<li>
+									Each location is occupied by one (and only one) class  
+								</li>
+							</ul>
+							<li>
+								Calculation of error matrix
+							</li>
+						</ul>
+							<figure>
+								<img src="OBIA - Image Interpretation_folder/57_01_site-spec_acc_ass.png" style="background: none; border: none;box-shadow: none;width: 78%; ">
+							</figure>
+							<aside class="notes">
+								<script>
+			
+									document.write(String(text.f49_1))
+								</script>
+							</aside>
+					
+		
+					</section>
+		
+					</section>
+		
+					<!-- Chapter 4 Error matrix-->
+					<section id="Chapter 7.4">
+						<section>
+							<h1>[7.4] Error Matrix</h1>
+		
+						<aside class="notes">
+							<script>
+		
+								document.write(String(text.f50_0))
+							</script>
+						</aside>
+						</section>
+		
+						<!--Error Matrix part 1-->
+						<section>
+							<h2> Error matrix</h2>
+							<ul style="text-align:left; font-size:60%; width: 45%; position: absolute;left:3%">
+								<li>
+									Percentage correct (overall accuracy)
+								</li>
+								<ul style="font-size:70%">
+									<li>
+									Sum of diagonal entries divided by total observations
+									</li>
+								</ul>
+								<li>
+									Errors of omission &#8660 Errors of commission
+								</li>
+								<ul style="font-size:70%">
+									<li>
+										Regarding an error from two different viewpoints
+									</li>
+									<li>
+										<strong>Error of omission:</strong> correct class hasn’t been recognised by the classification process (exclusion from category)
+									</li>
+									<li>
+										<strong>Error of comission:</strong>by mistake the unit has been assigned to the wrong class (error of inclusion)
+									</li>
+								</ul>
+								<li> Producer's accuracy &#8660 Consumer's accuracy </li>
+								<ul style="font-size:70%; width:140%">
+									<li>
+										Accuracies of individual categories
+									</li>
+									<li>
+										<strong>Producer's accuracy</strong> (a measure of omission error): indicates probability of a reference unit being correctly classified
+									</li>
+									<li>
+										<strong> Consumer'S accuracy</strong>  (user’s accuracy, a measure of commission error): probability of	a classified unit on the map actually representing that category on the ground
+									</li>
+								</ul>
+							</ul>
+							<figure>
+								<img src="OBIA - Image Interpretation_folder/58_error_matrix.png" style="background: none; border: none;box-shadow: none;width:50%; position: relative;right: -30%;">
+							</figure>
+							<aside class="notes">
+								<script>
+			
+									document.write(String(text.f50_1))
+								</script>
+							</aside>
+						</section>
+		
+						<!-- Kappa-->
+						<section>
+							<h2>Kappa</h2>
+							<ul style="font-size:50%; text-align:left;">
+								<li>
+									Kappa coefficient (K<sub>hat</sub>)
+								</li>
+							<figure>
+									<img src="OBIA - Image Interpretation_folder/59_01_kappa.png" style="background: none; border: none;box-shadow: none;width:60%">
+							</figure>
+							<li>
+								Explanation of the formula:
+							</li>
+							<ul>
+								<li>
+									Observed agreement = overall accuracy
+								</li>
+								<li>
+									Expected agreement = sum of the products of the consumer’s accuracy (CA) and the producer’s	accuracy (PA) of each class
+								</li>
+		
+							</ul>
+							<figure>
+								<img src="OBIA - Image Interpretation_folder/59_02_kappa_coeff.png" style="background: none; border: none;box-shadow: none;">
+						</figure>
+							</ul>
+							<aside class="notes">
+								<script>
+			
+									document.write(String(text.f50_2))
+								</script>
+							</aside>
+						</section>
+		
+						<!-- Error matrix part 2-->
+		
+						<section>
+							<h2>Error matrix</h2>
+							<ul style="text-align:left ; font-size:80%">
+								<li>
+									Limitations
+								</li>
+								<ul style="font-size: 80%;">
+									<li>
+										Error matrix not a standardized measure
+									</li>
+									<li>
+										Many different different indices indices, none of them ideal for every single problem
+									</li>
+									<li>
+										Sampling design (stratified, random…) and sample size can be limiting factors
+									</li>
+								</ul>
+								<li>
+									Type of error
+								</li>
+								<ul style="font-size: 80%;">
+									<li>
+										thematic error vs. error of location
+									</li>
+								</ul>
+								<li>
+									Accuracy / reliability of the reference data accuracy
+								</li>
+								<ul style="font-size: 80%;">
+									<li>
+										Ground “truth” data is a classification classification itself and may contain contain error
+									</li>
+									<li>
+										Often remotely sensed data is used as a surrogate for ground dat
+									</li>
+								</ul>
+								<li>
+									No assessment of the spatial distribution of error
+								</li>
+		
+							</ul>
+							<aside class="notes">
+								<script>
+			
+									document.write(String(text.f50_3))
+								</script>
+							</aside>
+						</section>
+						</section>
+		
+					<!-- Chapter 5 Towards object-based accuracy assessment-->
+					<section id="Chapter 7.5">
+						<section>
+							<h1>[7.5] Towards object-based accuracy assessment</h1>
+		
+						<aside class="notes">
+							<script>
+		
+								document.write(String(text.f51_0))
+							</script>
+						</aside>
+						</section>
+		
+						<!--Towards object-based accuracy assessment part 1-->
+						<section>
+							<h2>Towards object-based accuracy assessment</h2>
+							<ul style="text-align: left; font-size:80%">
+								<li>
+									Thematic assessment of object‐based classification
+								</li>
+								<ul style="font-size:70%">
+									<li>
+										Site‐specific approach (making use of <strong>random points</strong> within objects)
+									</li>
+									<li>
+										 Selecting <strong>objects</strong>  prior to training process to be used as reference information
+									</li>
+									<li>
+										Selecting <strong>small test areas</strong> where every single object is assessed in terms of its 								label
+									</li>
+								</ul>
+								<li>
+									Geometry assessment of image objects
+								</li>	
+								<ul style="font-size:70%">
+									<li>
+										Visually checking classified images against manual delineation
+									</li>
+									<li>
+										Quantitative assessment withGIS overlay techniques
+									</li>
+								</ul>
+								<li>
+									Challenges for object‐based accuracy assessment
+								</li>
+								<ul style="font-size:70%">
+								<li>
+									No 100% geometrical geometrical fit between between reference reference objects objects and objects objects to be evaluated (due to different ways of segmentation and delineation)
+								</li>
+								<li>
+									When using a fuzzified rule base thematic classes are not mutually exclusive
+								</li>
+								<p>
+									&#8658  Accuracy is a matter of geometrical and semantic agreement
+								</p>
+							</ul>
+							</ul>
+							<aside class="notes">
+								<script>
+			
+									document.write(String(text.f51_1))
+								</script>
+							</aside>
+						</section>
+		
+						<!--Towards object-based accuracy assessment part 2-->
+						<section>
+							<h2> Towards object-based accuracy assessment </h2>
+							<ul>
+							<li style="font-size:70%; text-align: left; margin-bottom: 0px;">
+								Visually checking classified images against manual delineation
+							</li>
+							<figure style="margin-top: 0px">
+								<img src="OBIA - Image Interpretation_folder/60_01_towards_object_based_ass.png" style="background: none; border: none;box-shadow: none; ">
+						</figure>
+						</ul>
+						<aside class="notes">
+							<script>
+		
+								document.write(String(text.f51_2))
+							</script>
+						</aside>
+		
+					
+						</section>
+		
+		
+		
+					</section>
+		
+					<!-- Chapter 6 Object fate analysis and object loyalty-->
+					<section id="Chapter 7.6">
+						<section>
+							<h1>[7.6] Object fate analysis and object loyalty</h1>
+		
+						<aside class="notes">
+							<script>
+		
+								document.write(String(text.f52_0))
+							</script>
+						</aside>
+						</section>
+		
+						<!--Object fate analysis part 1-->
+						<section>
+							<h2>Object fate analysis</h2>
+							<ul style="text-align: left; font-size:80%; width:60%; position: absolute;left:3%">
+								<li>
+									Quantitative assessment of object geometry accuracy
+								</li>
+								<ul style="font-size: 70%;">
+									<li>
+										Defining a tolerance (spatial overlay strictness) to allow minor differences in the object outlines
+									</li>
+									<li>
+										Testing  of objects
+									</li>
+									<ul style="font-size: 80%;">
+										<li>
+											Classification object has the same extent as the reference reference polygon polygon (“stable (“stable object”)
+										</li>
+										<li>
+											Reference object doesn’t match and is split into several objects of the classification
+										</li>
+										<li>
+											Complex geometry with objects not having the same boundaries
+										</li>
+									</ul>
+									<li>
+										Characterisation of object relationship ("object fate", similar to object-based change analysis)
+									</li>
+									<ul style="font-size: 80%;">
+										<li>
+											Good objects
+										</li>
+										<li>
+											Expanding objects
+										</li>
+										<li>
+											Invading objects
+										</li>
+									</ul>
+								</ul>
+							</ul>
+							<figure >
+								<img src="OBIA - Image Interpretation_folder/61_object_fate_analysis.png" style="background: none; border: none;box-shadow: none; position:relative; right:-45%;top:-20%; width:40% ">
+						</figure>
+						<figcaption style="position: absolute;bottom:5%; right:0%">
+							<p style="font-size: 40%;"> Lang et al 2011</p>
+						</figcaption>
+						aside class="notes">
+							<script>
+		
+								document.write(String(text.f52_1))
+							</script>
+						</aside>
+						</section>
+		
+						<!--Object fate analysis part 2-->
+						<section>
+							<h2>Object fate analysis </h2> 
+							<figure >
+								<img src="OBIA - Image Interpretation_folder/62_object_fate_analysis.png" style="background: none; border: none;box-shadow: none;  ">
+						</figure>
+						<figcaption style="font-size: 30%;">
+						<p> From Lang, 2008; Schöpfer et al. 2008; Albrecht 2008</p>
+						</figcaption>
+						aside class="notes">
+							<script>
+		
+								document.write(String(text.f52_2))
+							</script>
+						</aside>
+						</section>
+		
+						<!--Object fate analysis part 3-->
+						<section>
+							<h2>Object fate analysis </h2> 
+							<figure >
+								<img src="OBIA - Image Interpretation_folder/63_object_fate_analysis.png" style="background: none; border: none;box-shadow: none;  ">
+						</figure>
+						<figcaption style="font-size: 30%; position: absolute; bottom:5%; left:10%">
+						<p>  From Albrecht 2010</p>
+						</figcaption>
+						aside class="notes">
+							<script>
+		
+								document.write(String(text.f52_3))
+							</script>
+						</aside>
+						</section>
+		
+						<!-- Object loyalty-->
+						<section>
+							<h2> Object loyalty</h2>
+							<ul style="text-align: left; width:20%; font-size:40%; position: absolute; right:-5%; top:35%">
+								<li>
+									Similarity measures:
+								</li>
+								<ul style="margin-left: 0px;">
+									<li>
+										Proportion of overlapping area
+									</li>
+									<li style="margin-bottom:3px">
+										Number of overlapping objects
+									</li>
+								</ul>
+								<li style="margin-top: 20%;">
+									Similarity measures:
+								</li>
+								<ul style="margin-left: 0px;">
+									<li>
+										Proportion of overlapping area
+									</li>
+									<li>
+										Number of overlapping objects
+									</li>
+									<p>
+										&#10132 Locating systematically errors (e.g. shift in geolocation etc.)
+									</p>
+								</ul>
+							</ul>
+							<figure >
+								<img src="OBIA - Image Interpretation_folder/64_01_object_loyality.png" style="background: none; border: none;box-shadow: none;width:70%  ">
+						</figure>
+						<figure >
+							<img src="OBIA - Image Interpretation_folder/64_02_accurac_ass.png" style="background: none; border: none;box-shadow: none;width:20%; position: absolute;top:10%; right:0%  ">
+					</figure>
+					aside class="notes">
+					<script>
+		
+						document.write(String(text.f52_4))
+					</script>
+				</aside>
+						</section>
+		
+		
+					</section>
+					
+		
+					<!-- Chapter 7 Object validity-->
+					<section id="Chapter 7.7">
+						<section>
+							<h1>[7.7] Object validity</h1>
+		
+						<aside class="notes">
+							<script>
+		
+								document.write(String(text.f52_0))
+							</script>
+						</aside>
+						</section>
+		
+						<!--Object validity part 1-->	
+						<section>
+							<h2>Object validity</h2>
+							<ul style="text-align: left; font-size:60%">
+								<li>
+								Defined as <i>“degree of fitness for an operational task in a policy context."</i> (LANG et al. 2010)
+							</li>
+							<li>
+								From 'crisp' to higher complex objetcs
+							</li>
+							<ul>
+								<li>
+								 As we leave the domain of ‘crisp’, i.e. well defined (and well addressable) <i>bona fide</i>  objects (Smith, 1995), the binary decision between ‘correct’ and ‘false’ labeling gets blurred.					
+								</li>
+								<li>
+									Fuzzification of a decision using fuzzy rule sets with gradient probabilities of assigning binaries along a gradient, only partly address this new quality.
+								</li>
+								<li>
+								The further we move into the domain of <i> fiat</i> objects, we encounter problemswhen tying to assigning yes/no values to thematic classification results, even when the assignment is fuzzified.
+								</li>
+								<li>
+									The more complex, or concept‐related a specific category is, the more likely a binary assessment will fail. Instead, when we use a concept of ‘app p ro riateness’ or ‘validity ,’ we can accommodate the fact that there is no ‘right’ or ‘wrong’.
+								</li>
+		
+								</ul>
+								<script>
+		
+									document.write(String(text.f52_1))
+								</script>
+							</aside>
+						</section>
+		
+						<!--Object validity part 2-->
+						<section>
+							<h2>Object validity</h2> 
+							<ul style="text-align: left; font-size:70%; ">
+								<li>
+									Automated object generation -'correct' but not 'valid'
+								</li>
+								<ul>
+									<li>
+										Spatial inappropriateness – scale mismatch
+									</li>
+									<li>
+										Different object representations
+									</li>
+									<ul style="font-size:70%; width:50% ">
+										<li>
+											Terrestrial surveying (red)
+										</li>
+										<li>
+											Manual digitizing (green)
+										</li>
+										<li>
+											Automated extraction (yellow)
+										</li>
+									</ul>
+									<li>
+										Introducing error band (buffer)
+									</li>
+								</ul>
+							</ul>
+							<figure  style="margin-top: 0%;">
+								<img src="OBIA - Image Interpretation_folder/65_01_object_validity.png" style="background: none; border: none;box-shadow: none; width:30%  ">
+						</figure>
+						<figure >
+							<img src="OBIA - Image Interpretation_folder/65_02_object_validity.png" style="background: none; border: none;box-shadow: none;position: absolute; right:-10%; bottom:10%; width: 40%;  ">
+					</figure>
+					<figcaption style="font-size:30%">
+						<p>From Albrecht 2008/2010</p>
+					</figcaption>
+					<script>
+		
+						document.write(String(text.f52_2))
+					</script>
+				</aside>
+						</section>
+		
+						<!--Object validity part 3-->
+						<section>
+							<h2> Object validity</h2>
+						<figure  >
+								<img src="OBIA - Image Interpretation_folder/66_01_element_units.png" style="background: none; border: none;box-shadow: none;  position: absolute; left:5%  ">
+						</figure>
+						<figure  >
+							<img src="OBIA - Image Interpretation_folder/66_02_composed_objects.png" style="background: none; border: none;box-shadow: none;  width:40%;position: relative;right: -33%;  ">
+					</figure>
+					<figcaption style="position: absolute; bottom:5%; left:30%; font-size:70%">
+						<p><i>...How to validate?</i></p>
+					</figcaption>
+					<script>
+		
+						document.write(String(text.f52_3))
+					</script>
+				</aside>
+				</section>
+		
+		
+					<!--Object validity part 4-->
+					<section>
+						<h2> Object validity</h2>
+						<li> <i>"...that's what the users want!"</i></li>
+						<figure  >
+							<img src="OBIA - Image Interpretation_folder/67_object_validity.png" style="background: none; border: none;box-shadow: none;  ">
+					</figure>
+					</section>
+									
+		
+				</section>
 		
 		<!-- terminal -->
 		</section>	

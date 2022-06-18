@@ -746,60 +746,60 @@ f39_0:"Welcome to lesson 6, object-based classification, the second central pill
 		
 
 // Lesson 7: Accuracy Assessment
-f46_0:"(no explanation as yet)",
+f46_0:"This is the text of slide 46 zero",
 	//7.1 Definitons
-	f47_0:"",
+	f47_0:"This is the text of slide 47 zero",
 
 		//7.1.1 Definitions
-		f47_1:"",
+		f47_1:"This is the text of slide 47 one",
 
 	// 7.2 Non-site-specific accuracy assessment
-	f48_0:"",
+	f48_0:"This is the text of slide 48 zero",
 
 		//7.2.1 Non-site-specific accuracy assessment
-		f48_1:"",
+		f48_1:"This is the text of slide 48 one",
 
 	// 7.3 Site specific accuracy assessment
-	f49_0:"",
+	f49_0:"This is the text of slide 49 zero",
 
 		//7.3.1 Site specific accuracy assessment
 
 	// 7.4 Error Matrix
-	f50_0:"",
+	f50_0:"This is the text of slide 50 zero",
 
 		//7.4.1 Error Matrix part 1
-		f50_1:"",
+		f50_1:"This is the text of slide 50 one",
 
 		//7.4.2 Kappa
-		f50_2:"",
+		f50_2:"This is the text of slide 50 two",
 
 		//7.4.3 Error Matrix part 2
-		f50_3:"",
+		f50_3:"This is the text of slide 50 three",
 
 	// 7.5 Towards object-based accuracy assessment
-	f51_0:"",
+	f51_0:"This is the text of slide 51 zero",
 
 		//7.5.1 Towards object-based accuracy assessment- part 1
-		f51_1:"",
+		f51_1:"This is the text of slide 51 one",
 
 		// 7.5.2 Towards object-based accuracy assessment- part 2
-		f51_2:"",
+		f51_2:"This is the text of slide 51 two",
 
 
 	// 7.6 Object fate analysis and object loyalty
-	f52_0:"",
+	f52_0:"This is the text of slide 52 zero",
 
 		//7.6.1 Object fate analysis - part 1
-		f52_1:"",
+		f52_1:"This is the text of slide 52 one",
 
 		//7.6.2  Object fate analysis - part 2
-		f52_2:"",
+		f52_2:"This is the text of slide 52 two",
 
 		//7.6.3  Object fate analysis - part 3
-		f52_3:"",
+		f52_3:"This is the text of slide 52 three",
 
 		//7.6.4 Object loyalty
-		f52_4:"",
+		f52_4:"This is the text of slide 52 four",
 	
 		
 		
