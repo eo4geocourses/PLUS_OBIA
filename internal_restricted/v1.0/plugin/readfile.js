@@ -769,7 +769,7 @@ f46_0:"Welcome to lesson seven on accuracy assessment and object validity. It is
 	f50_0:"We are now discussing how we construct and read an error matrix.",
 
 		//7.4.1 Error Matrix part 1
-		f50_1:"The error matrix is a product of aggregated localised errors. The matrix structure allows for emphasizing different aspects in interpreting the outcomes of the assessment. Depending on which viewpoint we apply, we derive different accuracy figures. For example, when looking from the perspective of a producer we are interested in the quality of our product, as this is the one we can influence. From the perspective of a customer or user, they are interested in the quality level they can expect with respect to the so-called ground truth.
+		f50_1:"The error matrix is a product of aggregated localised errors. The matrix structure allows for emphasizing different aspects in interpreting the outcomes of the assessment. Depending on which viewpoint we apply, we derive different accuracy figures. For example, when looking from the perspective of a producer we are interested in the quality of our product, as this is the one we can influence. From the perspective of a customer or user, they are interested in the quality level they can expect with respect to the so-called ground truth.",
 
 		//7.4.2 Kappa
 		f50_2:"This is the text of slide 50 two",
