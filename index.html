@@ -12,14 +12,14 @@
 	<meta property="dc:title" content="Object-based Image Analysis">
 	<meta property="dc:creator" content="Stefan Lang, University of Salzburg">
 	<meta property="dc:publisher" content="University of Salzburg">
-	<meta property="dc:subject" content="OBIA concept, image segmentation, class modelling, Earth observation">
+	<meta property="dc:subject" content="OBIA approach, image segmentation, class modelling, Earth observation">
 	
 	<!-- Meta data needs to be acutalized -->
 
 	<meta property="dc:abstract"
 		content="These slides give an introduction to concepts and methods of object-based image analysis (OBIA). The slides have been prepared for and used in the virtual GEOBIA summer school in 2020.">
 
-	<meta property="dc:tableOfContents" content="(1) Introduction; (2) Image interpretation and perception; (3) Basic concepts of hierarchy theory; (4) Knowledge representation; (5) Image segmentation; (6) Object-based classification (incl. class modelling); (7) Accuracy assessment (incl. object validity; (8) OBIA for non-image data">
+	<meta property="dc:tableOfContents" content="(1) Introduction; (2) Image interpretation and perception; (3) Basic concepts of hierarchy theory; (4) Knowledge representation; (5) Image segmentation; (6) Object-based classification (incl. class modelling); (7) Accuracy assessment (incl. object validity; (8) Outlook: OBIA for non-image data">
 	<meta property="dc:description"
 		content="Learning outcomes: Understand the principles of spatial image analysis; discuss specific advantages of OBIA over pixel-based approach; apply OBIA concepts and analyse complex image content; examine different segmentation and object-based classification methods">
 	<meta property="dc:contributor" content="Vanessa Streifeneder, Andreas Schlagbauer, Florian Albrecht, Michael Hagenlocher, Hannah Augustin">
@@ -7279,7 +7279,7 @@
 							<h2> Towards object-based accuracy assessment </h2>
 							<ul>
 							<li style="font-size:70%; text-align: left; margin-bottom: 0px;">
-								Visually checking classified images against manual delineation
+								Comparing an OBIA classification with manual delineation
 							</li>
 							<figure style="margin-top: 0px">
 								<img src="OBIA - Image Interpretation_folder/60_01_towards_object_based_ass.png" style="background: none; border: none;box-shadow: none; ">
@@ -7299,10 +7299,10 @@
 		
 					</section>
 		
-					<!-- Chapter 6 Object fate analysis and object loyalty-->
+					<!-- Chapter 6 Object fate analysis-->
 					<section id="Chapter 7.6">
 						<section>
-							<h1>[7.6] Object fate analysis and object loyalty</h1>
+							<h1>[7.6] Object fate analysis (OFA)</h1>
 		
 						<aside class="notes">
 							<script>
@@ -7314,31 +7314,25 @@
 		
 						<!--Object fate analysis part 1-->
 						<section>
-							<h2>Object fate analysis</h2>
+							<h2>Spatial agreement</h2>
 							<ul style="text-align: left; font-size:80%; width:60%; position: absolute;left:3%">
 								<li>
-									Quantitative assessment of object geometry accuracy
+									Quantitative assessment: spatial overlay with tolerance 
 								</li>
-								<ul style="font-size: 70%;">
+								
+								<ul style="font-size: 80%;">
 									<li>
-										Defining a tolerance (spatial overlay strictness) to allow minor differences in the object outlines
+									Classified object has the same extent as reference object (“stable object”)
 									</li>
 									<li>
-										Testing  of objects
+									Reference object is an aggregate of several classified objects
 									</li>
-									<ul style="font-size: 80%;">
-										<li>
-											Classification object has the same extent as the reference reference polygon polygon (“stable (“stable object”)
-										</li>
-										<li>
-											Reference object doesn’t match and is split into several objects of the classification
-										</li>
-										<li>
-											Complex geometry with objects not having the same boundaries
-										</li>
-									</ul>
 									<li>
-										Characterisation of object relationship ("object fate", similar to object-based change analysis)
+									Complex geometry with non-overlapping objects 
+									</li>
+								</ul>
+									<li>
+										Characterisation of object relationship (<b>"object fate"</b>)
 									</li>
 									<ul style="font-size: 80%;">
 										<li>
@@ -7351,12 +7345,11 @@
 											Invading objects
 										</li>
 									</ul>
-								</ul>
 							</ul>
 							<figure >
-								<img src="OBIA - Image Interpretation_folder/61_object_fate_analysis.png" style="background: none; border: none;box-shadow: none; position:relative; right:-45%;top:-20%; width:40% ">
+								<img src="OBIA - Image Interpretation_folder/61_object_fate_analysis.png" style="background: none; border: none;box-shadow: none; position:relative; right:-45%; bottom:20%; width:40%; height:40%;">
 						</figure>
-						<figcaption style="position: absolute;bottom:5%; right:0%">
+						<figcaption style="position: absolute;bottom:10%; right:15%">
 							<p style="font-size: 40%;"> Lang et al 2011</p>
 						</figcaption>
 						<aside class="notes">
@@ -7374,7 +7367,7 @@
 								<img src="OBIA - Image Interpretation_folder/62_object_fate_analysis.png" style="background: none; border: none;box-shadow: none;  ">
 						</figure>
 						<figcaption style="font-size: 30%;">
-						<p> From Lang, 2008; Schöpfer et al. 2008; Albrecht 2008</p>
+						<p> Lang, 2008; Schöpfer et al. 2008; Albrecht 2008</p>
 						</figcaption>
 						<aside class="notes">
 							<script>
@@ -7391,7 +7384,7 @@
 								<img src="OBIA - Image Interpretation_folder/63_object_fate_analysis.png" style="background: none; border: none;box-shadow: none;  ">
 						</figure>
 						<figcaption style="font-size: 30%; position: absolute; bottom:5%; left:10%">
-						<p>  From Albrecht 2010</p>
+						<p>  Albrecht 2010</p>
 						</figcaption>
 						<aside class="notes">
 							<script>
@@ -7403,7 +7396,7 @@
 		
 						<!-- Object loyalty-->
 						<section>
-							<h2> Object loyalty</h2>
+							<h2> Object loyalty (OL)</h2>
 							<ul style="text-align: left; width:20%; font-size:40%; position: absolute; right:-5%; top:35%">
 								<li>
 									Similarity measures:
@@ -7457,40 +7450,40 @@
 						<aside class="notes">
 							<script>
 		
-								document.write(String(text.f52_0))
+								document.write(String(text.f53_0))
 							</script>
 						</aside>
 						</section>
 		
 						<!--Object validity part 1-->	
 						<section>
-							<h2>Object validity</h2>
+							<h2>Why object validity?</h2>
 							<ul style="text-align: left; font-size:60%">
 								<li>
-								Defined as <i>“degree of fitness for an operational task in a policy context."</i> (LANG et al. 2010)
+								<i>"Degree of fitness for an operational task in a policy context."</i> (Lang et al. 2010)
 							</li>
 							<li>
-								From 'crisp' to higher complex objetcs
+								From crisp boundaries to more complex objects
 							</li>
 							<ul>
 								<li>
-								 As we leave the domain of ‘crisp’, i.e. well defined (and well addressable) <i>bona fide</i>  objects (Smith, 1995), the binary decision between ‘correct’ and ‘false’ labeling gets blurred.					
+								 As we leave the domain of crisp, well defined  <i>bona fide</i>  objects (Smith, 1995), the binary decision between correct and false labeling begins to vanish.					
 								</li>
 								<li>
-									Fuzzification of a decision using fuzzy rule sets with gradient probabilities of assigning binaries along a gradient, only partly address this new quality.
+								Fuzzification of a class assignment relates to the semantic ambiguity but not (necessarily) to the delineation.
 								</li>
 								<li>
-								The further we move into the domain of <i> fiat</i> objects, we encounter problemswhen tying to assigning yes/no values to thematic classification results, even when the assignment is fuzzified.
+								The domain of <i> fiat</i> objects requires more flexible concepts to address these.
 								</li>
 								<li>
-									The more complex, or concept‐related a specific category is, the more likely a binary assessment will fail. Instead, when we use a concept of ‘app p ro riateness’ or ‘validity ,’ we can accommodate the fact that there is no ‘right’ or ‘wrong’.
+								We suggest the term validity to address the appropriateness of an object delineation.
 								</li>
 		
 								</ul>
-								<script>
-		
-									document.write(String(text.f52_1))
-								</script>
+							<aside class="notes">
+							<script>
+									document.write(String(text.f53_1))
+							</script>
 							</aside>
 						</section>
 		
@@ -7499,7 +7492,7 @@
 							<h2>Object validity</h2> 
 							<ul style="text-align: left; font-size:70%; ">
 								<li>
-									Automated object generation -'correct' but not 'valid'
+									Automated object generation - correct but not valid
 								</li>
 								<ul>
 									<li>
@@ -7510,13 +7503,13 @@
 									</li>
 									<ul style="font-size:70%; width:50% ">
 										<li>
-											Terrestrial surveying (red)
+											Terrestrial survey (red outline)
 										</li>
 										<li>
-											Manual digitizing (green)
+											Visual interpretation (green outline)
 										</li>
 										<li>
-											Automated extraction (yellow)
+											Automated extraction (yellow outline)
 										</li>
 									</ul>
 									<li>
@@ -7533,9 +7526,10 @@
 					<figcaption style="font-size:30%">
 						<p>From Albrecht 2008/2010</p>
 					</figcaption>
+					<aside class="notes">
 					<script>
 		
-						document.write(String(text.f52_2))
+						document.write(String(text.f53_2))
 					</script>
 				</aside>
 						</section>
@@ -7552,9 +7546,11 @@
 					<figcaption style="position: absolute; bottom:5%; left:30%; font-size:70%">
 						<p><i>...How to validate?</i></p>
 					</figcaption>
+					
+					<aside class="notes">
 					<script>
 		
-						document.write(String(text.f52_3))
+						document.write(String(text.f53_2))
 					</script>
 				</aside>
 				</section>
@@ -7577,7 +7573,7 @@
 		<section section id="Chapter 8.0">			
 					
 			<h1>Object-based Image Analysis (OBIA)</h1>
-			<h2>Outlook: OBIA for non-image data</h2>	
+			<h2>Outlook: OBIA for Non-Image Data</h2>	
 			<small >Stefan LANG & Dirk TIEDE</small>
 			
 			<p style="font-size: 50%; margin-top: 1%; ">

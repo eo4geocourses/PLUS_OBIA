@@ -786,30 +786,28 @@ f46_0:"Welcome to lesson seven on accuracy assessment and object validity. It is
 		// 7.5.2 Towards object-based accuracy assessment- part 2
 		f51_2:"So here is an example. In the upper part of the figure we see on the right hand side, we see an object-based delineation and classification, for a small subset of an aerial photograph. In the lower part, we see a visual delineation using the same classes. Appearently there is no great difference among the two, looking at both the shares of classes and spatial configuration. The only difference is, the upper part consists of a few more objects, especially inside vegetation, and the outline is a bit more detailed.  ",
 
+	// 7.6 Object fate analysis 
+	f52_0:"Object fate analysis, in short O F A, is a metaphoric concept that illustrates different types of relationships among classified and reference objects.",
 
-	// 7.6 Object fate analysis and object loyalty
-	f52_0:"This is the text of slide 52 zero",
+		//7.6.1 Spatial agreement
+		f52_1:"Object fate analysis itself is based on the concept of spatial agreement. Spatial agreement can be investigated and quantified when overlaying two corresponding objects, in our case the classified and the reference object. As shown in the previous example, the geometries of both objects can be compared. We can achieve this by overlaying the geometries of both objects and check to which degree they overlap. We shall recognize that when generalising the behaviour of overlaying objects, we can differentiate between three basic types. As you can see on the figure we have an ideal first case, where both objects sort of overlap. Note that there will be hardly a perfect overlap due to different ways of delineation, for example segmentation versus visual interpretation, so we have to allow a certain tolerance. The latter we can realise by a buffer that we apply around the object's geometries. The second case illustrates another, often experienced constellation, where one reference object is split into en parts. Just as we mentioned it in the example above. The third case is theoretically rare, but practically abundant, a complex case of mixed geometries. This has often to do with inappropriate segmentation results. To sort this complex case out, we again may differentiate between three cases to characterise the object relations. Objects that are within the reference boundaries are considered good objects. Those which have their centre within but extend over the boundaries, aer called expanding objects. Third, those which are mainly outside, but overlapping, invading objects. Please note that these terms are purely figurative.",
 
-		//7.6.1 Object fate analysis - part 1
-		f52_1:"This is the text of slide 52 one",
+		//7.6.2  Object fate analysis 1
+		f52_2:"O F A, compares the states of two corresponding objects. This can be different states in time, meaning one and the same object changes its spatial properties over time. Or, the corresponding objects, as in our case, represent two different kinds of delineations, the result of a segmentation and a visual interpretation, or any other means of object delineation like field measurements. In real-case applications, these representations often overlay each other, as reference data might originate from a different point in time.",
 
-		//7.6.2  Object fate analysis - part 2
-		f52_2:"This is the text of slide 52 two",
-
-		//7.6.3  Object fate analysis - part 3
-		f52_3:"This is the text of slide 52 three",
+		//7.6.3  Object fate analysis 2
+		f52_3:"So how can we operational ize O F A? As mentioned above we have to consider a certain spatial tolerance to account for subtle differences in the delineations. In this figure by Albrecht 2010, the red dashed line indicates a buffer that is computed around the object boundary. It controls whether a corresponding object is still considered a good object or whether it is expanding. In turn, a negative buffer is constructed to identify objects not interacting with each other versus invading objects.",
 
 		//7.6.4 Object loyalty
-		f52_4:"This is the text of slide 52 four",
+		f52_4:"Taking the object relationships into account, we can derive some measures for what we call object loyalty. Object loyalty, O L, would be the number of good objects divided by the total number of objects considered related. Related objects are objects that have their centroid within the extent of the reference object. This applies to good objects and expanding objects. Meaning that, according to this definition,  invading objects are not related. In fact they would be related to neighbouring objects.",
 	
-		
-		
-	
-		
-		
-		
-		
-		
+	// 7.7 Object validity 
+	f53_0:"Object validity denotes the fact that object representations can hardly be judged as right or wrong. The validation of object delineations need to be embedded in a certain application context and also take into consideration the scale of investigation.",
+
+			//7.7.1 Why object validity
+			f53_1:"Some objects show clear and crisp boundaries. Consider a forest patch, where the forest boundary clearly sticks out against the surrounding grassland or agricultural fields. Such objects we call bohna feedy objects, originating from Latin which literally means, good trust. The philosophical term, suggested by Smith 1995 in the context of geographical phenomena, is based on the assumption that there are objects, whose boundaries we can intersubjectively agree on. A river, a forest, agricultural fields, etc. Other objects are less crisp, so for example, where does a mountain end? Within O B I A, we are eventually dealing with composite objects, which are not readily delineated. They would require a certain experience and adhere to conventional practices, as we have been discussing in the chapter on class modelling. The so-called fee ad objects are objects that are more conceptually, fee ad in Latin means, it might be. The more we move into the domain of fee ad objects we encounter problems when trying to find crisp boundaries. In other words, the more complex, or concept related the definition of specific category is, the more likely a binary assessment will fail. In order to address the appropriateness of delineation more than its correctness, we suggest the term object validity. ",
+
+
 	
 	
 	
