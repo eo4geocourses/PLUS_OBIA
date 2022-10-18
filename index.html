@@ -56,6 +56,7 @@
 	<script type="text/javascript" src="./internal_restricted/v1.0/plugin/readtext.js"></script>
 	<!--Adapt this accordingly!!!!-->
 	<script type="text/javascript" src="./internal_restricted/v1.0/plugin/readfile.js"></script>
+	<script type="text/javascript" src="./internal_restricted/v1.0/plugin/readfile_quotes.js"></script>
 	<script type="text/javascript" src="./internal_restricted/v1.0/js/reveal.js"></script>
 	
 	<script type="text/javascript" src="./internal_restricted/v1.0/plugin/notes-server/client.js"></script>
@@ -7790,7 +7791,7 @@
 							if (t[i]==t_slide){
 								for ( let q=0; q<quotes.length+1;q++){
 									if(quotes[q]==t_slide){
-										read.readfile(text[t[i]],'en-CA')
+										read.readfileQuotes(text[t[i]],'en-CA')
 									}
 									if(q==quotes.length){
 										read.readfile(text[t[i]],'en-IE')
@@ -7823,7 +7824,7 @@
 							if (t[i]==f){
 								for ( let q=0; q< quotes.length+1;q++){
 									if(quotes[q]==t_slide){
-										read.readfile(text[t[i]],'en-CA')
+										read.readfileQuotes(text[t[i]],'en-CA')
 									}
 									if(q==quotes.length){
 										read.readfile(text[t[i]],'en-IE')
