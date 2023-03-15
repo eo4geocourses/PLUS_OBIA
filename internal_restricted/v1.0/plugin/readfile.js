@@ -2,7 +2,7 @@
 var text={
 	//Chapter 1: Introduction and Welcome
 	f0_0:"Let's get started!",
-	f1_0:"Welcome to the world of object-based image analysis! We will share some exciting ideas with you. You've already noticed that this course is designed in such a way that you can study the material on your own. All relevant documents, papers, and other external sources are provided. The content is conveyed through interactive sessions, meaning that chapters as well as exercises use multi-media content to  study the matter presented. The course has been growing over the last years and today you will benefit from a series of preceding discussions and revisions. As usual, we happily receive your feedback, whether related to content or organisational issues. Explore and enjoy!",
+	f1_0:"Welcome to the world of object-based image analysis! We will share some exciting ideas with you. You've already noticed that this course is designed in such a way that you can study the material on your own. All relevant documents, papers, and other external sources are provided. The content is conveyed through interactive sessions, meaning that chapters as well as exercises use multi-media content to  study the material presented. The course has been growing over the last years and today you will benefit from a series of preceding discussions and revisions. As usual, we happily receive your feedback, whether related to content or organisational issues. Explore and enjoy!",
 	//1.1 Introduction
 	f2_0:"First, there are some organizational and informative matters. Please study the following slides on your own. There we shall provide some information on the course objectives and structure. When you reach the chapter on course objectives, we will guide you again. You may also press the play button then.",
 
@@ -36,7 +36,7 @@ var text={
 	// 1.5 Landscape and objects
 	f6_0:"So naturally, on images, air photos or a satellite images we are looking for objects, too.",
 		// 1.5.1 Landscape and objects part 1
-		f6_1:"In geographical image analysis, objects are representations of the real-world, in units that are significant in a certain application context. This image shows landscape objects as viewed from an aircraft window. What objects can you on this image? Some are quite obvious, for example.",
+		f6_1:"In geographical image analysis, objects are representations of the real-world, in units that are significant in a certain application context. This image shows landscape objects as viewed from an aircraft window. What objects can you see on this image?",
 		//1.5.2 Landscape and objects part 2
 		f6_2:"Roads and settlements",
 		//1.5.3 Landscape and objects part3
